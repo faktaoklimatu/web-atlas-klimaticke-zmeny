@@ -9,11 +9,16 @@ import InstagramIcon from '../icons/InstagramIcon.astro';
 import XIcon from '../icons/XIcon.astro';
 import LinkedInIcon from '../icons/LinkedInIcon.astro';
 
-const siblings = [
-  { code: 'CZ', flag: '🇨🇿', url: '#' },
-  { code: 'FR', flag: '🇫🇷', url: '#' },
-  { code: 'EN', flag: '🇬🇧', url: '#' },
-];
+interface Sibling {
+  code: string;
+  flag?: string;
+  url: string;
+}
+interface Props {
+  /** Language versions from the CMS (Settings → Navigation, via site.json). */
+  siblings?: Sibling[];
+}
+const { siblings = [] } = Astro.props;
 ---
 
 <footer class="footer">
