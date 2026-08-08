@@ -101,4 +101,14 @@ const { chapters } = Astro.props;
     border-radius: 50%;
     background: var(--text-primary);
   }
+
+  /* Contents overlay: flat styling — every chapter takes the active colour,
+     every infographic the inactive colour, with no current-highlight or dot. */
+  :global(.toc-overlay) .chapter__header { color: var(--text-primary); }
+  :global(.feed[data-view='list'] .toc-overlay) .toc-link.is-current {
+    color: var(--text-tertiary);
+  }
+  :global(.feed[data-view='list'] .toc-overlay) .toc-link.is-current::before {
+    display: none;
+  }
 </style>

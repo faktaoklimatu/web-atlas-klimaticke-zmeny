@@ -227,9 +227,7 @@ const {
     }
     .nav__inner {
       align-items: center;
-      gap: var(--size-2) var(--size-4); /* row 8, column 16 */
-      /* If the brand + links can't fit on one line, the links wrap below
-         instead of overflowing past the (fixed, unclipped) viewport edge. */
+      gap: var(--size-2) var(--size-4);
       flex-wrap: wrap;
       min-width: 0;
     }
@@ -238,31 +236,16 @@ const {
       align-items: baseline;
       flex-wrap: wrap;
       min-width: 0;
-      gap: var(--size-2); /* 8px between title and subtitle */
+      gap: var(--size-2);
     }
     .nav__title {
-      font-size: var(--size-5); /* 20px */
+      font-size: var(--size-5);
       letter-spacing: -0.4px;
-      /* Allow the title to wrap on very narrow phones instead of forcing the
-         (fixed) header wider than the viewport. */
       white-space: normal;
     }
     .nav__subtitle {
-      /* on the same line as the title, regular weight */
-      max-width: none;
-      max-height: none;
-      opacity: 1;
-      font-weight: 400;
-      font-size: var(--size-3-5); /* 14px */
-      letter-spacing: -0.28px;
+      display: none;
     }
-    /* Em dash separating the inline subtitle from the title. */
-    .nav__subtitle::before { content: '— '; }
-  }
-
-  /* Too small to fit the subtitle — drop it entirely (--bp-xs 480). */
-  @media (max-width: 480px) {
-    .nav__subtitle { display: none; }
   }
 </style>
 
