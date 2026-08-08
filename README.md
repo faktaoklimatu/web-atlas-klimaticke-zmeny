@@ -1,134 +1,103 @@
-Project Overview
-This is a lightweight, static website built with Astro and Decap CMS (Git-based CMS). The project is designed for a simple proof-of-concept deployment on GitHub Pages.
+# Atlas of Climate Change
 
-Objective
-Generate the minimal boilerplate and configuration required to run the project locally and prepare it for static build (npm run build) with dynamic content coming from Markdown files managed via Decap CMS.
+A visual guide to the science and data behind climate change, for
+[Fakta o Klimatu](https://faktaoklimatu.cz). Static site built with **Astro 7**
+and edited through **Decap CMS** (Git-based, GitHub backend). Deployed to GitHub
+Pages.
 
-Technical Specifications
-Framework: Astro (latest stable)
+## Requirements
 
-CMS: Decap CMS (administered via a static /admin route)
+- Node **>= 22.12**
+- npm
 
-Styling: Minimal, clean vanilla CSS (no heavy utility frameworks, just a global layout reset and basic typography).
+## Getting started
 
-Output: Static Export (output: 'export') for GitHub Pages deployment.
+```bash
+npm install
+npm run dev      # dev server at http://localhost:4321/  (base path "/")
+```
 
-Directory Structure to Generate
-Plaintext
-├── public/
-│   └── admin/
-│       ├── index.html        # Decap CMS Admin page
-│       └── config.yml        # Decap CMS configuration
-├── src/
-│   ├── content/
-│   │   └── config.ts         # Astro Content Collections schema
-│   │   └── subpages/         # Markdown content directory
-│   │       ├── example-1.md
-│   │       └── example-2.md
-│   ├── layouts/
-│   │   └── Layout.astro      # Global layout wrapper
-│   ├── pages/
-│   │   ├── index.astro       # Homepage (List of subpages)
-│   │   └── [slug].astro      # Dynamic subpage template
-│   └── styles/
-│       └── global.css        # Minimal CSS styling
-├── astro.config.mjs          # Astro configuration (configured for static export)
-├── package.json
-└── tsconfig.json
-Code Implementations to Generate
-1. Configuration Files
-astro.config.mjs
-JavaScript
-import { defineConfig } from 'astro/config';
+- `npm run dev` / `npm start` — local dev server. Runs with `BASE_PATH=/` so the
+  Decap admin and CMS image previews resolve at the root.
+- `npm run build` — production build into `dist/` (base `/AtlasOfClimateChange`).
+- `npm run preview` — serve the production build locally.
 
-export default defineConfig({
-  output: 'export',
-  // Note: For GitHub Pages deployment, the site property should point to the repository URL later.
-});
-public/admin/config.yml
-Configure Decap CMS to work with GitHub as the backend and map the subpages collection with the specified fields: Title, Subtitle, SVG Graphic, and Paragraph.
+The CMS admin lives at `/admin/` (`public/admin/`). With `local_backend: true`
+you can run it against the local file system during development.
 
-YAML
-backend:
-  name: github
-  repo: owner/repo-name # Will be replaced by user
-  branch: main
+## Project structure
 
-media_folder: "public/images"
-public_folder: "/images"
+```
+public/
+  admin/            Decap CMS (index.html + config.yml)
+  images/atlas/     Infographic images (managed by the CMS)
+src/
+  pages/
+    index.astro     Homepage feed (chapters → infographics, grid/list, TOC)
+    [slug].astro    Infographic detail page (dynamic)
+  layouts/Layout.astro
+  components/        Nav, FancyBar, Button, Tag, feed/*, icons/*
+  scripts/           Page JS as ES modules (scroll-spy, overlays, nav)
+  data/
+    chapters.ts      Chapter names / taglines / order (site structure, in code)
+    infographics.ts  Feed assembly from the CMS collection
+    ui.ts            All fixed UI microcopy (labels, buttons, aria-labels)
+    site.json        CMS-managed nav menu + language switcher
+  content/infographics/   Markdown content (Decap collection)
+  content.config.ts       Collection schema
+  styles/            tokens.css, typography.css, global.css
+```
 
-collections:
-  - name: "subpages"
-    label: "Subpages"
-    folder: "src/content/subpages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Graphic (SVG)", name: "graphic", widget: "file", file_extensions: ["svg"] }
-      - { label: "Body Paragraph", name: "body", widget: "text" }
-public/admin/index.html
-HTML
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  </body>
-</html>
-2. Content & Schema
-src/content/config.ts
-Define the Astro content collection schema matching the Decap CMS fields.
+Deployment is automated: pushing to `main`/`master` runs
+`.github/workflows/deploy.yml`, which builds the site and publishes it to
+GitHub Pages.
 
-TypeScript
-import { z, defineCollection } from 'astro:content';
+## Editing content
 
-const subpagesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    subtitle: z.string(),
-    graphic: z.string(), // Path to the SVG file
-  }),
-});
+- **Infographics** — CMS *Infographics* collection (`src/content/infographics/`).
+- **Navigation & languages** — CMS *Settings → Navigation & Languages*
+  (`src/data/site.json`). The language switcher and header menu read from here.
+- **Chapter names / taglines** — `src/data/chapters.ts` (in code, rarely change).
+- **Fixed interface text** (labels, buttons, aria-labels) — `src/data/ui.ts`.
 
-export const collections = {
-  'subpages': subpagesCollection,
-};
-src/content/subpages/example-1.md (Generate code)
-Create a mock Markdown file with required frontmatter parameters and an abstract paragraph body. Include a placeholder path for the graphic field.
+## Creating a new language version (fork)
 
-src/content/subpages/example-2.md (Generate code)
-Create a second mock Markdown file to verify dynamic routing works.
+Each language is its **own repository and its own GitHub Pages deployment**. To
+spin up a new mutation on your GitHub account:
 
-3. Layouts & Styles
-src/styles/global.css
-Provide minimal fallback CSS. Standard system sans-serif font stack, a container class maxed out at 800px, basic link styling, and simple formatting for images/SVGs to ensure responsiveness.
+1. **Fork this repository** to your GitHub account (or use *Use this template* /
+   create a new repo from a copy). Give it a clear name, e.g.
+   `AtlasOfClimateChange-DE`.
 
-src/layouts/Layout.astro
-A basic HTML5 boilerplate wrapper accepting title as a prop and rendering a global <slot />. Imports global.css.
+2. **Point the build at your repo.** In `astro.config.mjs`:
+   - `site` → `https://<your-user>.github.io`
+   - the default `base` → `/<your-repo-name>` (must match the repo name, since
+     GitHub Pages serves a project site at `/<repo-name>/`). If you deploy to a
+     custom domain at the root, set `base` to `/` instead.
 
-4. Pages & Routing
-src/pages/index.astro
-Query all files from the subpages collection using getCollection('subpages').
+3. **Point the CMS at your repo.** In `public/admin/config.yml`:
+   - `backend.repo` → `<your-user>/<your-repo-name>`
+   - `backend.branch` → your default branch (`main` or `master`)
+   - `backend.base_url` → your own Decap OAuth proxy. GitHub login for the CMS
+     needs a small OAuth backend (e.g. a Cloudflare Worker) tied to a **GitHub
+     OAuth app you create**. Until it's set up, edit content locally with
+     `local_backend: true`, or commit Markdown directly on GitHub.
 
-Render a clean HTML page with a heading and an unordered list (<ul>) containing links to all existing subpages.
+4. **Translate.** Replace the English text with your language:
+   - `src/data/ui.ts` — all interface strings.
+   - `src/data/chapters.ts` — chapter names and taglines.
+   - `src/content/infographics/*.md` — titles, leads, and bodies (and swap in
+     translated images under `public/images/atlas/` if needed).
+   - `src/data/site.json` — the header menu, and the **language switcher links**:
+     add an entry pointing back to every other language version so visitors can
+     move between them.
+   - `src/layouts/Layout.astro` — set `<html lang="…">` to your language code.
 
-src/pages/[slug].astro
-Implement getStaticPaths() to generate static routes for all collection entries.
+5. **Enable GitHub Pages.** In the fork's *Settings → Pages*, set the source to
+   **GitHub Actions**. Pushing to the default branch then builds and deploys via
+   the included workflow; your site appears at
+   `https://<your-user>.github.io/<your-repo-name>/`.
 
-Render a single subpage structure using the template layout:
-
-<h1> Title
-
-<h2> Subtitle
-
-<img> Graphic rendering the SVG from frontmatter.
-
-<p> The paragraph body.
+6. **Cross-link the versions.** Once live, add the new site's URL to the
+   `languages` list of every other language version (via their CMS *Settings →
+   Navigation & Languages*) so the switcher lists it everywhere.
