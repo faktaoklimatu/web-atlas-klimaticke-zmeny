@@ -8,6 +8,7 @@ import FacebookIcon from '../icons/FacebookIcon.astro';
 import InstagramIcon from '../icons/InstagramIcon.astro';
 import XIcon from '../icons/XIcon.astro';
 import LinkedInIcon from '../icons/LinkedInIcon.astro';
+import { ui } from '../../data/ui';
 
 interface Sibling {
   code: string;
@@ -24,28 +25,25 @@ const { siblings = [] } = Astro.props;
 <footer class="footer">
   <div class="footer__top">
     <div class="footer__social">
-      <p class="footer__label">Follow us on social media</p>
+      <p class="footer__label">{ui.footer.followUs}</p>
       <div class="footer__icons">
-        <a href="#" aria-label="Facebook"><FacebookIcon size={22} /></a>
-        <a href="#" aria-label="Instagram"><InstagramIcon size={22} /></a>
-        <a href="#" aria-label="X"><XIcon size={22} /></a>
-        <a href="#" aria-label="LinkedIn"><LinkedInIcon size={22} /></a>
+        <a href="#" aria-label={ui.footer.social.facebook}><FacebookIcon size={22} /></a>
+        <a href="#" aria-label={ui.footer.social.instagram}><InstagramIcon size={22} /></a>
+        <a href="#" aria-label={ui.footer.social.x}><XIcon size={22} /></a>
+        <a href="#" aria-label={ui.footer.social.linkedin}><LinkedInIcon size={22} /></a>
       </div>
     </div>
 
     <div class="footer__sponsors">
-      <p class="footer__label">Sponsors</p>
+      <p class="footer__label">{ui.footer.sponsorsLabel}</p>
       <div class="footer__logos">
-        <span>LOGO</span>
-        <span>LOGO</span>
-        <span>LOGO</span>
-        <span>LOGO</span>
+        {Array.from({ length: 4 }).map(() => <span>{ui.footer.sponsorPlaceholder}</span>)}
       </div>
     </div>
   </div>
 
   <div class="footer__bottom">
-    <div class="footer__lang" role="group" aria-label="Language">
+    <div class="footer__lang" role="group" aria-label={ui.footer.languageLabel}>
       {
         siblings.map((s) => (
           <a class="footer__lang-item type-mono" href={s.url}>
@@ -57,9 +55,9 @@ const { siblings = [] } = Astro.props;
     </div>
 
     <div class="footer__legal">
-      <p>© 2026 Otevřená data o klimatu, z.ú.</p>
-      <p><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
-      <p><a href="mailto:info@faktaoklimatu.cz">info@faktaoklimatu.cz</a></p>
+      <p>{ui.footer.copyright}</p>
+      <p><a href="https://creativecommons.org/licenses/by/4.0/">{ui.footer.license}</a></p>
+      <p><a href={`mailto:${ui.footer.email}`}>{ui.footer.email}</a></p>
     </div>
   </div>
 </footer>

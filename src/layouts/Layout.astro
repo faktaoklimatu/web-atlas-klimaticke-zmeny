@@ -8,11 +8,9 @@ import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
-  /** Render the page edge-to-edge without the centred .container wrapper. */
-  fullWidth?: boolean;
 }
 
-const { title, fullWidth = false } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -25,14 +23,6 @@ const { title, fullWidth = false } = Astro.props;
     <ClientRouter />
   </head>
   <body>
-    {
-      fullWidth ? (
-        <slot />
-      ) : (
-        <div class="container">
-          <slot />
-        </div>
-      )
-    }
+    <slot />
   </body>
 </html>

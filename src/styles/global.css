@@ -17,7 +17,6 @@ figure {
 
 /* --- Base typography --- */
 :root {
-  --max-width: 800px;
   --text: #1a1a1a;
   --muted: #555;
   --link: #2563eb;
@@ -34,12 +33,6 @@ html {
 
 body {
   padding: 2rem 1rem;
-}
-
-/* --- Layout container --- */
-.container {
-  max-width: var(--max-width);
-  margin-inline: auto;
 }
 
 /* --- Headings --- */

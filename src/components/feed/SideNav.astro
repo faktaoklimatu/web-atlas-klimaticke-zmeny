@@ -7,6 +7,7 @@
  * the current infographic shows only in list view.
  */
 import type { FeedChapter } from '../../data/infographics';
+import { ui } from '../../data/ui';
 
 interface Props {
   chapters: FeedChapter[];
@@ -14,7 +15,7 @@ interface Props {
 const { chapters } = Astro.props;
 ---
 
-<nav class="sidenav" aria-label="Table of contents">
+<nav class="sidenav" aria-label={ui.feed.tocLabel}>
   {
     chapters.map((chapter, i) => (
       <div class:list={['chapter', { 'is-active': i === 0 }]} data-chapter={chapter.id}>

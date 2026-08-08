@@ -13,6 +13,7 @@ import { chapterName } from '../data/chapters';
 import { getFlatInfographics } from '../data/infographics';
 import { imgUrl } from '../utils/img';
 import site from '../data/site.json';
+import { ui } from '../data/ui';
 
 export async function getStaticPaths() {
   const flat = await getFlatInfographics();
@@ -61,7 +62,7 @@ const hasUnderlyingData = hasDataLinks || citation;
 const href = (slug: string) => `${base}/${slug}/`;
 ---
 
-<Layout title={`${title} — Atlas of Climate Change`} fullWidth>
+<Layout title={`${title} — ${ui.siteTitle}`}>
   <FancyBar />
   <Nav compact menuLinks={site.menuLinks} siblings={site.languages} />
 
@@ -84,31 +85,31 @@ const href = (slug: string) => `${base}/${slug}/`;
           <div class="detail__sidebar-sticky">
             <div class="meta" data-meta-root>
               <section class="meta__block" data-meta="download">
-                <h2 class="meta__label type-eyebrow">Download</h2>
+                <h2 class="meta__label type-eyebrow">{ui.detail.download}</h2>
                 <ButtonGroup direction="row">
                   {pdfHref && (
-                    <Button variant="text" tone="secondary" href={`${base}${pdfHref}`}>PDF</Button>
+                    <Button variant="text" tone="secondary" href={`${base}${pdfHref}`}>{ui.detail.pdf}</Button>
                   )}
-                  <Button variant="text" tone="secondary" href={imgSrc}>PNG</Button>
+                  <Button variant="text" tone="secondary" href={imgSrc}>{ui.detail.png}</Button>
                 </ButtonGroup>
               </section>
 
               {hasUnderlyingData && (
                 <section class="meta__block" data-meta="data">
-                  <h2 class="meta__label type-eyebrow">Underlying data</h2>
+                  <h2 class="meta__label type-eyebrow">{ui.detail.underlyingData}</h2>
                   <div class="meta__data">
                     {hasDataLinks && (
                       <ButtonGroup direction="column">
                         {tableUrl && (
                           <Button variant="text" tone="secondary" href={tableUrl}>
                             <ExternalLinkIcon slot="icon-left" size={16} />
-                            Our data table
+                            {ui.detail.dataTable}
                           </Button>
                         )}
                         {sourceUrl && (
                           <Button variant="text" tone="secondary" href={sourceUrl}>
                             <CodeIcon slot="icon-left" size={16} />
-                            Data source
+                            {ui.detail.dataSource}
                           </Button>
                         )}
                       </ButtonGroup>
@@ -120,7 +121,7 @@ const href = (slug: string) => `${base}/${slug}/`;
 
               {related.length > 0 && (
                 <section class="meta__block" data-meta="related">
-                  <h2 class="meta__label type-eyebrow">More articles</h2>
+                  <h2 class="meta__label type-eyebrow">{ui.detail.moreArticles}</h2>
                   <div class="meta__related">
                     {related.map((r) => (
                       <RelatedCard title={r.title} image={r.image} href={href(r.slug)} />

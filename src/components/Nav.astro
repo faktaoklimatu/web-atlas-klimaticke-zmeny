@@ -8,6 +8,7 @@
  * entries come from `siblings` (later wired to the CMS sibling list).
  */
 import GlobeIcon from './icons/GlobeIcon.astro';
+import { ui } from '../data/ui';
 
 interface Sibling {
   code: string;
@@ -45,11 +46,11 @@ const {
 >
   <div class="nav__inner">
     <a class="nav__brand" href={brandHref}>
-      <span class="nav__title">Atlas of climate change</span>
-      <span class="nav__subtitle">A Visual Guide to the Science and Data</span>
+      <span class="nav__title">{ui.nav.title}</span>
+      <span class="nav__subtitle">{ui.nav.subtitle}</span>
     </a>
 
-    <nav class="nav__links" aria-label="Primary">
+    <nav class="nav__links" aria-label={ui.nav.primaryLabel}>
       {
         menuLinks.map((l) => (
           <a class="nav__link type-nav-link" href={l.url}>{l.label}</a>
@@ -60,7 +61,7 @@ const {
         <button
           type="button"
           class="nav__lang-toggle"
-          aria-label="Change language"
+          aria-label={ui.nav.changeLanguage}
           aria-expanded="false"
           aria-haspopup="true"
           data-lang-toggle

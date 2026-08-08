@@ -6,6 +6,7 @@
  */
 import ListIcon from '../icons/ListIcon.astro';
 import GridIcon from '../icons/GridIcon.astro';
+import { ui } from '../../data/ui';
 
 interface Props {
   initial?: 'grid' | 'list';
@@ -14,7 +15,7 @@ interface Props {
 const { initial = 'grid', class: className } = Astro.props;
 ---
 
-<div class:list={['viewtoggle', className]} role="group" aria-label="View mode">
+<div class:list={['viewtoggle', className]} role="group" aria-label={ui.feed.viewMode}>
   <button
     type="button"
     class:list={['viewtoggle__btn', 'type-mono', { 'is-active': initial === 'list' }]}
@@ -22,7 +23,7 @@ const { initial = 'grid', class: className } = Astro.props;
     aria-pressed={initial === 'list' ? 'true' : 'false'}
   >
     <ListIcon size={16} />
-    <span>List</span>
+    <span>{ui.feed.list}</span>
   </button>
   <button
     type="button"
@@ -31,7 +32,7 @@ const { initial = 'grid', class: className } = Astro.props;
     aria-pressed={initial === 'grid' ? 'true' : 'false'}
   >
     <GridIcon size={16} />
-    <span>Grid</span>
+    <span>{ui.feed.grid}</span>
   </button>
 </div>
 

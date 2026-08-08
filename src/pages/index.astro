@@ -12,13 +12,14 @@ import ListIcon from '../components/icons/ListIcon.astro';
 import CloseIcon from '../components/icons/CloseIcon.astro';
 import { getChapters } from '../data/infographics';
 import site from '../data/site.json';
+import { ui } from '../data/ui';
 
 const chapters = await getChapters();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const detailHref = (slug: string) => `${base}/${slug}/`;
 ---
 
-<Layout title="Atlas of Climate Change" fullWidth>
+<Layout title={ui.siteTitle}>
   <FancyBar />
   <Nav menuLinks={site.menuLinks} siblings={site.languages} />
 
@@ -54,7 +55,7 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
               aria-expanded="false"
             >
               <ListIcon size={16} />
-              <span>Contents</span>
+              <span>{ui.feed.contents}</span>
             </button>
           </div>
 
@@ -127,17 +128,17 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
         class="toc-overlay__panel"
         role="dialog"
         aria-modal="true"
-        aria-label="Contents"
+        aria-label={ui.feed.contents}
         tabindex="-1"
         data-toc-panel
       >
         <div class="toc-overlay__header">
-          <span class="toc-overlay__title type-eyebrow">Contents</span>
+          <span class="toc-overlay__title type-eyebrow">{ui.feed.contents}</span>
           <button
             type="button"
             class="toc-overlay__close"
             data-toc-close
-            aria-label="Close contents"
+            aria-label={ui.feed.closeContents}
           >
             <CloseIcon size={20} />
           </button>
