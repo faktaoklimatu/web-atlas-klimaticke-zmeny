@@ -114,6 +114,28 @@
     Roboto, Helvetica, Arial, sans-serif;
   --font-mono: 'Geist Mono Variable', 'Geist Mono', ui-monospace, SFMono-Regular,
     Menlo, Consolas, monospace;
+
+  /* --- Breakpoints — single source of truth for the whole site ---
+     A conventional min-width scale (phone → large phone → tablet → large
+     tablet/small desktop → desktop). CSS @media rules can't read custom
+     properties, so the literal px values are repeated in media queries with
+     the token named in a trailing comment (e.g. `@media (max-width: 1024px)`
+     is `--bp-lg`). Keep the two in sync. JS reads these via
+     getComputedStyle() so matchMedia() stays driven by the same numbers.
+
+       --bp-xs   480px   large phone
+       --bp-sm   640px   small tablet (portrait)
+       --bp-md   768px   tablet
+       --bp-lg  1024px   large tablet / small desktop  ← primary layout switch
+       --bp-xl  1280px   desktop (matches the 1280 centre column)
+
+     `--bp-lg` is the primary switch: at/below it the feed + detail sidebars
+     restructure and the nav collapses to its fixed compact height. */
+  --bp-xs: 480px;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
 }
 
 html {

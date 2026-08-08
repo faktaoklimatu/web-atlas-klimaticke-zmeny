@@ -75,4 +75,15 @@ const src = imgUrl(image);
     max-width: none;
     display: block;
   }
+
+  /* Hover (pointer devices only — never sticks on touch). */
+  @media (hover: hover) {
+    .acard {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .acard:hover {
+      border-color: var(--gray-400);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
+    }
+  }
 </style>

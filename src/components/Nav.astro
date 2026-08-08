@@ -89,7 +89,7 @@ const {
        every size below interpolates between the two states via this var. */
     --nav-progress: 0;
     position: fixed;
-    top: var(--size-5); /* 20px — sits below the FancyBar */
+    top: var(--size-3-5); /* 14px — sits below the FancyBar */
     left: 0;
     right: 0;
     z-index: 90;
@@ -213,6 +213,57 @@ const {
   .nav__lang-item:hover { background: var(--gray-50); }
   .nav__lang-flag { font-size: 14px; }
   .nav__lang-code { padding: 0 var(--size-1); }
+
+  /* --- Small screens: fixed compact bar (--bp-lg 1024) ---
+     The bar stops interpolating with scroll and keeps one small height. The
+     subtitle joins the title on the same line in regular weight. Literal font
+     sizes below win over the base calc()s regardless of --nav-progress, so the
+     feed's scroll wiring can keep running harmlessly. */
+  @media (max-width: 1024px) {
+    .nav {
+      /* fixed small height — no more hero → compact travel; side padding
+         stays at the page gutter (--size-9 = 36) like every other section */
+      padding: var(--size-3) var(--size-9); /* 12px 36px */
+    }
+    .nav__inner {
+      align-items: center;
+      gap: var(--size-2) var(--size-4); /* row 8, column 16 */
+      /* If the brand + links can't fit on one line, the links wrap below
+         instead of overflowing past the (fixed, unclipped) viewport edge. */
+      flex-wrap: wrap;
+      min-width: 0;
+    }
+    .nav__brand {
+      flex-direction: row;
+      align-items: baseline;
+      flex-wrap: wrap;
+      min-width: 0;
+      gap: var(--size-2); /* 8px between title and subtitle */
+    }
+    .nav__title {
+      font-size: var(--size-5); /* 20px */
+      letter-spacing: -0.4px;
+      /* Allow the title to wrap on very narrow phones instead of forcing the
+         (fixed) header wider than the viewport. */
+      white-space: normal;
+    }
+    .nav__subtitle {
+      /* on the same line as the title, regular weight */
+      max-width: none;
+      max-height: none;
+      opacity: 1;
+      font-weight: 400;
+      font-size: var(--size-3-5); /* 14px */
+      letter-spacing: -0.28px;
+    }
+    /* Em dash separating the inline subtitle from the title. */
+    .nav__subtitle::before { content: '— '; }
+  }
+
+  /* Too small to fit the subtitle — drop it entirely (--bp-xs 480). */
+  @media (max-width: 480px) {
+    .nav__subtitle { display: none; }
+  }
 </style>
 
 <script>

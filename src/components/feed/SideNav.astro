@@ -67,6 +67,8 @@ const { chapters } = Astro.props;
     transition: grid-template-rows 0.35s ease;
   }
   .chapter.is-active .chapter__list-wrap { grid-template-rows: 1fr; }
+  /* Inside the mobile Contents overlay every chapter is expanded. */
+  :global(.toc-overlay) .chapter__list-wrap { grid-template-rows: 1fr; }
   .chapter__list {
     overflow: hidden;
     min-height: 0;

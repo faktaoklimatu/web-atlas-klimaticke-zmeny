@@ -83,9 +83,9 @@
 .type-tag {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: normal;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.28px;
   text-transform: uppercase;
 }
 

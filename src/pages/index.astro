@@ -8,6 +8,8 @@ import ViewToggle from '../components/feed/ViewToggle.astro';
 import ArticleCard from '../components/feed/ArticleCard.astro';
 import ArticleSmall from '../components/feed/ArticleSmall.astro';
 import SiteFooter from '../components/feed/SiteFooter.astro';
+import ListIcon from '../components/icons/ListIcon.astro';
+import CloseIcon from '../components/icons/CloseIcon.astro';
 import { getChapters } from '../data/infographics';
 import site from '../data/site.json';
 
@@ -40,6 +42,22 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
         </aside>
 
         <div class="feed__content">
+          <!-- Small screens (≤ --bp-lg): sticky toolbar holding the Contents
+               button (opens the TOC overlay) and the grid/list toggle, which
+               JS relocates here from .feed__toolbar. -->
+          <div class="feed__mobile-bar" data-mobile-bar>
+            <button
+              type="button"
+              class="feed__toc-btn type-mono"
+              data-toc-open
+              aria-haspopup="dialog"
+              aria-expanded="false"
+            >
+              <ListIcon size={16} />
+              <span>Contents</span>
+            </button>
+          </div>
+
           <div class="feed__toolbar"><ViewToggle initial="list" /></div>
 
           <!-- Grid view -->
@@ -99,18 +117,50 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
     </div>
 
     <div class="feed__spacer"></div>
+
+    <!-- TOC overlay (small screens): slides up from the bottom, always leaving
+         a top gap so the nav stays visible. JS moves the SideNav into its body.
+         Kept inside .feed so the scroll-spy still finds .sidenav after the move. -->
+    <div class="toc-overlay" data-toc-overlay hidden>
+      <div class="toc-overlay__backdrop" data-toc-close></div>
+      <div
+        class="toc-overlay__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Contents"
+        tabindex="-1"
+        data-toc-panel
+      >
+        <div class="toc-overlay__header">
+          <span class="toc-overlay__title type-eyebrow">Contents</span>
+          <button
+            type="button"
+            class="toc-overlay__close"
+            data-toc-close
+            aria-label="Close contents"
+          >
+            <CloseIcon size={20} />
+          </button>
+        </div>
+        <div class="toc-overlay__body" data-toc-body></div>
+      </div>
+    </div>
   </div>
 </Layout>
 
 <style is:global>
   /* This page is full-bleed — drop the demo body padding. */
   body { padding: 0; }
+
+  /* Scroll lock while the TOC overlay is open — only the overlay scrolls. */
+  html.is-toc-locked,
+  html.is-toc-locked body { overflow: hidden; }
 </style>
 
 <style>
   .feed {
-    --feed-top: 280px; /* clears the fixed FancyBar + hero nav on load */
-    --sticky-top: 110px; /* clears the collapsed nav while scrolling */
+    --feed-top: 274px; /* clears the fixed FancyBar (14) + hero nav on load */
+    --sticky-top: 104px; /* clears the collapsed nav while scrolling */
     position: relative;
     display: flex;
     align-items: stretch;
@@ -193,6 +243,8 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   .section__title {
     margin: 0;
     color: var(--text-primary);
+    font-size: 38px; /* smaller than the 48px type-display default */
+    letter-spacing: -0.76px;
   }
 
   .section__grid {
@@ -206,6 +258,138 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
     display: flex;
     flex-direction: column;
     gap: var(--size-10); /* 40px */
+  }
+
+  /* --- Small-screen chrome (hidden on desktop) --- */
+  .feed__mobile-bar { display: none; }
+  .toc-overlay[hidden] { display: none; }
+
+  /* Contents button (mobile bar). */
+  .feed__toc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size-1); /* 4px */
+    min-height: var(--size-9); /* 36px */
+    padding: var(--size-1-5) var(--size-3); /* 6px 12px */
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--size-1-5); /* 6px */
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+  .feed__toc-btn :global(svg) { display: block; }
+  .feed__toc-btn span { padding: 0 var(--size-1); }
+  .feed__toc-btn:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--blue-600);
+  }
+
+  /* --- TOC overlay (bottom sheet) --- */
+  .toc-overlay { position: fixed; inset: 0; z-index: 95; }
+  .toc-overlay__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .toc-overlay.is-open .toc-overlay__backdrop { opacity: 1; }
+  .toc-overlay__panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Always leave a gap at the top so the fixed nav stays visible. */
+    max-height: calc(100dvh - var(--toc-overlay-top, 84px));
+    display: flex;
+    flex-direction: column;
+    /* The overlay holds the TOC — i.e. the sidebar — so it takes the sidebar
+       tint (blue-gray-200), matching the desktop sidebar everywhere. */
+    background: var(--blue-gray-200);
+    border-top-left-radius: var(--size-4);
+    border-top-right-radius: var(--size-4);
+    box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.18);
+    transform: translateY(100%);
+    transition: transform 0.34s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .toc-overlay.is-open .toc-overlay__panel { transform: translateY(0); }
+  .toc-overlay__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-4);
+    padding: var(--size-4) var(--size-5);
+    border-bottom: 1px solid var(--blue-gray-300);
+  }
+  .toc-overlay__title { margin: 0; color: var(--text-primary); }
+  .toc-overlay__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size-9);
+    height: var(--size-9);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: var(--size-1);
+  }
+  .toc-overlay__close:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--blue-600);
+  }
+  .toc-overlay__body {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: var(--size-5);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toc-overlay__panel,
+    .toc-overlay__backdrop { transition: none; }
+  }
+
+  /* =====================================================================
+     Small screens (≤ --bp-lg 1024): single column. The sticky TOC sidebar is
+     replaced by a sticky mobile toolbar (Contents + view toggle) and a
+     bottom-sheet overlay; the SideNav + ViewToggle relocate via JS.
+     ===================================================================== */
+  @media (max-width: 1024px) {
+    .feed {
+      --feed-top: 100px; /* clears the fixed compact nav (FancyBar 14 + nav) */
+      --sticky-top: 72px; /* section scroll offset under the fixed nav */
+    }
+
+    /* Uniform background — no sidebar tint band. */
+    .feed-bg__center { grid-template-columns: 1fr; }
+    .feed-bg__col--sidebar { display: none; }
+    .feed-bg__fill--left { background: var(--blue-gray-100); }
+
+    .feed__main { grid-template-columns: 1fr; }
+    .feed__sidebar-col { display: none; }
+
+    /* Single column: the 36px spacer is the ONLY side gutter (same as the
+       nav), so the content itself carries no side padding — text lands at the
+       same inset as the navigation. */
+    .feed__content { padding: var(--feed-top) 0 0 0; }
+
+    /* The absolute desktop toolbar is retired; its toggle moves to the bar. */
+    .feed__toolbar { display: none; }
+
+    /* Mobile toolbar: Contents button + relocated toggle, in normal flow. */
+    .feed__mobile-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--size-3);
+      margin-bottom: var(--size-6);
+    }
+  }
+
+  /* Phone: two columns in grid view. */
+  @media (max-width: 640px) {
+    .section__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 </style>
 
@@ -365,4 +549,111 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
 
   // Runs on the first load and after every view-transition navigation.
   document.addEventListener('astro:page-load', initFeed);
+</script>
+
+<script>
+  // Small-screen chrome (≤ --bp-lg): relocate the sticky TOC sidebar into a
+  // bottom-sheet overlay opened from a sticky "Contents" button, and move the
+  // grid/list toggle from the (retired) absolute desktop toolbar into the same
+  // sticky mobile bar. The SideNav + ViewToggle are physically moved so their
+  // existing scroll-spy / toggle wiring (bound in initFeed) keeps working.
+  function initFeedOverlay() {
+    const feed = document.querySelector<HTMLElement>('.feed');
+    if (!feed) return;
+    const overlay = feed.querySelector<HTMLElement>('[data-toc-overlay]');
+    const overlayBody = feed.querySelector<HTMLElement>('[data-toc-body]');
+    const overlayPanel = feed.querySelector<HTMLElement>('[data-toc-panel]');
+    const mobileBar = feed.querySelector<HTMLElement>('[data-mobile-bar]');
+    const openBtn = feed.querySelector<HTMLElement>('[data-toc-open]');
+    if (!overlay || !overlayBody || !mobileBar || !openBtn) return;
+
+    const sidenav = feed.querySelector<HTMLElement>('.sidenav');
+    const sidebarSticky = feed.querySelector<HTMLElement>('.feed__sidebar-sticky');
+    const toggle = feed.querySelector<HTMLElement>('.viewtoggle');
+    const desktopToolbar = feed.querySelector<HTMLElement>('.feed__toolbar');
+
+    const bp =
+      getComputedStyle(document.documentElement).getPropertyValue('--bp-lg').trim() ||
+      '1024px';
+    const mq = window.matchMedia(`(max-width: ${bp})`);
+
+    // --- Open / close (bottom-sheet animation + page scroll lock) ---
+    let closeTimer: ReturnType<typeof setTimeout>;
+    function openOverlay() {
+      clearTimeout(closeTimer);
+      overlay!.hidden = false;
+      // Next frame so the panel transitions up from translateY(100%).
+      requestAnimationFrame(() => overlay!.classList.add('is-open'));
+      document.documentElement.classList.add('is-toc-locked');
+      openBtn!.setAttribute('aria-expanded', 'true');
+      // Move focus into the dialog so keyboard Tab lands inside it (and not
+      // on the page behind). The panel is tabindex="-1"; the next Tab then
+      // reaches the close button and the TOC links.
+      overlayPanel?.focus();
+    }
+    function closeOverlay() {
+      if (overlay!.hidden) return;
+      overlay!.classList.remove('is-open');
+      document.documentElement.classList.remove('is-toc-locked');
+      openBtn!.setAttribute('aria-expanded', 'false');
+      // Return focus to the opener, but only if it's still inside the overlay
+      // (don't yank it on a programmatic close from a resize).
+      if (overlay!.contains(document.activeElement)) openBtn!.focus();
+      // Keep it in the DOM until the slide-down finishes, then hide it.
+      closeTimer = setTimeout(() => {
+        overlay!.hidden = true;
+      }, 360);
+    }
+
+    openBtn.addEventListener('click', openOverlay);
+    overlay
+      .querySelectorAll('[data-toc-close]')
+      .forEach((el) => el.addEventListener('click', closeOverlay));
+
+    // A TOC click both scrolls (initFeed's handler) and closes the overlay.
+    // Capture phase runs before that bubble handler, so the page scroll is
+    // already unlocked by the time it calls scrollIntoView.
+    overlayBody.addEventListener(
+      'click',
+      (event) => {
+        if ((event.target as HTMLElement | null)?.closest('[data-slug], [data-chapter-link]'))
+          closeOverlay();
+      },
+      true
+    );
+
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closeOverlay();
+    };
+    document.addEventListener('keydown', onKey);
+
+    // --- Relocate SideNav + ViewToggle on breakpoint changes ---
+    let compact: boolean | null = null;
+    function apply() {
+      if (mq.matches === compact) return;
+      compact = mq.matches;
+      if (compact) {
+        if (sidenav) overlayBody!.appendChild(sidenav);
+        if (toggle) mobileBar!.appendChild(toggle);
+      } else {
+        if (sidenav && sidebarSticky) sidebarSticky.appendChild(sidenav);
+        if (toggle && desktopToolbar) desktopToolbar.appendChild(toggle);
+        closeOverlay();
+      }
+    }
+    apply();
+    mq.addEventListener('change', apply);
+
+    document.addEventListener(
+      'astro:before-swap',
+      () => {
+        mq.removeEventListener('change', apply);
+        document.removeEventListener('keydown', onKey);
+        document.documentElement.classList.remove('is-toc-locked');
+      },
+      { once: true }
+    );
+  }
+
+  document.addEventListener('astro:page-load', initFeedOverlay);
 </script>

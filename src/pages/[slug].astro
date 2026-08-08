@@ -82,8 +82,8 @@ const href = (slug: string) => `${base}/${slug}/`;
       <div class="detail__main">
         <aside class="detail__sidebar-col">
           <div class="detail__sidebar-sticky">
-            <div class="meta">
-              <section class="meta__block">
+            <div class="meta" data-meta-root>
+              <section class="meta__block" data-meta="download">
                 <h2 class="meta__label type-eyebrow">Download</h2>
                 <ButtonGroup direction="row">
                   {pdfHref && (
@@ -94,7 +94,7 @@ const href = (slug: string) => `${base}/${slug}/`;
               </section>
 
               {hasUnderlyingData && (
-                <section class="meta__block">
+                <section class="meta__block" data-meta="data">
                   <h2 class="meta__label type-eyebrow">Underlying data</h2>
                   <div class="meta__data">
                     {hasDataLinks && (
@@ -119,7 +119,7 @@ const href = (slug: string) => `${base}/${slug}/`;
               )}
 
               {related.length > 0 && (
-                <section class="meta__block">
+                <section class="meta__block" data-meta="related">
                   <h2 class="meta__label type-eyebrow">More articles</h2>
                   <div class="meta__related">
                     {related.map((r) => (
@@ -146,11 +146,19 @@ const href = (slug: string) => `${base}/${slug}/`;
             </div>
           </div>
 
+          <!-- Small screens (≤ --bp-lg): the sidebar's Download + Underlying
+               data blocks relocate here, directly under the infographic. -->
+          <div class="detail__inline-meta" data-inline-meta></div>
+
           <div class="detail__body">
             <div class="detail__prose">
               <Content />
             </div>
           </div>
+
+          <!-- Small screens: the sidebar's More articles block relocates here,
+               after the end of the article. -->
+          <div class="detail__end-meta" data-end-meta></div>
         </div>
       </div>
     </div>
@@ -170,10 +178,15 @@ const href = (slug: string) => `${base}/${slug}/`;
 
 <style>
   .detail {
-    --top-clear: 89px; /* FancyBar 20 + compact nav 69 */
+    --top-clear: 83px; /* FancyBar 14 + compact nav 69 */
     /* Pin the sidebar exactly at its natural offset (col padding-top below),
        so it's fixed from the first scrolled pixel — no sticky "settle" travel. */
     --sticky-top: calc(var(--top-clear) + var(--size-12)); /* 89 + 48 = 137px */
+    /* Distance from the centre column's edge to the viewport edge — i.e. the
+       spacer width. Full-bleed pseudo-elements extend by exactly this instead
+       of a whole -100vw (which would overflow ~a full viewport and, in touch
+       mode, stretch the fixed nav + background layer past the visible edge). */
+      --edge: max(var(--size-9), calc((100vw - 1280px) / 2));
     position: relative;
     display: flex;
     align-items: stretch;
@@ -190,7 +203,9 @@ const href = (slug: string) => `${base}/${slug}/`;
     display: flex;
     pointer-events: none;
   }
-  .detail-bg__fill { flex: 1 1 0; min-width: var(--size-4); }
+  /* min-width matches the nav's 36px side padding (--size-9) so the content
+     column lines up with the navigation instead of sitting closer to the edge. */
+  .detail-bg__fill { flex: 1 1 0; min-width: var(--size-9); }
   .detail-bg__fill--left { background: var(--blue-gray-200); }
   .detail-bg__fill--right { background: var(--blue-gray-100); }
   .detail-bg__center {
@@ -202,7 +217,7 @@ const href = (slug: string) => `${base}/${slug}/`;
   .detail-bg__col--sidebar { background: var(--blue-gray-200); }
   .detail-bg__col--content { background: var(--blue-gray-100); }
 
-  .detail__spacer { flex: 1 1 0; min-width: var(--size-4); }
+  .detail__spacer { flex: 1 1 0; min-width: var(--size-9); } /* matches nav padding */
 
   .detail__center {
     position: relative;
@@ -284,7 +299,7 @@ const href = (slug: string) => `${base}/${slug}/`;
     content: '';
     position: absolute;
     z-index: -1;
-    inset: 0 -100vw 0 0;
+    inset: 0 calc(-1 * var(--edge)) 0 0; /* bleed right, exactly to the edge */
     background: var(--white);
   }
   .detail__hero-inner {
@@ -399,4 +414,128 @@ const href = (slug: string) => `${base}/${slug}/`;
     text-underline-position: from-font;
   }
   .detail__prose :global(a:hover) { color: var(--blue-600); }
+
+  /* Mount points for the relocated sidebar blocks — desktop keeps them empty
+     and hidden; JS reveals + fills them at ≤ --bp-lg (see the <script>). */
+  .detail__inline-meta,
+  .detail__end-meta { display: none; }
+
+  /* =====================================================================
+     Small screens (≤ --bp-lg 1024): single column. The sidebar's Download +
+     Underlying data blocks move directly under the infographic, and More
+     articles moves to the end of the article. See the <script>.
+     ===================================================================== */
+  @media (max-width: 1024px) {
+    /* Uniform background — no sidebar tint band. */
+    .detail-bg__center { grid-template-columns: 1fr; }
+    .detail-bg__col--sidebar { display: none; }
+    .detail-bg__fill--left { background: var(--blue-gray-100); }
+
+    .detail__main { grid-template-columns: 1fr; }
+    .detail__sidebar-col { display: none; }
+
+    /* Single column: the 36px spacer is the ONLY side gutter (same as the
+       nav), so hero + body drop their side padding — text lands at the same
+       inset as the navigation. */
+    .detail__hero { padding-left: 0; }
+    .detail__body { padding-left: 0; }
+
+    /* With no sidebar, the hero's white band bleeds to BOTH edges so there's
+       no leftover blue-gray spacer strip beside it on the left. */
+    .detail__hero::before {
+      inset: 0 calc(-1 * var(--edge)) 0 calc(-1 * var(--edge));
+    }
+
+    /* Relocated Download + Underlying data, sitting under the infographic —
+       kept on the same white band as the hero (buttons stay on white). */
+    .detail__inline-meta {
+      position: relative;
+      z-index: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--size-8); /* 32px */
+      padding: var(--size-8) 0; /* text aligns with the nav via the spacer */
+    }
+    .detail__inline-meta::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0 calc(-1 * var(--edge)); /* full-bleed white, exactly to edges */
+      background: var(--white);
+    }
+    .detail__inline-meta .meta__block {
+      width: auto;
+      min-width: min(240px, 100%);
+    }
+    .detail__inline-meta :global(.btn) { justify-content: flex-start; }
+
+    /* Relocated More articles, after the end of the article. */
+    .detail__end-meta {
+      display: block;
+      padding: 0 0 var(--size-16); /* 96px bottom breathing room */
+    }
+    .detail__end-meta .meta__related {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--size-4);
+    }
+  }
+
+  /* Very small: stack the relocated related cards. */
+  @media (max-width: 480px) {
+    .detail__end-meta .meta__related { grid-template-columns: 1fr; }
+  }
 </style>
+
+<script>
+  // At ≤ --bp-lg the sidebar column is hidden; relocate its blocks into the
+  // content flow so they read in a sensible single-column order: Download +
+  // Underlying data under the infographic, More articles after the article.
+  // The nodes are physically moved (not duplicated) so their existing markup
+  // and hrefs are preserved; on resize back to desktop they return to the
+  // sidebar in their original order.
+  function initDetailResponsive() {
+    const root = document.querySelector<HTMLElement>('.detail');
+    if (!root) return;
+    const metaRoot = root.querySelector<HTMLElement>('[data-meta-root]');
+    const inlineMount = root.querySelector<HTMLElement>('[data-inline-meta]');
+    const endMount = root.querySelector<HTMLElement>('[data-end-meta]');
+    if (!metaRoot || !inlineMount || !endMount) return;
+
+    const download = metaRoot.querySelector<HTMLElement>('[data-meta="download"]');
+    const data = metaRoot.querySelector<HTMLElement>('[data-meta="data"]');
+    const related = metaRoot.querySelector<HTMLElement>('[data-meta="related"]');
+
+    const bp =
+      getComputedStyle(document.documentElement).getPropertyValue('--bp-lg').trim() ||
+      '1024px';
+    const mq = window.matchMedia(`(max-width: ${bp})`);
+
+    let compact: boolean | null = null;
+    function apply() {
+      if (mq.matches === compact) return; // no state change → nothing to move
+      compact = mq.matches;
+      if (compact) {
+        if (download) inlineMount!.appendChild(download);
+        if (data) inlineMount!.appendChild(data);
+        if (related) endMount!.appendChild(related);
+      } else {
+        // Restore the original sidebar order: download, data, related.
+        if (download) metaRoot!.appendChild(download);
+        if (data) metaRoot!.appendChild(data);
+        if (related) metaRoot!.appendChild(related);
+      }
+    }
+    apply();
+    mq.addEventListener('change', apply);
+
+    // The body is swapped on each view-transition navigation; drop the listener.
+    document.addEventListener(
+      'astro:before-swap',
+      () => mq.removeEventListener('change', apply),
+      { once: true }
+    );
+  }
+
+  document.addEventListener('astro:page-load', initDetailResponsive);
+</script>
