@@ -11,5 +11,7 @@ npm-debug.log*
 .env.production
 # macOS
 .DS_Store
+# JetBrains IDE
+.idea/
 # scratch / design source material (atlas exports, PDF, figma export)
 tmp/
