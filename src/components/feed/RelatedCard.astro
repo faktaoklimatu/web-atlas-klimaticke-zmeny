@@ -48,5 +48,11 @@ const src = imgUrl(image);
     padding: var(--size-2) var(--size-3); /* 8px 12px */
     color: var(--text-primary);
   }
-  .related:hover .related__title { color: var(--blue-600); }
+  @media (hover: hover) {
+    .related { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+    .related:hover {
+      border-color: var(--gray-400);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+    }
+  }
 </style>
