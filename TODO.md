@@ -50,7 +50,9 @@ Real content still needs to replace placeholders before launch:
 
 ## Missing pages / assets
 
-- **Favicon** — none is set in `Layout.astro`; add a favicon (and app/OG image).
+- **OG image** — favicon + app icons are set in `Layout.astro` (`public/favicon.svg`,
+  `favicon.ico`, `apple-touch-icon.png`, `icon-192/512.png`, `site.webmanifest`).
+  Still missing: the social share / Open Graph image (1200×630) — add with the SEO pass.
 - **404 page** — no `src/pages/404.astro`; add a styled not-found page.
 
 ## Deploy ownership
