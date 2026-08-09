@@ -88,9 +88,9 @@ const href = (slug: string) => `${base}/${slug}/`;
                 <h2 class="meta__label type-eyebrow">{ui.detail.download}</h2>
                 <ButtonGroup direction="row">
                   {pdfHref && (
-                    <Button variant="text" tone="secondary" href={`${base}${pdfHref}`}>{ui.detail.pdf}</Button>
+                    <Button variant="text" href={`${base}${pdfHref}`}>{ui.detail.pdf}</Button>
                   )}
-                  <Button variant="text" tone="secondary" href={imgSrc}>{ui.detail.png}</Button>
+                  <Button variant="text" href={imgSrc}>{ui.detail.png}</Button>
                 </ButtonGroup>
               </section>
 
@@ -101,13 +101,13 @@ const href = (slug: string) => `${base}/${slug}/`;
                     {hasDataLinks && (
                       <ButtonGroup direction="column">
                         {tableUrl && (
-                          <Button variant="text" tone="secondary" href={tableUrl}>
+                          <Button variant="text" href={tableUrl}>
                             <ExternalLinkIcon slot="icon-left" size={16} />
                             {ui.detail.dataTable}
                           </Button>
                         )}
                         {sourceUrl && (
-                          <Button variant="text" tone="secondary" href={sourceUrl}>
+                          <Button variant="text" href={sourceUrl}>
                             <CodeIcon slot="icon-left" size={16} />
                             {ui.detail.dataSource}
                           </Button>

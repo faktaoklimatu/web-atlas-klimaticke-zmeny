@@ -1,9 +1,12 @@
 ---
 /**
  * ViewToggle — grid/list switch. Figma: Buttons Group (315:1069).
- * Two segmented buttons; the active one gets a blue-gray-200 background.
- * Behaviour is wired in index.astro via [data-view-btn].
+ * A ButtonGroup of two text Buttons; the active one is `disabled` (blue-gray-200
+ * background). Behaviour is wired in feed-spy via [data-view-btn]; feed-overlay
+ * relocates the whole `.viewtoggle` between the desktop toolbar and mobile bar.
  */
+import ButtonGroup from '../ButtonGroup.astro';
+import Button from '../Button.astro';
 import ListIcon from '../icons/ListIcon.astro';
 import GridIcon from '../icons/GridIcon.astro';
 import { ui } from '../../data/ui';
@@ -15,52 +18,27 @@ interface Props {
 const { initial = 'grid', class: className } = Astro.props;
 ---
 
-<div class:list={['viewtoggle', className]} role="group" aria-label={ui.feed.viewMode}>
-  <button
-    type="button"
-    class:list={['viewtoggle__btn', 'type-mono', { 'is-active': initial === 'list' }]}
+<ButtonGroup
+  class:list={['viewtoggle', className]}
+  role="group"
+  aria-label={ui.feed.viewMode}
+>
+  <Button
+    variant="text"
     data-view-btn="list"
+    disabled={initial === 'list'}
     aria-pressed={initial === 'list' ? 'true' : 'false'}
   >
-    <ListIcon size={16} />
-    <span>{ui.feed.list}</span>
-  </button>
-  <button
-    type="button"
-    class:list={['viewtoggle__btn', 'type-mono', { 'is-active': initial === 'grid' }]}
+    <ListIcon slot="icon-left" size={16} />
+    {ui.feed.list}
+  </Button>
+  <Button
+    variant="text"
     data-view-btn="grid"
+    disabled={initial === 'grid'}
     aria-pressed={initial === 'grid' ? 'true' : 'false'}
   >
-    <GridIcon size={16} />
-    <span>{ui.feed.grid}</span>
-  </button>
-</div>
-
-<style>
-  .viewtoggle {
-    display: inline-flex;
-    background: var(--white);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--size-1-5); /* 6px */
-    overflow: hidden;
-  }
-  .viewtoggle__btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--size-0-5); /* 2px */
-    min-height: var(--size-9); /* 36px */
-    padding: var(--size-1-5) var(--size-3); /* 6px 12px */
-    border: 0;
-    background: transparent;
-    color: var(--text-primary);
-    cursor: pointer;
-  }
-  .viewtoggle__btn + .viewtoggle__btn { box-shadow: inset 1px 0 0 var(--gray-300); }
-  .viewtoggle__btn.is-active { background: var(--blue-gray-200); }
-  .viewtoggle__btn span { padding: 0 var(--size-1); } /* 4px */
-  .viewtoggle__btn :global(svg) { display: block; }
-  .viewtoggle__btn:focus-visible {
-    outline: none;
-    box-shadow: inset 0 0 0 2px var(--blue-600);
-  }
-</style>
+    <GridIcon slot="icon-left" size={16} />
+    {ui.feed.grid}
+  </Button>
+</ButtonGroup>

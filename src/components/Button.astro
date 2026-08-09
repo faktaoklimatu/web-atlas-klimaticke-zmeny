@@ -1,32 +1,30 @@
 ---
 /**
- * Button — Figma node 81:1282.
- * Axes: variant (filled | outlined | text | text-compact | text-compact-underline)
- *        × tone (primary | secondary | inverse) × font (mono | sans).
- * States hover/focus come from CSS (:hover / :focus-visible), matching the
- * Figma Default/Hover/Focus variants. Renders as <a> when `href` is set.
+ * Button — Figma node 81:1282. Single tone in mono.
+ * variant: outlined | text (they differ only by the border). Hover, on pointer
+ * devices, underlines the label. Renders as <a> when `href` is set. `disabled`
+ * (used for the homepage grid/list toggle) swaps the background to
+ * blue-gray-200 with a default cursor. Extra attributes (data-*, aria-*) pass
+ * through to the element.
  */
-type Variant = 'filled' | 'outlined' | 'text' | 'text-compact' | 'text-compact-underline';
-type Tone = 'primary' | 'secondary' | 'inverse';
+type Variant = 'outlined' | 'text';
 
 interface Props {
   variant?: Variant;
-  tone?: Tone;
-  font?: 'mono' | 'sans';
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   class?: string;
+  [attr: string]: unknown;
 }
 
 const {
-  variant = 'filled',
-  tone = 'primary',
-  font = 'mono',
+  variant = 'outlined',
   href,
   type = 'button',
   disabled = false,
   class: className,
+  ...rest
 } = Astro.props;
 
 const Tag = href ? 'a' : 'button';
@@ -35,11 +33,12 @@ const hasIconRight = Astro.slots.has('icon-right');
 ---
 
 <Tag
-  class:list={['btn', `btn--${variant}`, `btn--${tone}`, `btn--font-${font}`, className]}
+  class:list={['btn', `btn--${variant}`, className]}
   href={href}
   type={href ? undefined : type}
   disabled={!href && disabled ? true : undefined}
   aria-disabled={href && disabled ? 'true' : undefined}
+  {...rest}
 >
   {hasIconLeft && <span class="btn__icon"><slot name="icon-left" /></span>}
   <span class="btn__label"><slot>Button</slot></span>
@@ -66,11 +65,8 @@ const hasIconRight = Astro.slots.has('icon-right');
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.15s ease, color 0.15s ease,
-      border-color 0.15s ease, box-shadow 0.15s ease;
+      border-color 0.15s ease;
   }
-
-  .btn--font-sans { font-family: var(--font-sans); }
-  .btn--font-mono { font-family: var(--font-mono); }
 
   .btn__label {
     display: inline-flex;
@@ -87,63 +83,23 @@ const hasIconRight = Astro.slots.has('icon-right');
     height: var(--size-6);
   }
 
-  /* --- Filled --- */
-  .btn--filled.btn--primary { background: var(--blue-600); color: var(--white); }
-  .btn--filled.btn--primary:hover { background: var(--blue-700); }
-  .btn--filled.btn--secondary { background: var(--gray-700); color: var(--white); }
-  .btn--filled.btn--secondary:hover { background: var(--gray-800); }
-  .btn--filled.btn--inverse { background: var(--white); color: var(--blue-600); }
-  .btn--filled.btn--inverse:hover { background: var(--gray-50); }
+  /* --- Variants (same label colour; only the border differs) --- */
+  .btn--outlined { border-color: var(--gray-700); }
+  .btn--outlined,
+  .btn--text { color: var(--text-primary); }
 
-  /* --- Outlined --- */
-  .btn--outlined { background: transparent; }
-  .btn--outlined.btn--primary { border-color: var(--blue-600); color: var(--blue-600); }
-  .btn--outlined.btn--primary:hover { background: var(--blue-50); }
-  .btn--outlined.btn--secondary { border-color: var(--gray-700); color: var(--gray-700); }
-  .btn--outlined.btn--secondary:hover { background: var(--gray-50); }
-  .btn--outlined.btn--inverse { border-color: var(--white); color: var(--white); }
-  .btn--outlined.btn--inverse:hover { background: rgba(255, 255, 255, 0.12); }
-
-  /* --- Text (padded, no fill/border) --- */
-  .btn--text.btn--primary { color: var(--blue-600); }
-  .btn--text.btn--secondary { color: var(--text-primary); }
-  .btn--text.btn--inverse { color: var(--white); }
-  .btn--text:hover .btn__label { text-decoration: underline; }
-
-  /* --- Text Compact / Text Compact Underline (inline, no padding/min-height) --- */
-  .btn--text-compact,
-  .btn--text-compact-underline {
-    min-height: 0;
-    padding: 0;
-    border: 0;
-    gap: var(--size-1-5); /* 6px */
-  }
-  .btn--text-compact .btn__label,
-  .btn--text-compact-underline .btn__label { padding: 0; }
-  .btn--text-compact.btn--primary,
-  .btn--text-compact-underline.btn--primary { color: var(--blue-600); }
-  .btn--text-compact.btn--secondary,
-  .btn--text-compact-underline.btn--secondary { color: var(--text-primary); }
-  .btn--text-compact.btn--inverse,
-  .btn--text-compact-underline.btn--inverse { color: var(--white); }
-  .btn--text-compact-underline .btn__label {
-    text-decoration: underline;
-    text-underline-position: from-font;
+  /* Hover underlines the label — pointer devices only, so it never sticks on
+     touch. */
+  @media (hover: hover) {
+    .btn:hover .btn__label { text-decoration: underline; }
+    .btn:disabled:hover .btn__label,
+    .btn[aria-disabled='true']:hover .btn__label { text-decoration: none; }
   }
 
-  /* --- Focus ring (from Figma Focus state) --- */
-  .btn:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35); /* blue-600 @ 35% */
-  }
-  .btn--secondary:focus-visible { box-shadow: 0 0 0 3px rgba(55, 65, 81, 0.35); }
-  .btn--inverse:focus-visible { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); }
-
-  /* --- Disabled --- */
+  /* --- Disabled (homepage grid/list toggle) --- */
   .btn:disabled,
   .btn[aria-disabled='true'] {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
+    background: var(--blue-gray-200);
+    cursor: default;
   }
 </style>

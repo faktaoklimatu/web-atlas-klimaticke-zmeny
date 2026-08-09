@@ -109,7 +109,7 @@ function initFeed() {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  const buttons = feed.querySelectorAll('[data-view-btn]');
+  const buttons = feed.querySelectorAll<HTMLButtonElement>('[data-view-btn]');
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const view = btn.getAttribute('data-view-btn');
@@ -118,9 +118,10 @@ function initFeed() {
       feed.querySelectorAll<HTMLElement>('.feed__view').forEach((panel) => {
         panel.hidden = panel.getAttribute('data-view-panel') !== view;
       });
+      // The active view is the disabled button (blue-gray-200 background).
       buttons.forEach((b) => {
         const active = b === btn;
-        b.classList.toggle('is-active', active);
+        b.disabled = active;
         b.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
       onScroll();

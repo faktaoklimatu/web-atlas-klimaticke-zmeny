@@ -22,7 +22,7 @@ English "Atlas of Climate Change" for Fakta o Klimatu. Astro 7 static site + Dec
 - `src/pages/chapters-usage.json.ts` — static JSON endpoint listing chapter `id`s with an infographic count; read by the admin's chapter-delete guard.
 - `src/pages/404.astro` — not-found page: compact nav on top, centred `404` heading + `Page Submerged` subheading and a mono secondary "back home" button, sized to the viewport (no scroll). Copy lives in `ui.ts` (`ui.notFound`).
 - `src/layouts/Layout.astro` — base HTML, font/style imports, `ClientRouter` (view transitions).
-- `src/components/` — `Nav`, `FancyBar`, `Button`, `IconButton`, `ButtonGroup`, `Tag`.
+- `src/components/` — `Nav`, `FancyBar`, `Button`, `ButtonGroup`, `Tag`.
 - `src/components/feed/` — `SideNav` (TOC), `ArticleCard` (list), `ArticleSmall` (grid), `RelatedCard`, `ViewToggle`, `SiteFooter`.
 - `src/components/icons/` — SVG icon components. `XIcon` is the X/Twitter logo; use `CloseIcon` for dismiss.
 - `src/scripts/*.ts` — page JS extracted into ES modules, imported via `<script>`: `feed-spy` (scroll-spy + toggle), `feed-overlay` (mobile Contents overlay), `nav` (scroll collapse + lang menu), `detail-meta` (mobile block relocation). Each registers on `astro:page-load` (re-runs after every navigation).
