@@ -39,7 +39,8 @@ src/
   components/        Nav, FancyBar, Button, Tag, feed/*, icons/*
   scripts/           Page JS as ES modules (scroll-spy, overlays, nav)
   data/
-    chapters.ts      Chapter names / taglines / order (site structure, in code)
+    chapters.ts      Chapter interface + name lookup (loads chapters.json)
+    chapters.json    CMS-managed chapter names / taglines / order
     infographics.ts  Feed assembly from the CMS collection
     ui.ts            All fixed UI microcopy (labels, buttons, aria-labels)
     site.json        CMS-managed nav menu + language switcher
@@ -57,7 +58,9 @@ GitHub Pages.
 - **Infographics** — CMS *Infographics* collection (`src/content/infographics/`).
 - **Navigation & languages** — CMS *Settings → Navigation & Languages*
   (`src/data/site.json`). The language switcher and header menu read from here.
-- **Chapter names / taglines** — `src/data/chapters.ts` (in code, rarely change).
+- **Chapter names / taglines** — CMS *Settings → Chapters* (`src/data/chapters.json`).
+  Translate the name and tagline; keep each chapter's `id` unchanged (it links
+  infographics to their chapter).
 - **Fixed interface text** (labels, buttons, aria-labels) — `src/data/ui.ts`.
 
 ## Creating a new language version (fork)
@@ -85,7 +88,8 @@ spin up a new mutation on your GitHub account:
 
 4. **Translate.** Replace the English text with your language:
    - `src/data/ui.ts` — all interface strings.
-   - `src/data/chapters.ts` — chapter names and taglines.
+   - CMS *Settings → Chapters* (`src/data/chapters.json`) — chapter names and
+     taglines (keep the `id`s unchanged).
    - `src/content/infographics/*.md` — titles, leads, and bodies (and swap in
      translated images under `public/images/atlas/` if needed).
    - `src/data/site.json` — the header menu, and the **language switcher links**:

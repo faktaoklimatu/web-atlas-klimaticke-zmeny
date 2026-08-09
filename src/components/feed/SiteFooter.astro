@@ -8,6 +8,8 @@ import FacebookIcon from '../icons/FacebookIcon.astro';
 import InstagramIcon from '../icons/InstagramIcon.astro';
 import XIcon from '../icons/XIcon.astro';
 import LinkedInIcon from '../icons/LinkedInIcon.astro';
+import ButtonGroup from '../ButtonGroup.astro';
+import Button from '../Button.astro';
 import { ui } from '../../data/ui';
 
 interface Sibling {
@@ -43,16 +45,16 @@ const { siblings = [] } = Astro.props;
   </div>
 
   <div class="footer__bottom">
-    <div class="footer__lang" role="group" aria-label={ui.footer.languageLabel}>
+    <ButtonGroup role="group" aria-label={ui.footer.languageLabel}>
       {
         siblings.map((s) => (
-          <a class="footer__lang-item type-mono" href={s.url}>
-            <span aria-hidden="true">{s.flag}</span>
-            <span>{s.code}</span>
-          </a>
+          <Button variant="text" href={s.url}>
+            {s.flag && <span slot="icon-left" aria-hidden="true">{s.flag}</span>}
+            {s.code}
+          </Button>
         ))
       }
-    </div>
+    </ButtonGroup>
 
     <div class="footer__legal">
       <p>{ui.footer.copyright}</p>
@@ -103,25 +105,6 @@ const { siblings = [] } = Astro.props;
     margin-top: var(--size-8);
     padding-bottom: var(--size-12);
   }
-
-  .footer__lang {
-    display: inline-flex;
-    background: var(--white);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--size-1-5);
-    overflow: hidden;
-  }
-  .footer__lang-item {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--size-0-5);
-    min-height: var(--size-9);
-    padding: var(--size-1-5) var(--size-3);
-    color: var(--text-primary);
-    text-decoration: none;
-  }
-  .footer__lang-item + .footer__lang-item { box-shadow: inset 1px 0 0 var(--gray-300); }
-  .footer__lang-item:hover { background: var(--gray-50); }
 
   .footer__legal { text-align: right; font-size: 14px; color: var(--text-tertiary); }
   .footer__legal p { margin: 0 0 var(--size-1); }

@@ -8,5 +8,49 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Block removing a chapter (Settings → Chapters) that still has infographics
+      // linked to it — otherwise those infographics would drop out of the feed
+      // silently. Usage comes from the /chapters-usage.json build endpoint.
+      CMS.registerEventListener({
+        name: 'preSave',
+        handler: async ({ entry }) => {
+          const data = entry.get('data');
+          const chapters = data && data.get && data.get('chapters');
+          // Only the Chapters settings file has a `chapters` list; ignore others.
+          if (!chapters || typeof chapters.toJS !== 'function') return data;
+
+          const keptIds = chapters
+            .toJS()
+            .map((c) => c && c.id)
+            .filter(Boolean);
+
+          let usage;
+          try {
+            const url = new URL('../chapters-usage.json', document.baseURI).href;
+            const res = await fetch(url, { cache: 'no-store' });
+            if (!res.ok) return data; // manifest missing — don't block editing
+            usage = await res.json();
+          } catch {
+            return data; // offline / not built yet — don't block editing
+          }
+
+          const orphaned = usage.filter((u) => !keptIds.includes(u.id));
+          if (orphaned.length) {
+            const list = orphaned
+              .map(
+                (u) =>
+                  `“${u.name}” (${u.count} infographic${u.count === 1 ? '' : 's'})`
+              )
+              .join(', ');
+            throw new Error(
+              `Can't remove a chapter that still has infographics: ${list}. ` +
+                `Reassign those infographics to another chapter first.`
+            );
+          }
+          return data;
+        },
+      });
+    </script>
   </body>
 </html>

@@ -1,19 +1,19 @@
 ---
 /**
  * ButtonGroup — Figma node 85:1090.
- * A bordered container that joins Button / IconButton children with 1px
- * separators. Children should be borderless (Button variant="text" or
- * IconButton variant="simple"); the group supplies the frame + dividers.
- * `direction` = row | column.
+ * A bordered container that joins Button children with 1px separators.
+ * Children should be borderless (Button variant="text"); the group supplies
+ * the frame + dividers. `direction` = row | column.
  */
 interface Props {
   direction?: 'row' | 'column';
   class?: string;
+  [attr: string]: unknown;
 }
-const { direction = 'row', class: className } = Astro.props;
+const { direction = 'row', class: className, ...rest } = Astro.props;
 ---
 
-<div class:list={['buttongroup', `buttongroup--${direction}`, className]}>
+<div class:list={['buttongroup', `buttongroup--${direction}`, className]} {...rest}>
   <slot />
 </div>
 
@@ -29,10 +29,10 @@ const { direction = 'row', class: className } = Astro.props;
   .buttongroup--row { flex-direction: row; }
   .buttongroup--column { flex-direction: column; }
 
-  /* Neutralise child corner radius so the group frame clips cleanly.
-     Higher specificity (.buttongroup > .btn) beats the child's own radius. */
-  .buttongroup > :global(.btn),
-  .buttongroup > :global(.iconbtn) { border-radius: 0; }
+  /* Drop the child's own frame (the group supplies border + radius). Removing
+     the 1px border too — not just the radius — lets the dividers span the full
+     height and a filled/disabled child meet the divider with no white gap. */
+  .buttongroup > :global(.btn) { border: 0; border-radius: 0; }
 
   /* 1px separators drawn with an inset box-shadow so the child's `border`
      shorthand can't override them. */
