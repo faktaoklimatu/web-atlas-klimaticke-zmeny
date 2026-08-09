@@ -20,6 +20,7 @@ English "Atlas of Climate Change" for Fakta o Klimatu. Astro 7 static site + Dec
 - `src/pages/[slug].astro` — infographic detail (dynamic; `getStaticPaths` over all infographics).
 - `src/pages/components.astro` — component preview page.
 - `src/pages/chapters-usage.json.ts` — static JSON endpoint listing chapter `id`s with an infographic count; read by the admin's chapter-delete guard.
+- `src/pages/404.astro` — not-found page: compact nav on top, centred `404` heading + `Page Submerged` subheading and a mono secondary "back home" button, sized to the viewport (no scroll). Copy lives in `ui.ts` (`ui.notFound`).
 - `src/layouts/Layout.astro` — base HTML, font/style imports, `ClientRouter` (view transitions).
 - `src/components/` — `Nav`, `FancyBar`, `Button`, `IconButton`, `ButtonGroup`, `Tag`.
 - `src/components/feed/` — `SideNav` (TOC), `ArticleCard` (list), `ArticleSmall` (grid), `RelatedCard`, `ViewToggle`, `SiteFooter`.

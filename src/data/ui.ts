@@ -34,6 +34,12 @@ export const ui = {
     moreArticles: 'More articles',
   },
 
+  notFound: {
+    heading: '404',
+    subheading: 'Page Submerged',
+    homeLabel: 'Back to homepage',
+  },
+
   footer: {
     followUs: 'Follow us on social media',
     sponsorsLabel: 'Sponsors',

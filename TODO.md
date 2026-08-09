@@ -48,13 +48,6 @@ Real content still needs to replace placeholders before launch:
   the real Facebook / Instagram / X / LinkedIn URLs.
 - Sponsor logos are `LOGO` text placeholders — swap in the real logos.
 
-## Missing pages / assets
-
-- **OG image** — favicon + app icons are set in `Layout.astro` (`public/favicon.svg`,
-  `favicon.ico`, `apple-touch-icon.png`, `icon-192/512.png`, `site.webmanifest`).
-  Still missing: the social share / Open Graph image (1200×630) — add with the SEO pass.
-- **404 page** — no `src/pages/404.astro`; add a styled not-found page.
-
 ## Deploy ownership
 
 `astro.config.mjs` `site` points at a personal account
@@ -71,9 +64,11 @@ and the TOC overlay for overflow, cramped spacing, and tap targets.
 
 ## SEO
 
-Handle later: per-page `<title>`/meta descriptions, Open Graph + Twitter cards,
-canonical URLs, `lang`/`hreflang` across language versions, `sitemap.xml`,
-`robots.txt`, and structured data for infographics.
+Handle later: per-page `<title>`/meta descriptions, Open Graph + Twitter cards
+(**including the 1200×630 social share image** — the favicon/app icons are
+already done in `Layout.astro`), canonical URLs, `lang`/`hreflang` across
+language versions, `sitemap.xml`, `robots.txt`, and structured data for
+infographics.
 
 ## Accessibility (A11Y)
 

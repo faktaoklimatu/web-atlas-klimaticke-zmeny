@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FancyBar from '../components/FancyBar.astro';
+import Nav from '../components/Nav.astro';
+import Button from '../components/Button.astro';
+import ArrowLeftIcon from '../components/icons/ArrowLeftIcon.astro';
+import site from '../data/site.json';
+import { ui } from '../data/ui';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const homeHref = `${base}/`;
+---
+
+<Layout title={`${ui.notFound.heading} · ${ui.siteTitle}`}>
+  <FancyBar />
+  <Nav compact menuLinks={site.menuLinks} siblings={site.languages} />
+
+  <main class="notfound">
+    <div class="notfound__inner">
+      <h1 class="notfound__code type-display">{ui.notFound.heading}</h1>
+      <p class="notfound__subtitle type-subheading">{ui.notFound.subheading}</p>
+      <div class="notfound__actions">
+        <Button href={homeHref} variant="outlined" tone="secondary" font="mono">
+          <ArrowLeftIcon slot="icon-left" />
+          {ui.notFound.homeLabel}
+        </Button>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* This page fills the viewport exactly; drop the global body padding so
+     100dvh doesn't overflow into a scroll. */
+  :global(body) {
+    padding: 0;
+  }
+
+  .notfound {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--size-6);
+    overflow: hidden;
+  }
+
+  .notfound__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--size-2); /* 8px between code and subtitle */
+  }
+
+  .notfound__code {
+    color: var(--text-primary);
+  }
+
+  .notfound__subtitle {
+    color: var(--text-primary);
+  }
+
+  .notfound__actions {
+    margin-top: var(--size-10); /* 40px — clear gap before the button */
+  }
+</style>
