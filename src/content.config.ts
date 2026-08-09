@@ -5,7 +5,7 @@ import { z } from 'astro/zod';
 /**
  * Infographics — the Atlas content model, edited in Decap CMS.
  * One markdown file per infographic; the markdown body is the article text.
- * Chapter metadata (name / tagline / order) lives in src/data/chapters.ts.
+ * Chapter metadata (name / tagline / order) lives in src/data/chapters.json.
  */
 const infographicsCollection = defineCollection({
   // Content Layer API (Astro 5+): the glob loader replaces the old

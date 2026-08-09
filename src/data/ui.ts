@@ -2,7 +2,7 @@
  * UI microcopy for the Atlas — the fixed interface strings that live in code
  * (not the CMS): nav, feed chrome, detail sidebar labels, footer. Single source
  * so the whole interface can be reviewed or translated from one place.
- * CMS-managed text stays in site.json; chapter names/taglines in chapters.ts.
+ * CMS-managed text stays in site.json; chapter names/taglines in chapters.json.
  */
 export const ui = {
   /** Used for the homepage <title> and the detail-page title suffix. */

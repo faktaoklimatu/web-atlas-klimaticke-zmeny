@@ -96,3 +96,19 @@ collections:
               - { label: "Code", name: "code", widget: "string", hint: "Shown in the switcher, e.g. EN" }
               - { label: "Flag emoji", name: "flag", widget: "string", required: false }
               - { label: "URL", name: "url", widget: "string", hint: "Link to that language's site" }
+
+      - name: "chapters"
+        label: "Chapters"
+        file: "src/data/chapters.json"
+        description: "Section titles and taglines shown in the feed. Translate the name and tagline; keep the ID unchanged."
+        fields:
+          - label: "Chapters"
+            name: "chapters"
+            label_singular: "Chapter"
+            widget: "list"
+            summary: "{{fields.name}}  ·  {{fields.tagline}}"
+            fields:
+              - { label: "ID", name: "id", widget: "string", hint: "Join key with infographics — keep stable, do not translate." }
+              - { label: "Name", name: "name", widget: "string", hint: "Bold section name, e.g. Introduction." }
+              - { label: "Tagline", name: "tagline", widget: "string", hint: "Descriptive tagline, e.g. The Big Picture." }
+              - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1 }
