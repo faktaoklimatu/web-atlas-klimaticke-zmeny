@@ -1,5 +1,14 @@
 {
-  "menuLinks": [],
+  "menuLinks": [
+    {
+      "label": "Link 1",
+      "url": "#"
+    },
+    {
+      "label": "Link 2",
+      "url": "#"
+    }
+  ],
   "languages": [
     {
       "code": "CZ",
