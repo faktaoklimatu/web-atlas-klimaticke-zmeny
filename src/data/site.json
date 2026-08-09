@@ -1,10 +1,15 @@
 {
-  "menuLinks": [
-    { "label": "Facts on Climate", "url": "#" }
-  ],
+  "menuLinks": [],
   "languages": [
-    { "code": "CZ", "flag": "🇨🇿", "url": "#" },
-    { "code": "FR", "flag": "🇫🇷", "url": "#" },
-    { "code": "EN", "flag": "🇬🇧", "url": "#" }
+    {
+      "code": "CZ",
+      "flag": "🇨🇿",
+      "url": "#"
+    },
+    {
+      "code": "FR",
+      "flag": "🇫🇷",
+      "url": "#"
+    }
   ]
 }
