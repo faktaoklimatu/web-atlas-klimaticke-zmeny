@@ -160,8 +160,8 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
 
 <style>
   .feed {
-    --feed-top: 274px; /* clears the fixed FancyBar (14) + hero nav on load */
-    --sticky-top: 104px; /* clears the collapsed nav while scrolling */
+    --feed-top: 270px; /* clears the fixed FancyBar (10) + hero nav on load */
+    --sticky-top: 100px; /* clears the collapsed nav while scrolling */
     position: relative;
     display: flex;
     align-items: stretch;
@@ -361,8 +361,8 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
      ===================================================================== */
   @media (max-width: 1024px) {
     .feed {
-      --feed-top: 100px; /* clears the fixed compact nav (FancyBar 14 + nav) */
-      --sticky-top: 72px; /* section scroll offset under the fixed nav */
+      --feed-top: 96px; /* clears the fixed compact nav (FancyBar 10 + nav) */
+      --sticky-top: 68px; /* section scroll offset under the fixed nav */
     }
 
     /* Uniform background — no sidebar tint band. */
