@@ -88,6 +88,17 @@ function initFeed() {
   if (brand) {
     brand.addEventListener('click', (event) => {
       event.preventDefault();
+      // Same as a TOC click: freeze the spy so the sidebar lands on the first
+      // chapter without walking every section on the way up.
+      const panel = visiblePanel();
+      const firstSection = panel?.querySelector('.section[data-chapter]');
+      const firstCard = firstSection?.querySelector('[data-slug]');
+      setActive(
+        firstCard?.getAttribute('data-slug') ?? null,
+        firstSection?.getAttribute('data-chapter') ?? null
+      );
+      spyLocked = true;
+      scheduleUnlock();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
