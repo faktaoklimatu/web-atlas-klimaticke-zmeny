@@ -1,7 +1,10 @@
 ---
 /**
  * ArticleSmall — grid-view card. Figma: Section/Grid → ArticleSmall (135:4558).
- * Title (16px Bold) above a cropped thumbnail (aspect ~16:9, border, radius 8).
+ * Same bordered/gradient container as ArticleCard (list view), scaled down —
+ * smaller padding, same title size. Grid stretches every card in a row to the
+ * tallest (default CSS Grid align-items), and the link's space-between keeps
+ * the graphic pinned to the bottom regardless of title length.
  */
 interface Props {
   title: string;
@@ -25,11 +28,23 @@ const src = imgUrl(image);
 </article>
 
 <style>
-  .scard { scroll-margin-top: 110px; }
+  .scard {
+    scroll-margin-top: 110px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--size-2); /* 8px */
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--blue-gray-100) 0%, var(--white) 15%);
+  }
   .scard__link {
     display: flex;
     flex-direction: column;
-    gap: var(--size-3-5); /* 14px */
+    justify-content: space-between;
+    gap: var(--size-3); /* 12px */
+    height: 100%;
+    padding: var(--size-3) var(--size-3) 0; /* 12px 12px 0 */
     text-decoration: none;
   }
   .scard__title {
@@ -42,8 +57,6 @@ const src = imgUrl(image);
     position: relative;
     width: 100%;
     aspect-ratio: 1.8;
-    border: 1px solid var(--gray-300);
-    border-radius: var(--size-2); /* 8px */
     overflow: hidden;
     background: var(--gray-100);
   }
@@ -59,10 +72,10 @@ const src = imgUrl(image);
 
   /* Hover (pointer devices only — never sticks on touch). */
   @media (hover: hover) {
-    .scard__media {
+    .scard {
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    .scard__link:hover .scard__media {
+    .scard:has(.scard__link:hover) {
       border-color: var(--gray-400);
       box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
     }

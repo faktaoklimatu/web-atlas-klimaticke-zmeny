@@ -32,7 +32,8 @@ export const ui = {
     underlyingData: 'Underlying data',
     dataTable: 'Our data table',
     dataSource: 'Data source',
-    moreArticles: 'More articles',
+    previousInfographic: 'Previous infographic',
+    nextInfographic: 'Next infographic',
   },
 
   notFound: {

@@ -18,7 +18,6 @@ import { ui } from '../data/ui';
 
 export async function getStaticPaths() {
   const flat = await getFlatInfographics();
-  const lookup = new Map(flat.map((f) => [f.slug, f]));
 
   const entries = await getCollection('infographics');
   const entryBySlug = new Map<string, (typeof entries)[number]>(
@@ -27,22 +26,14 @@ export async function getStaticPaths() {
 
   return flat.map((item, i) => {
     const entry = entryBySlug.get(item.slug)!;
+    const prev = flat[(i - 1 + flat.length) % flat.length];
+    const next = flat[(i + 1) % flat.length];
 
-    // Related: prefer the CMS relation list, else the next 2 (wrapping).
-    const relatedSlugs =
-      entry.data.related && entry.data.related.length
-        ? entry.data.related
-        : [flat[(i + 1) % flat.length].slug, flat[(i + 2) % flat.length].slug];
-    const related = relatedSlugs
-      .map((s) => lookup.get(s))
-      .filter(Boolean)
-      .map((r) => ({ slug: r!.slug, title: r!.title, image: r!.image }));
-
-    return { params: { slug: item.slug }, props: { entry, related } };
+    return { params: { slug: item.slug }, props: { entry, prev, next } };
   });
 }
 
-const { entry, related } = Astro.props;
+const { entry, prev, next } = Astro.props;
 const data = entry.data;
 const { Content } = await render(entry);
 
@@ -120,16 +111,16 @@ const href = (slug: string) => `${base}/${slug}/`;
                 </section>
               )}
 
-              {related.length > 0 && (
-                <section class="meta__block" data-meta="related">
-                  <h2 class="meta__label type-eyebrow">{ui.detail.moreArticles}</h2>
-                  <div class="meta__related">
-                    {related.map((r) => (
-                      <RelatedCard title={r.title} image={r.image} href={href(r.slug)} />
-                    ))}
-                  </div>
-                </section>
-              )}
+              <section class="meta__block" data-meta="related">
+                <h2 class="meta__label type-eyebrow">{ui.detail.nextInfographic}</h2>
+                <div class="meta__related">
+                  <RelatedCard title={next.title} image={next.image} href={href(next.slug)} />
+                </div>
+                <h2 class="meta__label type-eyebrow">{ui.detail.previousInfographic}</h2>
+                <div class="meta__related">
+                  <RelatedCard title={prev.title} image={prev.image} href={href(prev.slug)} />
+                </div>
+              </section>
             </div>
           </div>
         </aside>
@@ -242,7 +233,7 @@ const href = (slug: string) => `${base}/${slug}/`;
 
   /* Sidebar meta panel */
   .detail__sidebar-col {
-    padding: calc(var(--top-clear) + var(--size-12)) var(--size-9) 0 0; /* top matches --sticky-top; right gap 36 */
+    padding: calc(var(--top-clear) + var(--size-12)) 0 0 0; /* top matches --sticky-top */
     border-right: 1px solid var(--blue-gray-100);
   }
   .detail__sidebar-sticky {
@@ -250,7 +241,11 @@ const href = (slug: string) => `${base}/${slug}/`;
     top: var(--sticky-top);
     /* Stay pinned while the content scrolls. Only if the panel itself is
        taller than the viewport does it scroll — and then only when the
-       cursor is over it (that's where the scroll container lives). */
+       cursor is over it (that's where the scroll container lives). The
+       right gap (36px) lives here, not on the column, so an overflow
+       scrollbar rides the column's actual right edge instead of sitting
+       inset by the gap. */
+    padding-right: var(--size-9); /* 36px */
     max-height: calc(100vh - var(--sticky-top) - var(--size-6));
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -478,21 +473,11 @@ const href = (slug: string) => `${base}/${slug}/`;
     }
     .detail__inline-meta :global(.btn) { justify-content: flex-start; }
 
-    /* Relocated More articles, after the end of the article. */
+    /* Relocated Previous/Next infographic, after the end of the article. */
     .detail__end-meta {
       display: block;
       padding: 0 0 var(--size-16); /* 96px bottom breathing room */
     }
-    .detail__end-meta .meta__related {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--size-4);
-    }
-  }
-
-  /* Very small: stack the relocated related cards. */
-  @media (max-width: 480px) {
-    .detail__end-meta .meta__related { grid-template-columns: 1fr; }
   }
 </style>
 

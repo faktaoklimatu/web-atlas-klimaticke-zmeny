@@ -208,11 +208,18 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   }
 
   .feed__sidebar-col {
-    padding: var(--feed-top) var(--size-9) 0 0; /* right gap 36 */
+    padding: var(--feed-top) 0 0 0;
   }
   .feed__sidebar-sticky {
     position: sticky;
     top: var(--sticky-top);
+    /* The right gap (36px) lives here, not on the column, so an overflow
+       scrollbar rides the column's actual right edge instead of sitting
+       inset by the gap. Scrolls internally when taller than the viewport. */
+    padding-right: var(--size-9); /* 36px */
+    max-height: calc(100vh - var(--sticky-top) - var(--size-6));
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .feed__content {

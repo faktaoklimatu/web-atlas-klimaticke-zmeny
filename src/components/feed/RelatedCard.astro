@@ -1,8 +1,8 @@
 ---
 /**
- * RelatedCard — small "More articles" card in the detail sidebar.
- * Figma: Side Nav buttons (233:7340). Thumbnail on top, title below;
- * blue-gray-100 fill, bordered, rounded.
+ * RelatedCard — Previous/Next infographic card in the detail sidebar.
+ * Same bordered/gradient container + crop as the homepage grid's
+ * ArticleSmall, so previews look identical wherever they appear.
  */
 interface Props {
   title: string;
@@ -15,38 +15,46 @@ const src = imgUrl(image);
 ---
 
 <a class="related" href={href}>
+  <h3 class="related__title type-card-title">{title}</h3>
   <div class="related__media">
     <img src={src} alt={title} loading="lazy" decoding="async" />
   </div>
-  <div class="related__title type-small-strong">{title}</div>
 </a>
 
 <style>
   .related {
     display: flex;
     flex-direction: column;
-    background: var(--blue-gray-100);
+    justify-content: space-between;
+    gap: var(--size-3); /* 12px */
     border: 1px solid var(--gray-300);
-    border-radius: var(--size-1-5); /* 6px */
+    border-radius: var(--size-2); /* 8px */
     overflow: hidden;
+    background: linear-gradient(to bottom, var(--blue-gray-100) 0%, var(--white) 15%);
+    padding: var(--size-3) var(--size-3) 0; /* 12px 12px 0 */
     text-decoration: none;
   }
+  .related__title {
+    margin: 0;
+    color: var(--text-primary);
+  }
+  /* Aspect tuned to the atlas images (5906×4157) so a uniform scale crops
+     3% off each side, 14% off the top, and leaves the bottom flush. */
   .related__media {
-    aspect-ratio: 241 / 108;
-    border-bottom: 1px solid var(--gray-300);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.8;
     overflow: hidden;
     background: var(--gray-100);
   }
   .related__media img {
+    position: absolute;
+    left: -2%;
+    bottom: -5%;
+    width: 104%;
+    height: auto; /* keep aspect ratio — no distortion */
+    max-width: none;
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
-  }
-  .related__title {
-    padding: var(--size-2) var(--size-3); /* 8px 12px */
-    color: var(--text-primary);
   }
   @media (hover: hover) {
     .related { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
