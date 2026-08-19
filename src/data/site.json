@@ -9,18 +9,7 @@
       "url": "https://google.com/"
     }
   ],
-  "languages": [
-    {
-      "code": "CZ",
-      "flag": "🇨🇿",
-      "url": "#"
-    },
-    {
-      "code": "FR",
-      "flag": "🇫🇷",
-      "url": "#"
-    }
-  ],
+  "languages": [],
   "socialLinks": [
     {
       "label": "Facebook",

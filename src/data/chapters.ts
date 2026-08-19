@@ -10,6 +10,7 @@ export interface ChapterMeta {
   id: string;
   name: string; // bold chapter name, e.g. "Introduction"
   tagline: string; // descriptive tagline, e.g. "The Big Picture"
+  subheading?: string; // optional descriptive paragraph under the tagline
   order: number;
 }
 

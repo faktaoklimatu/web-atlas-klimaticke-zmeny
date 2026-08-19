@@ -49,6 +49,7 @@ const aboutHref = `${base}/about/`;
     <nav class="nav__links" aria-label={ui.nav.primaryLabel}>
       <a class="nav__link type-nav-link" href={aboutHref}>{ui.nav.about}</a>
 
+      {siblings.length > 0 && (
       <div class="nav__lang" data-lang>
         <button
           type="button"
@@ -72,6 +73,7 @@ const aboutHref = `${base}/about/`;
           }
         </div>
       </div>
+      )}
     </nav>
   </div>
 </header>

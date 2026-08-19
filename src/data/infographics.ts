@@ -17,6 +17,7 @@ export interface FeedChapter {
   id: string;
   name: string;
   tagline: string;
+  subheading?: string;
   infographics: FeedInfographic[];
 }
 
@@ -30,6 +31,7 @@ export async function getChapters(): Promise<FeedChapter[]> {
       id: ch.id,
       name: ch.name,
       tagline: ch.tagline,
+      subheading: ch.subheading,
       infographics: entries
         .filter((e) => e.data.chapter === ch.id)
         .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0))
