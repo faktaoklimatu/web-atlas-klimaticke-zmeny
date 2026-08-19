@@ -12,8 +12,10 @@
     "url": "https://github.com/hiiampadik"
   },
   "scripts": {
-    "dev": "BASE_PATH=/ astro dev",
-    "start": "BASE_PATH=/ astro dev",
+    "dev": "concurrently -n astro,cms -c blue,magenta \"npm:dev:astro\" \"npm:dev:cms\"",
+    "dev:astro": "BASE_PATH=/ astro dev",
+    "dev:cms": "decap-server",
+    "start": "npm run dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -26,6 +28,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "concurrently": "^10.0.5",
+    "decap-server": "^3.10.0",
     "typescript": "^6.0.3"
   }
 }
