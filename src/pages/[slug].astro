@@ -113,13 +113,17 @@ const href = (slug: string) => `${base}/${slug}/`;
               )}
 
               <section class="meta__block" data-meta="related">
-                <h2 class="meta__label type-eyebrow">{ui.detail.nextInfographic}</h2>
-                <div class="meta__related">
-                  <RelatedCard title={next.title} image={next.image} href={href(next.slug)} />
+                <div class="meta__related-item">
+                  <h2 class="meta__label type-eyebrow">{ui.detail.nextInfographic}</h2>
+                  <div class="meta__related">
+                    <RelatedCard title={next.title} image={next.image} href={href(next.slug)} />
+                  </div>
                 </div>
-                <h2 class="meta__label type-eyebrow">{ui.detail.previousInfographic}</h2>
-                <div class="meta__related">
-                  <RelatedCard title={prev.title} image={prev.image} href={href(prev.slug)} />
+                <div class="meta__related-item">
+                  <h2 class="meta__label type-eyebrow">{ui.detail.previousInfographic}</h2>
+                  <div class="meta__related">
+                    <RelatedCard title={prev.title} image={prev.image} href={href(prev.slug)} />
+                  </div>
                 </div>
               </section>
             </div>
@@ -296,6 +300,12 @@ const href = (slug: string) => `${base}/${slug}/`;
     margin: 0;
     color: var(--text-tertiary);
   }
+  .meta__related-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4); /* 16px */
+    width: 100%;
+  }
   .meta__related {
     align-self: stretch;
     display: flex;
@@ -434,7 +444,63 @@ const href = (slug: string) => `${base}/${slug}/`;
     text-decoration: underline;
     text-underline-position: from-font;
   }
-  .detail__prose :global(a:hover) { color: var(--blue-600); }
+
+  /* GFM footnotes ([^1] in the Body): the marker renders as a superscript
+     number; the auto-generated list lands here at the end. Note text and the
+     numbers are monospaced blue. */
+  .detail__prose :global(.footnotes) {
+    margin-top: var(--size-10); /* 40px */
+    padding-top: var(--size-4);
+    border-top: 1px solid var(--gray-300);
+  }
+  /* GFM emits an accessible-only "Footnotes" heading — hide it visually. */
+  .detail__prose :global(.footnotes h2.sr-only) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  /* Superscript reference marker in the body — blue monospace, no underline. */
+  .detail__prose :global([data-footnote-ref]) {
+    font-family: var(--font-mono);
+    text-decoration: underline;
+  }
+  /* Own numbering (via a counter) so the gap between the number and the note
+     text is ours to size, not the browser's default marker spacing. */
+  .detail__prose :global(.footnotes ol) {
+    list-style: none;
+    counter-reset: fn;
+    margin: 0;
+    padding-left: 0;
+  }
+  .detail__prose :global(.footnotes li) {
+    counter-increment: fn;
+    position: relative;
+    padding-left: var(--size-10); /* number column + gap (40px) */
+    margin-bottom: var(--size-2);
+  }
+  .detail__prose :global(.footnotes li)::before {
+    content: counter(fn) '.';
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+  }
+  .detail__prose :global(.footnotes p) {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  /* Land clear of the fixed nav when jumping to a note or back to its marker. */
+  .detail__prose :global(.footnotes li),
+  .detail__prose :global([data-footnote-ref]) {
+    scroll-margin-top: calc(var(--top-clear) + var(--size-6));
+  }
 
   /* Mount points for the relocated sidebar blocks — desktop keeps them empty
      and hidden; JS reveals + fills them at ≤ --bp-lg (see the <script>). */
@@ -491,10 +557,16 @@ const href = (slug: string) => `${base}/${slug}/`;
     }
     .detail__inline-meta :global(.btn) { justify-content: flex-start; }
 
-    /* Relocated Previous/Next infographic, after the end of the article. */
+    /* Relocated Previous/Next infographic, after the end of the article —
+       laid out as two side-by-side columns (Next | Previous). */
     .detail__end-meta {
       display: block;
       padding: 0 0 var(--size-16); /* 96px bottom breathing room */
+    }
+    .detail__end-meta .meta__block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--size-6); /* 24px */
     }
   }
 </style>

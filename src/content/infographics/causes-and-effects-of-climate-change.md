@@ -15,7 +15,9 @@ related:
   - co2-concentrations-at-an-800000-year-high
 ---
 
-Climate change is not just a change in temperatures – this umbrella term covers several interrelated phenomena. Higher concentration of greenhouse gases in the atmosphere results in a long chain of interconnected impacts.
+Climate change is not just a change in temperatures – this umbrella term covers several interrelated phenomena.[^1] Higher concentration of greenhouse gases in the atmosphere results in a long chain of interconnected impacts.
+
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ## What causes climate change?
 
