@@ -1,0 +1,216 @@
+---
+/**
+ * About — static CMS page (Settings → About Page). Same two-column shell +
+ * split background as the homepage/detail page (sidebar blue-gray-200,
+ * content blue-gray-100, no divider border), minus the graphic. The sidebar
+ * column is kept empty for now.
+ */
+import { getCollection, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import FancyBar from '../components/FancyBar.astro';
+import Nav from '../components/Nav.astro';
+import Button from '../components/Button.astro';
+import ButtonGroup from '../components/ButtonGroup.astro';
+import ArrowLeftIcon from '../components/icons/ArrowLeftIcon.astro';
+import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.astro';
+import site from '../data/site.json';
+import { ui } from '../data/ui';
+
+const [entry] = await getCollection('about');
+const { title } = entry.data;
+const { Content } = await render(entry);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title={`${title} — ${ui.siteTitle}`}>
+  <FancyBar />
+  <Nav compact siblings={site.languages} />
+
+  <!-- Fixed split background (same as the homepage/detail page). -->
+  <div class="about-bg" aria-hidden="true">
+    <div class="about-bg__fill about-bg__fill--left"></div>
+    <div class="about-bg__center">
+      <div class="about-bg__col about-bg__col--sidebar"></div>
+      <div class="about-bg__col about-bg__col--content"></div>
+    </div>
+    <div class="about-bg__fill about-bg__fill--right"></div>
+  </div>
+
+  <div class="about">
+    <div class="about__spacer"></div>
+
+    <div class="about__center">
+      <div class="about__main">
+        <aside class="about__sidebar-col">
+          <div class="about__sidebar-sticky">
+            {site.menuLinks.length > 0 && (
+              <section class="about__meta-block">
+                <h2 class="about__meta-label type-eyebrow">{ui.about.externalLinks}</h2>
+                <ButtonGroup direction="column">
+                  {site.menuLinks.map((l) => (
+                    <Button variant="text" href={l.url}>
+                      <ExternalLinkIcon slot="icon-left" size={16} />
+                      {l.label}
+                    </Button>
+                  ))}
+                </ButtonGroup>
+              </section>
+            )}
+          </div>
+        </aside>
+
+        <div class="about__content">
+          <div class="about__back">
+            <Button variant="text" href={`${base}/`}>
+              <ArrowLeftIcon slot="icon-left" size={16} />
+              {ui.detail.back}
+            </Button>
+          </div>
+          <h1 class="about__title type-title">{title}</h1>
+          <div class="about__prose">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__spacer"></div>
+  </div>
+</Layout>
+
+<style is:global>
+  body { padding: 0; }
+</style>
+
+<style>
+  .about {
+    --top-clear: 79px; /* FancyBar 10 + compact nav 69 */
+    --sticky-top: calc(var(--top-clear) + var(--size-12)); /* 79 + 48 = 127px */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: stretch;
+    min-height: 100dvh;
+  }
+
+  /* Fixed split background */
+  .about-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    pointer-events: none;
+  }
+  .about-bg__fill { flex: 1 1 0; min-width: var(--size-9); } /* matches nav padding */
+  .about-bg__fill--left { background: var(--blue-gray-200); }
+  .about-bg__fill--right { background: var(--blue-gray-100); }
+  .about-bg__center {
+    flex: 0 1 1280px;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+  }
+  .about-bg__col--sidebar { background: var(--blue-gray-200); }
+  .about-bg__col--content { background: var(--blue-gray-100); }
+
+  .about__spacer { flex: 1 1 0; min-width: var(--size-9); } /* matches nav padding */
+
+  .about__center {
+    position: relative;
+    flex: 0 1 1280px;
+    min-width: 0;
+    display: flex;
+  }
+  .about__main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .about__sidebar-col {
+    padding: var(--sticky-top) 0 0 0;
+  }
+  .about__sidebar-sticky {
+    position: sticky;
+    top: var(--sticky-top);
+    padding-right: var(--size-9); /* 36px */
+    max-height: calc(100vh - var(--sticky-top) - var(--size-6));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .about__meta-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-4); /* 16px */
+  }
+  .about__meta-block :global(.btn) { justify-content: flex-start; }
+  .about__meta-label {
+    margin: 0;
+    color: var(--text-primary);
+  }
+
+  .about__content {
+    padding: var(--sticky-top) var(--size-9) var(--size-24) var(--size-24); /* right 36, bottom 96, left 96 */
+    max-width: 894px;
+  }
+  /* Matches the detail page's back-to-title gap: its .detail__hero-inner flex
+     gap (24px) plus .detail__back's own margin-bottom (4px) = 28px. */
+  .about__back { margin-bottom: var(--size-7); /* 28px */ }
+  .about__back :global(.btn) { padding: 0; min-height: 0; }
+  .about__back :global(.btn__label) { padding: 0; }
+  .about__title {
+    margin: 0 0 var(--size-6); /* 24px */
+    color: var(--text-primary);
+  }
+
+  /* Rendered markdown body (from the CMS) — same rules as the detail page. */
+  .about__prose { max-width: 600px; }
+  .about__prose :global(h2) {
+    margin: var(--size-8) 0 var(--size-3);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+  .about__prose :global(h2:first-child) { margin-top: 0; }
+  .about__prose :global(p) {
+    margin: 0 0 var(--size-4);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-primary);
+  }
+  .about__prose :global(ul),
+  .about__prose :global(ol) {
+    margin: 0 0 var(--size-4);
+    padding-left: var(--size-6);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-primary);
+  }
+  .about__prose :global(li) { margin-bottom: var(--size-2); }
+  .about__prose :global(a) {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-position: from-font;
+  }
+  .about__prose :global(a:hover) { color: var(--blue-600); }
+
+  /* Single column: the 36px spacer is the only side gutter (same as the nav). */
+  @media (max-width: 1024px) {
+    /* Uniform background — no sidebar tint band. */
+    .about-bg__center { grid-template-columns: 1fr; }
+    .about-bg__col--sidebar { display: none; }
+    .about-bg__fill--left { background: var(--blue-gray-100); }
+
+    .about__main { grid-template-columns: 1fr; }
+    .about__sidebar-col { display: none; }
+    .about__content { padding-left: 0; }
+  }
+</style>

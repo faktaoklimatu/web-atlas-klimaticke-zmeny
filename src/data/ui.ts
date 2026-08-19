@@ -12,6 +12,7 @@ export const ui = {
     title: 'Atlas of climate change',
     subtitle: 'A Visual Guide to the Science and Data',
     primaryLabel: 'Primary',
+    about: 'About',
     changeLanguage: 'Change language',
   },
 
@@ -34,6 +35,10 @@ export const ui = {
     dataSource: 'Data source',
     previousInfographic: 'Previous infographic',
     nextInfographic: 'Next infographic',
+  },
+
+  about: {
+    externalLinks: 'External links',
   },
 
   notFound: {

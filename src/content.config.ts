@@ -40,6 +40,18 @@ const infographicsCollection = defineCollection({
   }),
 });
 
+/**
+ * About — single markdown file (CMS: Settings → About Page). Title +
+ * markdown body, rendered the same way as an infographic's body.
+ */
+const aboutCollection = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/about' }),
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
 export const collections = {
   infographics: infographicsCollection,
+  about: aboutCollection,
 };

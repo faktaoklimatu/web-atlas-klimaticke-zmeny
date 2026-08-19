@@ -35,6 +35,7 @@ src/
   pages/
     index.astro     Homepage feed (chapters → infographics, grid/list, TOC)
     [slug].astro    Infographic detail page (dynamic)
+    about.astro     About page (static, CMS-edited content)
   layouts/Layout.astro
   components/        Nav, FancyBar, Button, Tag, feed/*, icons/*
   scripts/           Page JS as ES modules (scroll-spy, overlays, nav)
@@ -43,9 +44,10 @@ src/
     chapters.json    CMS-managed chapter names / taglines / order
     infographics.ts  Feed assembly from the CMS collection
     ui.ts            All fixed UI microcopy (labels, buttons, aria-labels)
-    site.json        CMS-managed nav menu + language switcher
+    site.json        CMS-managed external links (About sidebar) + language switcher
   content/infographics/   Markdown content (Decap collection)
-  content.config.ts       Collection schema
+  content/about/about.md  About page title + body (single-file Decap collection)
+  content.config.ts       Collection schemas
   styles/            tokens.css, typography.css, global.css
 ```
 
@@ -56,8 +58,10 @@ GitHub Pages.
 ## Editing content
 
 - **Infographics** — CMS *Infographics* collection (`src/content/infographics/`).
+- **About page** — CMS *Settings → About Page* (`src/content/about/about.md`).
 - **Navigation & languages** — CMS *Settings → Navigation & Languages*
-  (`src/data/site.json`). The language switcher and header menu read from here.
+  (`src/data/site.json`). The language switcher reads from here, and the
+  "External links" box in the About page's sidebar reads from `menuLinks`.
 - **Chapter names / taglines** — CMS *Settings → Chapters* (`src/data/chapters.json`).
   Translate the name and tagline; keep each chapter's `id` unchanged (it links
   infographics to their chapter).
@@ -92,7 +96,7 @@ spin up a new mutation on your GitHub account:
      taglines (keep the `id`s unchanged).
    - `src/content/infographics/*.md` — titles, leads, and bodies (and swap in
      translated images under `public/images/atlas/` if needed).
-   - `src/data/site.json` — the header menu, and the **language switcher links**:
+   - `src/data/site.json` — the About page's external links, and the **language switcher links**:
      add an entry pointing back to every other language version so visitors can
      move between them.
    - `src/layouts/Layout.astro` — set `<html lang="…">` to your language code.

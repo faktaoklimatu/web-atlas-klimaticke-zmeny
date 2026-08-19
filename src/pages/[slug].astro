@@ -56,7 +56,7 @@ const href = (slug: string) => `${base}/${slug}/`;
 
 <Layout title={`${title} — ${ui.siteTitle}`}>
   <FancyBar />
-  <Nav compact menuLinks={site.menuLinks} siblings={site.languages} />
+  <Nav compact siblings={site.languages} />
 
   <!-- Fixed split background (same as the feed). -->
   <div class="detail-bg" aria-hidden="true">
@@ -234,7 +234,6 @@ const href = (slug: string) => `${base}/${slug}/`;
   /* Sidebar meta panel */
   .detail__sidebar-col {
     padding: calc(var(--top-clear) + var(--size-12)) 0 0 0; /* top matches --sticky-top */
-    border-right: 1px solid var(--blue-gray-100);
   }
   .detail__sidebar-sticky {
     position: sticky;

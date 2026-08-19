@@ -78,12 +78,13 @@ collections:
       - name: "navigation"
         label: "Navigation & Languages"
         file: "src/data/site.json"
-        description: "Header menu links and the language versions shown in the switcher."
+        description: "External links (shown on the About page) and the language versions shown in the switcher."
         fields:
-          - label: "Menu links"
+          - label: "External links"
             name: "menuLinks"
-            label_singular: "Menu link"
+            label_singular: "External link"
             widget: "list"
+            hint: "Shown in the \"External links\" box on the About page's sidebar."
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
@@ -96,6 +97,14 @@ collections:
               - { label: "Code", name: "code", widget: "string", hint: "Shown in the switcher, e.g. EN" }
               - { label: "Flag emoji", name: "flag", widget: "string", required: false }
               - { label: "URL", name: "url", widget: "string", hint: "Link to that language's site" }
+
+      - name: "about"
+        label: "About Page"
+        file: "src/content/about/about.md"
+        description: "Content shown on the About page."
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - name: "chapters"
         label: "Chapters"
