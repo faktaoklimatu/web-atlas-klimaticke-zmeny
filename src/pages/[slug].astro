@@ -9,6 +9,7 @@ import Button from '../components/Button.astro';
 import RelatedCard from '../components/feed/RelatedCard.astro';
 import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
+import ArrowLeftIcon from '../components/icons/ArrowLeftIcon.astro';
 import { chapterName } from '../data/chapters';
 import { getFlatInfographics } from '../data/infographics';
 import { imgUrl } from '../utils/img';
@@ -136,6 +137,12 @@ const href = (slug: string) => `${base}/${slug}/`;
         <div class="detail__content">
           <div class="detail__hero">
             <div class="detail__hero-inner">
+              <div class="detail__back">
+                <Button variant="text" href={`${base}/#${entry.id}`}>
+                  <ArrowLeftIcon slot="icon-left" size={16} />
+                  {ui.detail.back}
+                </Button>
+              </div>
               <div class="detail__titles">
                 <h1 class="detail__title type-title">{title}</h1>
                 <p class="detail__lead type-lead">{lead}</p>
@@ -309,6 +316,9 @@ const href = (slug: string) => `${base}/${slug}/`;
     gap: var(--size-6); /* 24px */
     max-width: 894px;
   }
+  .detail__back { margin-bottom: var(--size-1); /* 4px */ }
+  .detail__back :global(.btn) { padding: 0; min-height: 0; }
+  .detail__back :global(.btn__label) { padding: 0; }
   .detail__titles {
     display: flex;
     flex-direction: column;

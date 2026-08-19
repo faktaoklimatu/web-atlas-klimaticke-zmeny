@@ -25,6 +25,7 @@ export const ui = {
   },
 
   detail: {
+    back: 'Back to homepage',
     download: 'Download',
     pdf: 'PDF',
     png: 'PNG',

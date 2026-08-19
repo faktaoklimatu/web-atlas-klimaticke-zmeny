@@ -72,6 +72,18 @@ function initFeed() {
   window.addEventListener('scroll', onWindowScroll, { passive: true });
   window.addEventListener('resize', requestTick, { passive: true });
 
+  // Landing from a detail page's back button (#slug): jump straight to that
+  // article in the active panel, no smooth-scroll animation.
+  const hashSlug = decodeURIComponent(location.hash.slice(1));
+  if (hashSlug) {
+    const panel = visiblePanel();
+    const target = panel?.querySelector('[data-slug="' + hashSlug + '"]');
+    if (target) {
+      target.scrollIntoView({ behavior: 'instant', block: 'start' });
+      setActive(hashSlug, target.closest('.section[data-chapter]')?.getAttribute('data-chapter') ?? null);
+    }
+  }
+
   const brand = document.querySelector('.nav__brand');
   if (brand) {
     brand.addEventListener('click', (event) => {
