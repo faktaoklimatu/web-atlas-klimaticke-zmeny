@@ -17,13 +17,18 @@ npm install
 npm run dev      # dev server at http://localhost:4321/  (base path "/")
 ```
 
-- `npm run dev` / `npm start` — local dev server. Runs with `BASE_PATH=/` so the
-  Decap admin and CMS image previews resolve at the root.
+- `npm run dev` / `npm start` — runs the Astro dev server (`BASE_PATH=/`, so the
+  Decap admin and CMS image previews resolve at the root) together with the
+  Decap `local_backend` proxy (`decap-server`), via `concurrently`.
+- `npm run dev:astro` — Astro dev server only, without the CMS proxy.
 - `npm run build` — production build into `dist/` (base `/AtlasOfClimateChange`).
 - `npm run preview` — serve the production build locally.
 
-The CMS admin lives at `/admin/` (`public/admin/`). With `local_backend: true`
-you can run it against the local file system during development.
+The CMS admin lives at `/admin/` (`public/admin/`). `local_backend: true` in
+`config.yml` makes it read/write the local file system during development —
+but only while `decap-server` (started by `npm run dev`) is running. If that
+proxy isn't running, the CMS silently falls back to the GitHub backend
+instead of local files.
 
 ## Project structure
 
@@ -44,7 +49,7 @@ src/
     chapters.json    CMS-managed chapter names / taglines / order
     infographics.ts  Feed assembly from the CMS collection
     ui.ts            All fixed UI microcopy (labels, buttons, aria-labels)
-    site.json        CMS-managed external links (About sidebar) + language switcher
+    site.json        CMS-managed external links (About sidebar), language switcher + footer
   content/infographics/   Markdown content (Decap collection)
   content/about/about.md  About page title + body (single-file Decap collection)
   content.config.ts       Collection schemas
@@ -58,7 +63,7 @@ GitHub Pages.
 ## Editing content
 
 - **Infographics** — CMS *Infographics* collection (`src/content/infographics/`).
-- **About page** — CMS *Settings → About Page* (`src/content/about/about.md`).
+- **About page** — CMS *About Page* collection (`src/content/about/about.md`).
 - **Navigation & languages** — CMS *Settings → Navigation & Languages*
   (`src/data/site.json`). The language switcher reads from here, and the
   "External links" box in the About page's sidebar reads from `menuLinks`.

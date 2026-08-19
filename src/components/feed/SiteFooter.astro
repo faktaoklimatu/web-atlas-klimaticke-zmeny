@@ -1,15 +1,13 @@
 ---
 /**
  * SiteFooter — Figma: footer of the grid page (117:1203).
- * Social links + sponsors, then a language switcher and copyright.
- * Sits inside the content column, below the feed.
+ * Atlas title + PDF download, then social links; a language switcher +
+ * "get it in your language" link, then copyright. Sits inside the content
+ * column, below the feed.
  */
-import FacebookIcon from '../icons/FacebookIcon.astro';
-import InstagramIcon from '../icons/InstagramIcon.astro';
-import XIcon from '../icons/XIcon.astro';
-import LinkedInIcon from '../icons/LinkedInIcon.astro';
 import ButtonGroup from '../ButtonGroup.astro';
 import Button from '../Button.astro';
+import { imgUrl } from '../../utils/img';
 import { ui } from '../../data/ui';
 
 interface Sibling {
@@ -17,97 +15,122 @@ interface Sibling {
   flag?: string;
   url: string;
 }
+interface SocialLink {
+  label: string;
+  url: string;
+  icon: string;
+}
 interface Props {
   /** Language versions from the CMS (Settings → Navigation, via site.json). */
   siblings?: Sibling[];
+  /** Social icon links from the CMS (Settings → Navigation, via site.json). */
+  socialLinks?: SocialLink[];
+  /** Atlas PDF download from the CMS; hidden when empty. */
+  atlasPdfUrl?: string;
+  /** "Get the Atlas in your language" link target; hidden when empty. */
+  languageVersionsUrl?: string;
+  /** Copyright/license/contact — a single CMS-edited paragraph. */
+  footerLegal?: string;
 }
-const { siblings = [] } = Astro.props;
+const {
+  siblings = [],
+  socialLinks = [],
+  atlasPdfUrl,
+  languageVersionsUrl,
+  footerLegal,
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <footer class="footer">
-  <div class="footer__top">
+    <div class="footer__brand">
+      <p class="footer__label">{ui.siteTitle}</p>
+      {atlasPdfUrl && (
+        <Button variant="outlined" href={`${base}${atlasPdfUrl}`} target="_blank" rel="noopener noreferrer">
+          {ui.footer.downloadPdf}
+        </Button>
+      )}
+    </div>
+
     <div class="footer__social">
       <p class="footer__label">{ui.footer.followUs}</p>
       <div class="footer__icons">
-        <a href="#" aria-label={ui.footer.social.facebook}><FacebookIcon size={22} /></a>
-        <a href="#" aria-label={ui.footer.social.instagram}><InstagramIcon size={22} /></a>
-        <a href="#" aria-label={ui.footer.social.x}><XIcon size={22} /></a>
-        <a href="#" aria-label={ui.footer.social.linkedin}><LinkedInIcon size={22} /></a>
+        {
+          socialLinks.map((s) => (
+            <a href={s.url} aria-label={s.label} target="_blank" rel="noopener noreferrer">
+              <img src={imgUrl(s.icon)} alt="" width="22" height="22" />
+            </a>
+          ))
+        }
       </div>
     </div>
 
-    <div class="footer__sponsors">
-      <p class="footer__label">{ui.footer.sponsorsLabel}</p>
-      <div class="footer__logos">
-        {Array.from({ length: 4 }).map(() => <span>{ui.footer.sponsorPlaceholder}</span>)}
-      </div>
-    </div>
-  </div>
-
-  <div class="footer__bottom">
-    <ButtonGroup role="group" aria-label={ui.footer.languageLabel}>
-      {
-        siblings.map((s) => (
-          <Button variant="text" href={s.url}>
-            {s.flag && <span slot="icon-left" aria-hidden="true">{s.flag}</span>}
-            {s.code}
+    <div class="footer__languages">
+      <p class="footer__label">{ui.footer.languageLabel}</p>
+      <ButtonGroup role="group" aria-label={ui.footer.languageLabel}>
+        {
+          siblings.map((s) => (
+            <Button variant="text" href={s.url} target="_blank" rel="noopener noreferrer">
+              {s.flag && <span slot="icon-left" aria-hidden="true">{s.flag}</span>}
+              {s.code}
+            </Button>
+          ))
+        }
+      </ButtonGroup>
+      {languageVersionsUrl && (
+        <div class="footer__lang-link">
+          <Button variant="text" href={languageVersionsUrl} target="_blank" rel="noopener noreferrer">
+            {ui.footer.getInYourLanguage}
           </Button>
-        ))
-      }
-    </ButtonGroup>
+        </div>
+      )}
+    </div>
 
     <div class="footer__legal">
-      <p>{ui.footer.copyright}</p>
-      <p><a href="https://creativecommons.org/licenses/by/4.0/">{ui.footer.license}</a></p>
-      <p><a href={`mailto:${ui.footer.email}`}>{ui.footer.email}</a></p>
+      <p class="footer__label">{footerLegal}</p>
     </div>
-  </div>
+
 </footer>
 
 <style>
   .footer {
     margin-top: var(--size-16); /* 64px */
-    padding-top: var(--size-10); /* 40px */
+    padding: var(--size-10) 0; /* 40px */
     border-top: 1px solid var(--gray-200);
     font-family: var(--font-sans);
     color: var(--text-secondary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--size-8);
+    row-gap: var(--size-8);
   }
 
-  .footer__top {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--size-10);
-    flex-wrap: wrap;
-  }
+
   .footer__label {
     margin: 0 0 var(--size-3);
     font-size: 15px;
     color: var(--text-secondary);
   }
-  .footer__icons { display: flex; gap: var(--size-3); }
-  .footer__icons a { color: var(--text-primary); display: inline-flex; }
-  .footer__icons a:hover { color: var(--blue-600); }
-
-  .footer__logos { display: flex; gap: var(--size-4); }
-  .footer__logos span {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--text-tertiary);
-    letter-spacing: 0.05em;
-    transform: rotate(-8deg);
-  }
-
-  .footer__bottom {
+  .footer__brand {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
-    gap: var(--size-6);
-    margin-top: var(--size-8);
-    padding-bottom: var(--size-12);
   }
 
-  .footer__legal { text-align: right; font-size: 14px; color: var(--text-tertiary); }
-  .footer__legal p { margin: 0 0 var(--size-1); }
-  .footer__legal a { color: var(--text-tertiary); }
-  .footer__legal a:hover { color: var(--blue-600); }
+  .footer__icons { display: flex; gap: var(--size-3); }
+  .footer__icons a { display: inline-flex; }
+  .footer__icons img { display: block; width: 22px; height: 22px; }
+  @media (hover: hover) {
+    .footer__icons a { transition: opacity 0.15s ease; }
+    .footer__icons a:hover { opacity: 0.7; }
+  }
+
+  .footer__languages { display: flex; flex-direction: column; align-items: flex-start; }
+  .footer__lang-link { margin-top: var(--size-1); /* 4px */ }
+  .footer__lang-link :global(.btn) { padding: 0; min-height: 0; }
+  .footer__lang-link :global(.btn__label) { padding: 0; }
+
+  .footer__legal { text-align: left; }
+  .footer__legal .footer__label { margin: 0; }
 </style>

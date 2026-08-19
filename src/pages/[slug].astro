@@ -7,6 +7,7 @@ import Tag from '../components/Tag.astro';
 import ButtonGroup from '../components/ButtonGroup.astro';
 import Button from '../components/Button.astro';
 import RelatedCard from '../components/feed/RelatedCard.astro';
+import SiteFooter from '../components/feed/SiteFooter.astro';
 import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
 import ArrowLeftIcon from '../components/icons/ArrowLeftIcon.astro';
@@ -157,6 +158,16 @@ const href = (slug: string) => `${base}/${slug}/`;
           <!-- Small screens: the sidebar's More articles block relocates here,
                after the end of the article. -->
           <div class="detail__end-meta" data-end-meta></div>
+
+          <div class="detail__footer">
+            <SiteFooter
+              siblings={site.languages}
+              socialLinks={site.socialLinks}
+              atlasPdfUrl={site.atlasPdfUrl}
+              languageVersionsUrl={site.languageVersionsUrl}
+              footerLegal={site.footerLegal}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -178,8 +189,11 @@ const href = (slug: string) => `${base}/${slug}/`;
   .detail {
     --top-clear: 79px; /* FancyBar 10 + compact nav 69 */
     /* Pin the sidebar exactly at its natural offset (col padding-top below),
-       so it's fixed from the first scrolled pixel — no sticky "settle" travel. */
-    --sticky-top: calc(var(--top-clear) + var(--size-12)); /* 79 + 48 = 127px */
+       so it's fixed from the first scrolled pixel — no sticky "settle" travel.
+       Flush with the nav (not +size-12) so the sidebar's own overflow clips
+       scrolled-out content right at the nav edge, not below it; the visual
+       48px breathing room instead lives as padding inside the scroll box. */
+    --sticky-top: var(--top-clear);
     /* Distance from the centre column's edge to the viewport edge — i.e. the
        spacer width. Full-bleed pseudo-elements extend by exactly this instead
        of a whole -100vw (which would overflow ~a full viewport and, in touch
@@ -233,7 +247,7 @@ const href = (slug: string) => `${base}/${slug}/`;
 
   /* Sidebar meta panel */
   .detail__sidebar-col {
-    padding: calc(var(--top-clear) + var(--size-12)) 0 0 0; /* top matches --sticky-top */
+    padding: var(--sticky-top) 0 0 0;
   }
   .detail__sidebar-sticky {
     position: sticky;
@@ -243,8 +257,10 @@ const href = (slug: string) => `${base}/${slug}/`;
        cursor is over it (that's where the scroll container lives). The
        right gap (36px) lives here, not on the column, so an overflow
        scrollbar rides the column's actual right edge instead of sitting
-       inset by the gap. */
-    padding-right: var(--size-9); /* 36px */
+       inset by the gap. Top padding (48px) also lives here rather than in
+       --sticky-top, so it's inside the clip boundary: scrolled-out content
+       disappears flush with the nav instead of lingering in that gap. */
+    padding: var(--size-12) var(--size-9) 0 0; /* top 48, right 36 */
     max-height: calc(100vh - var(--sticky-top) - var(--size-6));
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -348,6 +364,8 @@ const href = (slug: string) => `${base}/${slug}/`;
     padding: var(--size-16) 0 var(--size-24) var(--size-24); /* top 64, left 96, bottom 96 */
     max-width: 894px;
   }
+
+  .detail__footer { padding-left: var(--size-24); /* 96px, matches the hero/body inset */ }
   .detail__intro {
     margin: 0;
     color: var(--text-primary);
@@ -442,6 +460,7 @@ const href = (slug: string) => `${base}/${slug}/`;
        inset as the navigation. */
     .detail__hero { padding-left: 0; }
     .detail__body { padding-left: 0; }
+    .detail__footer { padding-left: 0; }
 
     /* With no sidebar, the hero's white band bleeds to BOTH edges so there's
        no leftover blue-gray spacer strip beside it on the left. */

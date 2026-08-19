@@ -49,17 +49,8 @@ export const ui = {
 
   footer: {
     followUs: 'Follow us on social media',
-    sponsorsLabel: 'Sponsors',
-    sponsorPlaceholder: 'LOGO',
-    languageLabel: 'Language',
-    copyright: '© 2026 Otevřená data o klimatu, z.ú.',
-    license: 'CC BY 4.0',
-    email: 'info@faktaoklimatu.cz',
-    social: {
-      facebook: 'Facebook',
-      instagram: 'Instagram',
-      x: 'X',
-      linkedin: 'LinkedIn',
-    },
+    downloadPdf: 'Download PDF',
+    languageLabel: 'Available language versions',
+    getInYourLanguage: 'Get the Atlas in your language',
   },
 } as const;

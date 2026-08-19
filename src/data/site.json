@@ -2,11 +2,11 @@
   "menuLinks": [
     {
       "label": "Link 1",
-      "url": "#"
+      "url": "https://google.com/"
     },
     {
       "label": "Link 2",
-      "url": "#"
+      "url": "https://google.com/"
     }
   ],
   "languages": [
@@ -20,5 +20,30 @@
       "flag": "🇫🇷",
       "url": "#"
     }
-  ]
+  ],
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": "#",
+      "icon": "/images/social/facebook.svg"
+    },
+    {
+      "label": "Instagram",
+      "url": "#",
+      "icon": "/images/social/instagram.svg"
+    },
+    {
+      "label": "X",
+      "url": "#",
+      "icon": "/images/social/x.svg"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "#",
+      "icon": "/images/social/linkedin.svg"
+    }
+  ],
+  "atlasPdfUrl": "/images/atlas/ebook_cz_zelenina_kterou_vypestuje_kazdy.pdf",
+  "languageVersionsUrl": "https://google.com/",
+  "footerLegal": "© 2026 Otevřená data o klimatu, z.ú. · CC BY 4.0 · info@faktaoklimatu.cz"
 }

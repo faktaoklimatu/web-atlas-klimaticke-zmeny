@@ -72,13 +72,24 @@ collections:
           display_fields: ["title"]
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "src/content/about/about.md"
+        description: "Content shown on the About page."
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "settings"
     label: "Settings"
     files:
       - name: "navigation"
-        label: "Navigation & Languages"
+        label: "Navigation, Languages & Footer"
         file: "src/data/site.json"
-        description: "External links (shown on the About page) and the language versions shown in the switcher."
+        description: "External links (About page sidebar), language switcher, and footer content."
         fields:
           - label: "External links"
             name: "menuLinks"
@@ -97,14 +108,34 @@ collections:
               - { label: "Code", name: "code", widget: "string", hint: "Shown in the switcher, e.g. EN" }
               - { label: "Flag emoji", name: "flag", widget: "string", required: false }
               - { label: "URL", name: "url", widget: "string", hint: "Link to that language's site" }
-
-      - name: "about"
-        label: "About Page"
-        file: "src/content/about/about.md"
-        description: "Content shown on the About page."
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Social links"
+            name: "socialLinks"
+            label_singular: "Social link"
+            widget: "list"
+            summary: "{{fields.label}}"
+            hint: "Shown as icon links in the footer."
+            fields:
+              - { label: "Name", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - label: "Icon (SVG)"
+                name: "icon"
+                widget: "image"
+                media_folder: "public/images/social"
+                public_folder: "/images/social"
+          - label: "Atlas PDF"
+            name: "atlasPdfUrl"
+            widget: "file"
+            required: false
+            hint: "Shown as a \"Download PDF\" button in the footer, next to the Atlas title."
+          - label: "Get the Atlas in your language — URL"
+            name: "languageVersionsUrl"
+            widget: "string"
+            required: false
+            hint: "Shown as a link below the language switcher in the footer."
+          - label: "Footer legal text"
+            name: "footerLegal"
+            widget: "text"
+            hint: "Copyright, license, and contact info — shown as a single paragraph in the footer."
 
       - name: "chapters"
         label: "Chapters"

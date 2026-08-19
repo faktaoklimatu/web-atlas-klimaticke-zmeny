@@ -83,8 +83,11 @@ const hasIconRight = Astro.slots.has('icon-right');
     height: var(--size-6);
   }
 
-  /* --- Variants (same label colour; only the border differs) --- */
-  .btn--outlined { border-color: var(--gray-700); }
+  /* --- Variants (same label colour; only the border/background differ) --- */
+  .btn--outlined {
+    background: var(--white);
+    border-color: var(--gray-300);
+  }
   .btn--outlined,
   .btn--text { color: var(--text-primary); }
 

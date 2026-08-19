@@ -112,7 +112,13 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
             }
           </div>
 
-          <SiteFooter siblings={site.languages} />
+          <SiteFooter
+            siblings={site.languages}
+            socialLinks={site.socialLinks}
+            atlasPdfUrl={site.atlasPdfUrl}
+            languageVersionsUrl={site.languageVersionsUrl}
+            footerLegal={site.footerLegal}
+          />
         </div>
       </div>
     </div>
@@ -161,7 +167,10 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
 <style>
   .feed {
     --feed-top: 270px; /* clears the fixed FancyBar (10) + hero nav on load */
-    --sticky-top: 100px; /* clears the collapsed nav while scrolling */
+    /* Flush with the compact nav (FancyBar 10 + nav 69), so the sticky
+       sidebar's own overflow clips scrolled-out content right at the nav
+       edge instead of lingering below it. */
+    --sticky-top: 79px;
     position: relative;
     display: flex;
     align-items: stretch;
@@ -207,16 +216,24 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
     min-width: 0;
   }
 
+  /* Clears the hero nav MINUS the 48px gap that lives inside the sticky box
+     below — so the sidebar content lines up with the right column on load
+     (both effectively at --feed-top). */
   .feed__sidebar-col {
-    padding: var(--feed-top) 0 0 0;
+    padding: calc(var(--feed-top) - var(--size-12)) 0 0 0;
   }
   .feed__sidebar-sticky {
     position: sticky;
+    /* Box top — and therefore the overflow clip edge — sits flush under the
+       compact nav. The sidebar sticks here once the nav has collapsed; the
+       right column keeps scrolling underneath. */
     top: var(--sticky-top);
-    /* The right gap (36px) lives here, not on the column, so an overflow
-       scrollbar rides the column's actual right edge instead of sitting
-       inset by the gap. Scrolls internally when taller than the viewport. */
-    padding-right: var(--size-9); /* 36px */
+    /* Right gap (36px) lives here so an overflow scrollbar rides the column's
+       real right edge, not inset by the gap. Top gap (48px) also lives here,
+       INSIDE the overflow box: it's the breathing room below the compact nav,
+       and on internal scroll it scrolls away first — so content only starts
+       clipping once it has passed the gap and reached the nav edge. */
+    padding: var(--size-12) var(--size-9) 0 0; /* top 48, right 36 */
     max-height: calc(100vh - var(--sticky-top) - var(--size-6));
     overflow-y: auto;
     overscroll-behavior: contain;
