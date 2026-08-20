@@ -7,6 +7,7 @@ import Tag from '../components/Tag.astro';
 import ButtonGroup from '../components/ButtonGroup.astro';
 import Button from '../components/Button.astro';
 import RelatedCard from '../components/feed/RelatedCard.astro';
+import CroppedInfographic from '../components/CroppedInfographic.astro';
 import SiteFooter from '../components/feed/SiteFooter.astro';
 import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
@@ -144,7 +145,7 @@ const href = (slug: string) => `${base}/${slug}/`;
                 <p class="detail__lead type-lead">{lead}</p>
               </div>
               <div class="detail__media">
-                <img src={imgSrc} alt={title} />
+                <CroppedInfographic src={imgSrc} alt={title} loading="eager" />
               </div>
             </div>
           </div>
@@ -355,16 +356,8 @@ const href = (slug: string) => `${base}/${slug}/`;
   }
   .detail__media {
     width: 100%;
-    aspect-ratio: 894 / 460;
     overflow: hidden;
     border-radius: var(--size-2);
-  }
-  .detail__media img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
   }
 
   .detail__body {

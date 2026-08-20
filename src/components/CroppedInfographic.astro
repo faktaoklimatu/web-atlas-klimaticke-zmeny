@@ -1,0 +1,40 @@
+---
+/**
+ * Every infographic is exported from a shared template (see
+ * public/caea9b93-f79f-4bad-8a30-52c009571dbd.jpeg) with a fixed red margin:
+ * 5.50% left, 5.57% right, 21.64% top, 5.91% bottom of the full image. This
+ * scales the image up so the margin sits outside the container (hidden) and
+ * the remaining content fills it edge to edge. The container's aspect-ratio
+ * matches the template's content-area ratio, so the crop lands exactly on
+ * the white area with no distortion — and since every infographic shares
+ * that ratio, height at a given width is identical across all of them.
+ */
+interface Props {
+  src: string;
+  alt: string;
+  loading?: 'lazy' | 'eager';
+}
+const { src, alt, loading = 'lazy' } = Astro.props;
+---
+
+<div class="cropped-infographic">
+  <img src={src} alt={alt} loading={loading} decoding="async" />
+</div>
+
+<style>
+  .cropped-infographic {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1261 / 723;
+    overflow: hidden;
+  }
+  .cropped-infographic img {
+    position: absolute;
+    top: -29.8755%;
+    left: -6.1856%;
+    width: 112.4504%;
+    height: 138.036%;
+    max-width: none;
+    display: block;
+  }
+</style>

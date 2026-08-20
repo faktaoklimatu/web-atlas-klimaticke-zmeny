@@ -10,15 +10,14 @@ interface Props {
   href: string;
 }
 import { imgUrl } from '../../utils/img';
+import TeaserImage from './TeaserImage.astro';
 const { title, image, href } = Astro.props;
 const src = imgUrl(image);
 ---
 
 <a class="related" href={href}>
   <h3 class="related__title type-card-title">{title}</h3>
-  <div class="related__media">
-    <img src={src} alt={title} loading="lazy" decoding="async" />
-  </div>
+  <TeaserImage src={src} alt={title} />
 </a>
 
 <style>
@@ -37,24 +36,6 @@ const src = imgUrl(image);
   .related__title {
     margin: 0;
     color: var(--text-primary);
-  }
-  /* Aspect tuned to the atlas images (5906×4157) so a uniform scale crops
-     3% off each side, 14% off the top, and leaves the bottom flush. */
-  .related__media {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1.8;
-    overflow: hidden;
-    background: var(--gray-100);
-  }
-  .related__media img {
-    position: absolute;
-    left: -2%;
-    bottom: -5%;
-    width: 104%;
-    height: auto; /* keep aspect ratio — no distortion */
-    max-width: none;
-    display: block;
   }
   @media (hover: hover) {
     .related { transition: border-color 0.2s ease, box-shadow 0.2s ease; }

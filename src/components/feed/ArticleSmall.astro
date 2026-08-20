@@ -14,6 +14,7 @@ interface Props {
   href?: string;
 }
 import { imgUrl } from '../../utils/img';
+import TeaserImage from './TeaserImage.astro';
 const { title, image, slug, chapterId, href = '#' } = Astro.props;
 const src = imgUrl(image);
 ---
@@ -21,9 +22,7 @@ const src = imgUrl(image);
 <article class="scard" data-slug={slug} data-chapter={chapterId}>
   <a class="scard__link" href={href}>
     <h3 class="scard__title type-card-title">{title}</h3>
-    <div class="scard__media">
-      <img src={src} alt={title} loading="lazy" decoding="async" />
-    </div>
+    <TeaserImage src={src} alt={title} />
   </a>
 </article>
 
@@ -51,25 +50,6 @@ const src = imgUrl(image);
     margin: 0;
     color: var(--text-primary);
   }
-  /* Aspect tuned to the atlas images (5906×4157) so a uniform scale crops
-     3% off each side, 14% off the top, and leaves the bottom flush. */
-  .scard__media {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1.8;
-    overflow: hidden;
-    background: var(--gray-100);
-  }
-  .scard__media img {
-    position: absolute;
-    left: -2%;
-    bottom: -5%;
-    width: 104%;
-    height: auto; /* keep aspect ratio — no distortion */
-    max-width: none;
-    display: block;
-  }
-
   /* Hover (pointer devices only — never sticks on touch). */
   @media (hover: hover) {
     .scard {

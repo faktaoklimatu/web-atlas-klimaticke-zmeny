@@ -42,7 +42,7 @@ src/
     [slug].astro    Infographic detail page (dynamic)
     about.astro     About page (static, CMS-edited content)
   layouts/Layout.astro
-  components/        Nav, FancyBar, Button, Tag, feed/*, icons/*
+  components/        Nav, FancyBar, Button, Tag, CroppedInfographic, feed/*, icons/*
   scripts/           Page JS as ES modules (scroll-spy, overlays, nav)
   data/
     chapters.ts      Chapter interface + name lookup (loads chapters.json)
