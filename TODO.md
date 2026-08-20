@@ -52,13 +52,6 @@ Real content still needs to replace placeholders before launch:
 Worker (`brona-musil.workers.dev`). Before launch, move the deploy + OAuth
 backend to the production / organization account.
 
-## Responsiveness
-
-Handle later: full responsiveness for the smallest screens. The layout has
-breakpoints down to `--bp-xs` (480), but the very small phone range still needs
-a proper pass — check nav, feed grid/list, detail hero + relocated meta blocks,
-and the TOC overlay for overflow, cramped spacing, and tap targets.
-
 ## SEO
 
 Handle later: per-page `<title>`/meta descriptions, Open Graph + Twitter cards
