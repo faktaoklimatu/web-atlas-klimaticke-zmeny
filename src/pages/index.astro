@@ -12,6 +12,7 @@ import ListIcon from '../components/icons/ListIcon.astro';
 import CloseIcon from '../components/icons/CloseIcon.astro';
 import { getChapters } from '../data/infographics';
 import site from '../data/site.json';
+import seo from '../data/seo.json';
 import { ui } from '../data/ui';
 
 const chapters = await getChapters();
@@ -19,7 +20,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const detailHref = (slug: string) => `${base}/${slug}/`;
 ---
 
-<Layout title={ui.siteTitle}>
+<Layout
+  title={seo.siteTitle}
+  description={seo.defaultDescription}
+  canonicalPath={`${base}/`}
+>
   <FancyBar />
   <Nav siblings={site.languages} />
 

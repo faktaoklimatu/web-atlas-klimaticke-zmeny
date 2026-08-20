@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { satteri } from '@astrojs/markdown-satteri';
+import sitemap from '@astrojs/sitemap';
 
 // The GitHub Pages project site lives under /AtlasOfClimateChange. Local dev +
 // the Decap admin run at the root (BASE_PATH=/ in the dev script) so CMS image
@@ -43,6 +44,7 @@ export default defineConfig({
   output: 'static',
   site: 'https://hiiampadik.github.io',
   base,
+  integrations: [sitemap({ filter: (page) => !page.endsWith('/404/') })],
   markdown: {
     processor: satteri({ hastPlugins: [satteriBaseLinks()] }),
   },

@@ -81,6 +81,7 @@ collections:
         description: "Content shown on the About page."
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "description", widget: "text", required: false, hint: "Shown in search results and social previews. Falls back to the site default (Settings → SEO) if left blank." }
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "settings"
@@ -108,6 +109,7 @@ collections:
               - { label: "Code", name: "code", widget: "string", hint: "Shown in the switcher, e.g. EN" }
               - { label: "Flag emoji", name: "flag", widget: "string", required: false }
               - { label: "URL", name: "url", widget: "string", hint: "Link to that language's site" }
+              - { label: "hreflang code", name: "hreflang", widget: "string", required: false, hint: "ISO language code for SEO, e.g. en, cs, pt-BR. Leave blank to exclude this version from hreflang tags." }
           - label: "Social links"
             name: "socialLinks"
             label_singular: "Social link"
@@ -136,6 +138,19 @@ collections:
             name: "footerLegal"
             widget: "text"
             hint: "Copyright, license, and contact info — shown as a single paragraph in the footer."
+
+      - name: "seo"
+        label: "SEO"
+        file: "src/data/seo.json"
+        description: "Site title, default meta description, social share image, and language code used across every page."
+        fields:
+          - { label: "Site title", name: "siteTitle", widget: "string", hint: "Used in every page's <title>, and as the site name in social share previews." }
+          - { label: "Language code", name: "locale", widget: "string", default: "en", hint: "Sets the page language (<html lang>), e.g. en, cs. One value per site — set per language fork." }
+          - { label: "Default meta description", name: "defaultDescription", widget: "text", hint: "Used on the homepage and 404 page, and as a fallback anywhere else with no description of its own." }
+          - label: "Default social share image"
+            name: "ogImageFallback"
+            widget: "image"
+            hint: "1200×630px. Used for pages without their own image (homepage, About, 404)."
 
       - name: "chapters"
         label: "Chapters"

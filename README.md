@@ -41,7 +41,8 @@ src/
     index.astro     Homepage feed (chapters → infographics, grid/list, TOC)
     [slug].astro    Infographic detail page (dynamic)
     about.astro     About page (static, CMS-edited content)
-  layouts/Layout.astro
+    robots.txt.ts   robots.txt endpoint (points at the generated sitemap)
+  layouts/Layout.astro   Base HTML + all SEO tags (meta, canonical, OG/Twitter, hreflang)
   components/        Nav, FancyBar, Button, Tag, CroppedInfographic, feed/*, icons/*
   scripts/           Page JS as ES modules (scroll-spy, overlays, nav)
   data/
@@ -50,11 +51,16 @@ src/
     infographics.ts  Feed assembly from the CMS collection
     ui.ts            All fixed UI microcopy (labels, buttons, aria-labels)
     site.json        CMS-managed external links (About sidebar), language switcher + footer
+    seo.json         CMS-managed site title, default description, social share image, locale
   content/infographics/   Markdown content (Decap collection)
   content/about/about.md  About page title + body (single-file Decap collection)
   content.config.ts       Collection schemas
+  utils/seo.ts       absoluteUrl() / truncate() helpers used by Layout.astro
   styles/            tokens.css, typography.css, global.css
 ```
+
+`@astrojs/sitemap` (configured in `astro.config.mjs`) generates `sitemap-index.xml`/
+`sitemap-0.xml` at build time from every prerendered page (excluding `/404/`).
 
 Deployment is automated: pushing to `main`/`master` runs
 `.github/workflows/deploy.yml`, which builds the site and publishes it to
@@ -70,6 +76,11 @@ GitHub Pages.
 - **Chapter names / taglines** — CMS *Settings → Chapters* (`src/data/chapters.json`).
   Translate the name and tagline; keep each chapter's `id` unchanged (it links
   infographics to their chapter).
+- **SEO** — CMS *Settings → SEO* (`src/data/seo.json`): site title, default meta
+  description, default social share image, and the page language code
+  (`<html lang>`). Per-page descriptions/images come from existing content
+  where possible (an infographic's `lead`/`image`, the About page's own
+  `description` field) and only fall back to these defaults.
 - **Fixed interface text** (labels, buttons, aria-labels) — `src/data/ui.ts`.
 
 ## Creating a new language version (fork)
@@ -103,8 +114,12 @@ spin up a new mutation on your GitHub account:
      translated images under `public/images/atlas/` if needed).
    - `src/data/site.json` — the About page's external links, and the **language switcher links**:
      add an entry pointing back to every other language version so visitors can
-     move between them.
-   - `src/layouts/Layout.astro` — set `<html lang="…">` to your language code.
+     move between them. Set each entry's `hreflang` to its ISO language code
+     (e.g. `en`, `cs`) — that's what drives the `hreflang` SEO tags, separate
+     from `code`, which is just the switcher's display label.
+   - CMS *Settings → SEO* (`src/data/seo.json`) — site title, default meta
+     description, social share image, and `locale` (sets `<html lang="…">` to
+     your language code).
 
 5. **Enable GitHub Pages.** In the fork's *Settings → Pages*, set the source to
    **GitHub Actions**. Pushing to the default branch then builds and deploys via

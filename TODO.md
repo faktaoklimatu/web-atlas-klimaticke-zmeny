@@ -1,3 +1,5 @@
+- zmenšují se obrázky nebo se nahrávají plné velikosti? 
+
 # Open items
 
 Things noted while working, to resolve later.
@@ -28,6 +30,7 @@ GitHub OAuth app for CMS login; the shared one won't authorize other repos.
 Options to smooth this out: document the Worker setup as a reusable template,
 or provide a one-click/deployable OAuth proxy. Until then, forkers fall back to
 `local_backend: true` or editing Markdown directly on GitHub.
+nastav local_backend podle env variables.
 
 ## Deployment
 
@@ -52,13 +55,6 @@ Real content still needs to replace placeholders before launch:
 Worker (`brona-musil.workers.dev`). Before launch, move the deploy + OAuth
 backend to the production / organization account.
 
-## SEO
-
-Handle later: per-page `<title>`/meta descriptions, Open Graph + Twitter cards
-(**including the 1200×630 social share image** — the favicon/app icons are
-already done in `Layout.astro`), canonical URLs, `lang`/`hreflang` across
-language versions, `sitemap.xml`, `robots.txt`, and structured data for
-infographics.
 
 ## Accessibility (A11Y)
 

@@ -9,6 +9,7 @@ import ButtonGroup from '../ButtonGroup.astro';
 import Button from '../Button.astro';
 import { imgUrl } from '../../utils/img';
 import { ui } from '../../data/ui';
+import seo from '../../data/seo.json';
 
 interface Sibling {
   code: string;
@@ -45,7 +46,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <footer class="footer">
     <div class="footer__brand">
-      <p class="footer__label">{ui.siteTitle}</p>
+      <p class="footer__label">{seo.siteTitle}</p>
       {atlasPdfUrl && (
         <Button variant="outlined" href={`${base}${atlasPdfUrl}`} target="_blank" rel="noopener noreferrer">
           {ui.footer.downloadPdf}

@@ -15,7 +15,9 @@ import ArrowLeftIcon from '../components/icons/ArrowLeftIcon.astro';
 import { chapterName } from '../data/chapters';
 import { getFlatInfographics } from '../data/infographics';
 import { imgUrl } from '../utils/img';
+import { absoluteUrl } from '../utils/seo';
 import site from '../data/site.json';
+import seo from '../data/seo.json';
 import { ui } from '../data/ui';
 
 export async function getStaticPaths() {
@@ -54,9 +56,34 @@ const hasDataLinks = tableUrl || sourceUrl;
 const hasUnderlyingData = hasDataLinks || citation;
 
 const href = (slug: string) => `${base}/${slug}/`;
+
+const pageUrl = absoluteUrl(Astro.site, `${base}/${entry.id}/`);
+const imageUrl = absoluteUrl(Astro.site, imgSrc);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ImageObject',
+      contentUrl: imageUrl,
+      url: imageUrl,
+      name: title,
+      description: lead,
+      representativeOfPage: true,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: seo.siteTitle, item: absoluteUrl(Astro.site, `${base}/`) },
+        { '@type': 'ListItem', position: 2, name: chapterLabel },
+        { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+      ],
+    },
+  ],
+};
 ---
 
-<Layout title={`${title} — ${ui.siteTitle}`}>
+<Layout title={`${title} — ${seo.siteTitle}`} description={lead} image={data.image} type="article">
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
   <FancyBar />
   <Nav compact siblings={site.languages} />
 

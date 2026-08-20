@@ -5,13 +5,14 @@ import Nav from '../components/Nav.astro';
 import Button from '../components/Button.astro';
 import ArrowLeftIcon from '../components/icons/ArrowLeftIcon.astro';
 import site from '../data/site.json';
+import seo from '../data/seo.json';
 import { ui } from '../data/ui';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const homeHref = `${base}/`;
 ---
 
-<Layout title={`${ui.notFound.heading} · ${ui.siteTitle}`}>
+<Layout title={`${ui.notFound.heading} · ${seo.siteTitle}`} description={ui.notFound.subheading} noindex>
   <FancyBar />
   <Nav compact siblings={site.languages} />
 

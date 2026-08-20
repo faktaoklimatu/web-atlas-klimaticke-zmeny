@@ -5,17 +5,51 @@ import '../styles/global.css';
 import '../styles/tokens.css';
 import '../styles/typography.css';
 import { ClientRouter } from 'astro:transitions';
+import { absoluteUrl, truncate } from '../utils/seo';
+import seo from '../data/seo.json';
+import site from '../data/site.json';
+
+interface LanguageSibling {
+  code: string;
+  flag?: string;
+  url: string;
+  hreflang?: string;
+}
 
 interface Props {
   title: string;
+  /** Plain text; truncated defensively to a safe meta-description length. */
+  description?: string;
+  /** Base-relative public path (e.g. from the CMS `image` field). Falls back to `seo.ogImageFallback`. */
+  image?: string;
+  /** og:type. */
+  type?: 'website' | 'article';
+  /** Defaults to the current URL. */
+  canonicalPath?: string;
+  /** Excludes the page from indexing (e.g. 404). */
+  noindex?: boolean;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description,
+  image,
+  type = 'website',
+  canonicalPath,
+  noindex = false,
+} = Astro.props;
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const lang = seo.locale || 'en';
+
+const canonicalUrl = absoluteUrl(Astro.site, canonicalPath ?? Astro.url.pathname);
+const ogImage = absoluteUrl(Astro.site, `${base}${image ?? seo.ogImageFallback}`);
+const metaDescription = truncate(description || seo.defaultDescription);
+const languages = (site.languages as LanguageSibling[]).filter((l) => l.hreflang);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +60,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <link rel="manifest" href={`${base}/site.webmanifest`} />
     <meta name="theme-color" content="#1D4ED8" />
     <title>{title}</title>
+
+    <meta name="description" content={metaDescription} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={canonicalUrl} />
+    {languages.map((l) => <link rel="alternate" hreflang={l.hreflang} href={l.url} />)}
+    {languages.length > 0 && <link rel="alternate" hreflang="x-default" href={canonicalUrl} />}
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={seo.siteTitle} />
+    <meta property="og:locale" content={lang} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={ogImage} />
+
     <ClientRouter />
   </head>
   <body>
