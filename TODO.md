@@ -42,11 +42,8 @@ launch: add a `CNAME`, point DNS at GitHub Pages, and set `site`/`base` in
 
 Real content still needs to replace placeholders before launch:
 
-- `src/data/site.json` — language switcher URLs and the header menu link are all
-  `#`. Point them at the real language versions and pages.
 - `src/components/feed/SiteFooter.astro` — social links are `href="#"`; wire up
   the real Facebook / Instagram / X / LinkedIn URLs.
-- Sponsor logos are `LOGO` text placeholders — swap in the real logos.
 
 ## Deploy ownership
 

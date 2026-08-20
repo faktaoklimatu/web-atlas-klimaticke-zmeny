@@ -245,6 +245,14 @@ const aboutHref = `${base}/about/`;
       display: none;
     }
   }
+
+  /* Large phone (--bp-xs 480): same tighter edge gutter as the rest of the
+     page (36px -> 16px), and the title drops to the same size as the About
+     link beside it. */
+  @media (max-width: 480px) {
+    .nav { padding: var(--size-3) var(--size-4); }
+    .nav__title { font-size: 15px; letter-spacing: 0; } /* matches .nav__link (type-nav-link) */
+  }
 </style>
 
 <script>

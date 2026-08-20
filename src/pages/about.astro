@@ -165,6 +165,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: var(--text-primary);
   }
 
+
   .about__content {
     padding: var(--sticky-top) 0 0 var(--size-24); /* right 36, left 96 */
   }
@@ -215,6 +216,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
   .about__prose :global(a:hover) { color: var(--blue-600); }
 
+  @media (max-width: 1280px) {
+    .about__content {padding: var(--sticky-top) 0 0 var(--size-9);}
+    .about__title { font-size: 28px; } /* 38px -> 28px */
+  }
   /* Single column: the 36px spacer is the only side gutter (same as the nav). */
   @media (max-width: 1024px) {
     /* Uniform background — no sidebar tint band. */
@@ -225,5 +230,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     .about__main { grid-template-columns: 1fr; }
     .about__sidebar-col { display: none; }
     .about__content { padding-left: 0; }
+  }
+
+  /* Large phone (--bp-xs 480): tighter edge gutter. */
+  @media (max-width: 480px) {
+    .about-bg__fill,
+    .about__spacer { min-width: var(--size-4); } /* 36px -> 16px */
+    .about__prose { padding-bottom: var(--size-4); }
+
+    /* top-clear (nav clearance) + 16px breathing room, was +48px */
+    .about__content { padding-top: calc(var(--top-clear) + var(--size-4)); }
   }
 </style>

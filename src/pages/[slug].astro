@@ -500,6 +500,11 @@ const href = (slug: string) => `${base}/${slug}/`;
   .detail__inline-meta,
   .detail__end-meta { display: none; }
 
+  @media (max-width: 1280px) {
+    .detail__hero {padding: calc(var(--top-clear) + var(--size-12)) 0 var(--size-9) var(--size-9);}
+    .detail__body {padding: var(--size-9) 0 var(--size-24) var(--size-9);}
+  }
+
   /* =====================================================================
      Small screens (≤ --bp-lg 1024): single column. The sidebar's Download +
      Underlying data blocks move directly under the infographic, and More
@@ -561,6 +566,23 @@ const href = (slug: string) => `${base}/${slug}/`;
       grid-template-columns: 1fr 1fr;
       gap: var(--size-6); /* 24px */
     }
+  }
+
+  /* Large phone (--bp-xs 480): tighter edge gutter. */
+  @media (max-width: 480px) {
+    .detail {
+      --edge: max(var(--size-4), calc((100vw - 1280px) / 2));
+    }
+    .detail-bg__fill,
+    .detail__spacer { min-width: var(--size-4); } /* 36px -> 16px */
+
+    /* top-clear + 16px breathing room, was +48px */
+    .detail__hero { padding: calc(var(--top-clear) + var(--size-4)) 0 var(--size-4) 0; }
+    .detail__body { padding-top: var(--size-4); padding-bottom: var(--size-4); }
+    .detail__end-meta { padding-bottom: var(--size-4); } /* 64px -> 16px */
+    .detail__end-meta .meta__block { grid-template-columns: 1fr; }
+    .detail__title { font-size: 26px; } /* 32px -> 26px */
+    .detail__lead { font-size: 17px; } /* 20px -> 17px */
   }
 </style>
 

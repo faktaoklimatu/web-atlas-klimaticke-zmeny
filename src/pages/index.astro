@@ -390,6 +390,10 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
     .toc-overlay__backdrop { transition: none; }
   }
 
+  @media (max-width: 1280px) {
+    .feed__content {padding: var(--feed-top) 0 0 var(--size-9);}
+  }
+
   /* =====================================================================
      Small screens (≤ --bp-lg 1024): single column. The sticky TOC sidebar is
      replaced by a sticky mobile toolbar (Contents + view toggle) and a
@@ -430,6 +434,34 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   /* Phone: two columns in grid view. */
   @media (max-width: 640px) {
     .section__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  /* Large phone (--bp-xs 480): tighter edge gutter and less breathing room
+     between/inside cards. */
+  @media (max-width: 480px) {
+    .feed-bg__fill,
+    .feed__spacer { min-width: var(--size-4); } /* 36px -> 16px */
+
+    .section__grid { column-gap: var(--size-3); row-gap: var(--size-5); }
+    .section__column { gap: var(--size-5); } /* 40px -> 20px */
+
+    .feed {
+      --feed-top: 84px; /* sticky-top (68) + 16px breathing room, was 28px */
+    }
+
+    .feed__view--grid .section__header,
+    .feed__view--list .section__header { margin-bottom: var(--size-4); } /* -> 16px */
+    .section__title { font-size: 28px; } /* 38px -> 28px */
+
+    /* Smallest phones: no grid/list choice, always list — regardless of
+       whatever view was picked before the viewport shrank this far.
+       .viewtoggle is rendered by ButtonGroup.astro, not this file, so it
+       needs :global() to reach past this style block's scoping — and
+       !important to beat ButtonGroup's own scoped .buttongroup[data-astro-cid]
+       rule, which outranks a plain .viewtoggle selector on specificity alone. */
+    :global(.viewtoggle) { display: none !important; }
+    .feed__view--grid { display: none !important; }
+    .feed__view--list { display: block !important; }
   }
 </style>
 
