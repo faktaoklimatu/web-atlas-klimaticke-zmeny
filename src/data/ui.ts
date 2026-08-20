@@ -9,7 +9,7 @@ export const ui = {
   siteTitle: 'Atlas of Climate Change',
 
   nav: {
-    title: 'Atlas of climate change',
+    title: 'Atlas of Climate Change',
     subtitle: 'A Visual Guide to the Science and Data',
     primaryLabel: 'Primary',
     about: 'About',

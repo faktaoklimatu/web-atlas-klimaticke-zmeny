@@ -35,6 +35,10 @@ body {
   padding: 2rem 1rem;
 }
 
+strong {
+  font-weight: 600;
+}
+
 /* --- Headings --- */
 h1 {
   font-size: 2rem;
