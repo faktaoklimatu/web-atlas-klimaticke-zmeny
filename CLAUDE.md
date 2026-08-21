@@ -5,7 +5,7 @@ English "Atlas of Climate Change" for Fakta o Klimatu. Astro 7 static site + Dec
 ## Working style (important)
 
 - **Few comments.** Comment only genuinely non-obvious intent — a browser-quirk workaround, a load-bearing specificity trick. No comments on trivial or self-explanatory edits.
-- **No change-narration.** The project is still being built (pre-deploy), so don't write "this is new / we changed X / big refactor" in code. Keep commit messages factual and short.
+- **No change-narration.** Don't write "this is new / we changed X / big refactor" in code. Keep commit messages factual and short.
 - Match the surrounding code's naming and idiom. Build (`npm run build`) after changes.
 - **Keep docs current.** After any larger change (new file/module, structural move, new convention), update the relevant section of both CLAUDE.md and README.md in the same pass.
 
