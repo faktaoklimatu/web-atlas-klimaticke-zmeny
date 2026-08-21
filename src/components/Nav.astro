@@ -62,10 +62,10 @@ const aboutHref = `${base}/about/`;
           <GlobeIcon size={20} />
         </button>
 
-        <div class="nav__lang-menu" role="menu">
+        <div class="nav__lang-menu">
           {
             siblings.map((s) => (
-              <a class="nav__lang-item type-mono" href={s.url} role="menuitem">
+              <a class="nav__lang-item type-mono" href={s.url}>
                 <span class="nav__lang-flag" aria-hidden="true">{s.flag}</span>
                 <span class="nav__lang-code">{s.code}</span>
               </a>

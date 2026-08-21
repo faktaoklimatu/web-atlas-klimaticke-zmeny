@@ -15,7 +15,10 @@ function initFeed() {
       ch.classList.toggle('is-active', ch.getAttribute('data-chapter') === chapterId);
     });
     sidenav!.querySelectorAll('.toc-link').forEach((l) => {
-      l.classList.toggle('is-current', l.getAttribute('data-slug') === slug);
+      const current = l.getAttribute('data-slug') === slug;
+      l.classList.toggle('is-current', current);
+      if (current) l.setAttribute('aria-current', 'true');
+      else l.removeAttribute('aria-current');
     });
   }
 
@@ -141,11 +144,10 @@ function initFeed() {
       feed.querySelectorAll<HTMLElement>('.feed__view').forEach((panel) => {
         panel.hidden = panel.getAttribute('data-view-panel') !== view;
       });
-      // The active view is the disabled button (blue-gray-200 background).
+      // The active view is styled off aria-pressed (blue-gray-200 background)
+      // rather than disabled, so it stays reachable via keyboard/AT.
       buttons.forEach((b) => {
-        const active = b === btn;
-        b.disabled = active;
-        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
       });
       onScroll();
     });

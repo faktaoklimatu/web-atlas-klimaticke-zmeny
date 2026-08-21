@@ -47,7 +47,8 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
           <div class="feed__sidebar-sticky"><SideNav chapters={chapters} /></div>
         </aside>
 
-        <div class="feed__content">
+        <main class="feed__content" id="main-content">
+          <h1 class="sr-only">{seo.siteTitle}</h1>
           <!-- Small screens (≤ --bp-lg): sticky toolbar holding the Contents
                button (opens the TOC overlay) and the grid/list toggle, which
                JS relocates here from .feed__toolbar. -->
@@ -130,7 +131,7 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
             languageVersionsUrl={site.languageVersionsUrl}
             footerLegal={site.footerLegal}
           />
-        </div>
+        </main>
       </div>
     </div>
 

@@ -3,8 +3,9 @@
  * Button — Figma node 81:1282. Single tone in mono.
  * variant: outlined | text (they differ only by the border). Hover, on pointer
  * devices, underlines the label. Renders as <a> when `href` is set. `disabled`
- * (used for the homepage grid/list toggle) swaps the background to
- * blue-gray-200 with a default cursor. Extra attributes (data-*, aria-*) pass
+ * swaps the background to blue-gray-200 with a default cursor; so does
+ * `aria-pressed="true"` (the homepage grid/list toggle's active state — kept
+ * focusable rather than disabled). Extra attributes (data-*, aria-*) pass
  * through to the element.
  */
 type Variant = 'outlined' | 'text';
@@ -96,12 +97,21 @@ const hasIconRight = Astro.slots.has('icon-right');
   @media (hover: hover) {
     .btn:hover .btn__label { text-decoration: underline; }
     .btn:disabled:hover .btn__label,
-    .btn[aria-disabled='true']:hover .btn__label { text-decoration: none; }
+    .btn[aria-disabled='true']:hover .btn__label,
+    .btn[aria-pressed='true']:hover .btn__label { text-decoration: none; }
   }
 
-  /* --- Disabled (homepage grid/list toggle) --- */
+  /* --- Disabled --- */
   .btn:disabled,
   .btn[aria-disabled='true'] {
+    background: var(--blue-gray-200);
+    cursor: default;
+  }
+
+  /* --- Pressed (homepage grid/list toggle) — stays focusable/operable, only
+     styled to look "selected"; not disabled, so screen-reader and keyboard
+     users can still perceive and reach the currently-active option. */
+  .btn[aria-pressed='true'] {
     background: var(--blue-gray-200);
     cursor: default;
   }

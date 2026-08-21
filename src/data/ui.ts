@@ -6,6 +6,10 @@
  * site title and other SEO metadata in seo.json.
  */
 export const ui = {
+  a11y: {
+    skipToContent: 'Skip to content',
+  },
+
   nav: {
     title: 'Atlas of Climate Change',
     subtitle: 'A Visual Guide to the Science and Data',

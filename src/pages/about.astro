@@ -62,7 +62,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           </div>
         </aside>
 
-        <div class="about__content">
+        <main class="about__content" id="main-content">
           <div class="about__back">
             <Button variant="text" href={`${base}/`}>
               <ArrowLeftIcon slot="icon-left" size={16} />
@@ -81,7 +81,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             languageVersionsUrl={site.languageVersionsUrl}
             footerLegal={site.footerLegal}
           />
-        </div>
+        </main>
       </div>
     </div>
 

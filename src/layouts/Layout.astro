@@ -8,6 +8,7 @@ import { ClientRouter } from 'astro:transitions';
 import { absoluteUrl, truncate } from '../utils/seo';
 import seo from '../data/seo.json';
 import site from '../data/site.json';
+import { ui } from '../data/ui';
 
 interface LanguageSibling {
   code: string;
@@ -82,6 +83,26 @@ const languages = (site.languages as LanguageSibling[]).filter((l) => l.hreflang
     <ClientRouter />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">{ui.a11y.skipToContent}</a>
     <slot />
   </body>
 </html>
+
+<style>
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--size-4);
+    z-index: 200;
+    padding: var(--size-2) var(--size-4);
+    background: var(--white);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 var(--size-1-5) var(--size-1-5);
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+</style>

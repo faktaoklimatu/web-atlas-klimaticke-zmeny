@@ -48,10 +48,13 @@ const applyProgress = () => {
   );
 };
 
-const closeLang = () => {
+const closeLang = (opts: { refocus?: boolean } = {}) => {
   if (!nav) return;
+  const wasOpen = nav.classList.contains('is-lang-open');
   nav.classList.remove('is-lang-open');
-  nav.querySelector('[data-lang-toggle]')?.setAttribute('aria-expanded', 'false');
+  const toggle = nav.querySelector('[data-lang-toggle]');
+  toggle?.setAttribute('aria-expanded', 'false');
+  if (opts.refocus && wasOpen) (toggle as HTMLElement | null)?.focus();
 };
 
 window.addEventListener('scroll', applyProgress, { passive: true });
@@ -65,7 +68,8 @@ document.addEventListener('click', (event) => {
   if (langWrap && !langWrap.contains(event.target as Node | null)) closeLang();
 });
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeLang();
+  // Return focus to the toggle so keyboard users aren't dropped onto the page.
+  if (event.key === 'Escape') closeLang({ refocus: true });
 });
 
 document.addEventListener('astro:page-load', () => {

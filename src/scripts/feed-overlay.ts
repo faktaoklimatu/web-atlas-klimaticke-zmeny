@@ -22,6 +22,27 @@ function initFeedOverlay() {
     '1024px';
   const mq = window.matchMedia(`(max-width: ${bp})`);
 
+  // Mark everything outside the overlay inert while it's open, so Tab can't
+  // leave the dialog and land on the page behind it (true modal behaviour).
+  const inertedEls: HTMLElement[] = [];
+  function setBackgroundInert(on: boolean) {
+    if (!on) {
+      inertedEls.forEach((el) => el.removeAttribute('inert'));
+      inertedEls.length = 0;
+      return;
+    }
+    let node: HTMLElement = overlay!;
+    while (node.parentElement && node !== document.body) {
+      for (const sibling of Array.from(node.parentElement.children)) {
+        if (sibling !== node && sibling instanceof HTMLElement) {
+          sibling.setAttribute('inert', '');
+          inertedEls.push(sibling);
+        }
+      }
+      node = node.parentElement;
+    }
+  }
+
   let closeTimer: ReturnType<typeof setTimeout>;
   function openOverlay() {
     clearTimeout(closeTimer);
@@ -29,6 +50,7 @@ function initFeedOverlay() {
     requestAnimationFrame(() => overlay!.classList.add('is-open'));
     document.documentElement.classList.add('is-toc-locked');
     openBtn!.setAttribute('aria-expanded', 'true');
+    setBackgroundInert(true);
     // Move focus in so keyboard Tab lands inside the dialog, not the page.
     overlayPanel?.focus();
   }
@@ -37,6 +59,7 @@ function initFeedOverlay() {
     overlay!.classList.remove('is-open');
     document.documentElement.classList.remove('is-toc-locked');
     openBtn!.setAttribute('aria-expanded', 'false');
+    setBackgroundInert(false);
     if (overlay!.contains(document.activeElement)) openBtn!.focus();
     closeTimer = setTimeout(() => {
       overlay!.hidden = true;

@@ -1,8 +1,9 @@
 ---
 /**
  * ViewToggle — grid/list switch. Figma: Buttons Group (315:1069).
- * A ButtonGroup of two text Buttons; the active one is `disabled` (blue-gray-200
- * background). Behaviour is wired in feed-spy via [data-view-btn]; feed-overlay
+ * A ButtonGroup of two text Buttons; the active one has `aria-pressed="true"`
+ * (blue-gray-200 background, stays focusable). Behaviour is wired in feed-spy
+ * via [data-view-btn]; feed-overlay
  * relocates the whole `.viewtoggle` between the desktop toolbar and mobile bar.
  */
 import ButtonGroup from '../ButtonGroup.astro';
@@ -26,7 +27,6 @@ const { initial = 'grid', class: className } = Astro.props;
   <Button
     variant="text"
     data-view-btn="list"
-    disabled={initial === 'list'}
     aria-pressed={initial === 'list' ? 'true' : 'false'}
   >
     <ListIcon slot="icon-left" size={16} />
@@ -35,7 +35,6 @@ const { initial = 'grid', class: className } = Astro.props;
   <Button
     variant="text"
     data-view-btn="grid"
-    disabled={initial === 'grid'}
     aria-pressed={initial === 'grid' ? 'true' : 'false'}
   >
     <GridIcon slot="icon-left" size={16} />

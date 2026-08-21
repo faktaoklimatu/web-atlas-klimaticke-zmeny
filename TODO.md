@@ -55,13 +55,6 @@ Real content still needs to replace placeholders before launch:
 Worker (`brona-musil.workers.dev`). Before launch, move the deploy + OAuth
 backend to the production / organization account.
 
-
-## Accessibility (A11Y)
-
-Handle later: full audit — keyboard navigation and focus order, focus-visible
-states, colour contrast, image `alt` text, heading hierarchy, ARIA on the
-overlays/menus, reduced-motion coverage, and screen-reader testing.
-
 ## Pre-launch cleanup
 
 ### Strip "still being built" notes from CLAUDE.md
