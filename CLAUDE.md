@@ -12,7 +12,7 @@ English "Atlas of Climate Change" for Fakta o Klimatu. Astro 7 static site + Dec
 ## Commands
 
 - `npm run dev` / `npm start` — runs Astro dev server (`BASE_PATH=/`) and the Decap `local_backend` proxy (`decap-server`) together via `concurrently`, so CMS image previews and links resolve. Admin: `/admin/index.html`. Without the proxy running, the CMS falls back to the GitHub backend instead of reading/writing local files. Run `npm run dev:astro` alone to skip the CMS proxy.
-- `npm run build` — production build (base `/AtlasOfClimateChange`).
+- `npm run build` — production build. `site` (origin) and `base` (path) come from `public/deploy.config.js`, defaulting to `https://hiiampadik.github.io` + `/AtlasOfClimateChange`.
 
 ## Structure
 
@@ -32,7 +32,8 @@ English "Atlas of Climate Change" for Fakta o Klimatu. Astro 7 static site + Dec
 - `src/data/` — `infographics.ts` (`getChapters`, `getFlatInfographics`), `chapters.ts` (`ChapterMeta` interface + `chapterName`; loads `chapters.json`), `chapters.json` (CMS-managed chapter name/tagline/order), `site.json`, `seo.json` (CMS: Settings → SEO — `siteTitle`, `locale`, `defaultDescription`, `ogImageFallback`; the only editable-content home for the site title and other cross-page SEO defaults), `ui.ts` (all fixed UI microcopy — nav, feed chrome, detail sidebar labels, footer, aria-labels).
 - `src/content/infographics/` — Markdown content (Decap collection). `src/content/about/about.md` — the About page's title + body (single-file Decap collection). `src/content.config.ts` — collection schemas.
 - `src/utils/img.ts` — `imgUrl(image)` (bare filename or `/images/...`). `src/utils/seo.ts` — `absoluteUrl(site, path)` (base-relative path → fully-qualified URL, for canonical/OG/Twitter/JSON-LD) and `truncate(text, max)` (meta-description length guard, word-boundary safe).
-- `public/admin/` — Decap CMS config.
+- `public/deploy.config.js` — the single per-fork deploy identity: `siteUrl`, `basePath`, and `cms` (`repo`/`branch`/`oauthBaseUrl`). Read by `astro.config.mjs` (build) and by `public/admin/index.html` (CMS backend, injected at runtime). A fork edits **only** this file to retarget the site + CMS, so upstream pulls don't conflict on deploy config. See README "Creating a new language version".
+- `public/admin/` — Decap CMS config. `index.html` uses Decap **manual init** (`CMS_MANUAL_INIT`): it loads `deploy.config.js` and merges the `github` backend (repo/branch/`base_url`) over `config.yml`, so `config.yml`'s `backend` block is a placeholder — collections and `local_backend` still live in `config.yml`.
 
 ## Conventions
 

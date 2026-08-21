@@ -7,7 +7,32 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script type="module">
+      // Backend (repo / branch / OAuth proxy) is injected from the single
+      // per-fork config file so the admin needn't be edited when forking.
+      // Loaded base-relative so it resolves in dev (/admin/) and prod
+      // (/<base>/admin/) alike. The rest of the config (collections,
+      // local_backend, media folders) still comes from config.yml; CMS.init
+      // merges this backend over it.
+      const { deployConfig } = await import(
+        new URL('../deploy.config.js', document.baseURI).href
+      );
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: deployConfig.cms.repo,
+            branch: deployConfig.cms.branch,
+            base_url: deployConfig.cms.oauthBaseUrl,
+            auth_endpoint: '/auth',
+          },
+        },
+      });
+    </script>
     <script>
       // Block removing a chapter (Settings → Chapters) that still has infographics
       // linked to it — otherwise those infographics would drop out of the feed

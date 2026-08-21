@@ -1,9 +1,10 @@
+# The real backend (repo / branch / OAuth proxy) is injected at runtime by
+# index.html from public/deploy.config.js — edit that file, not this block.
+# These placeholders only keep config.yml valid for parsing / local_backend.
 backend:
   name: github
   repo: hiiampadik/AtlasOfClimateChange
   branch: master
-  base_url: https://decap-oauth.brona-musil.workers.dev
-  auth_endpoint: /auth
 
 local_backend: true
 

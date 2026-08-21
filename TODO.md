@@ -5,46 +5,21 @@ Things noted while working, to resolve later.
 > **When resolving any large item here, update `README.md` and `CLAUDE.md`** to
 > reflect the change in the same pass.
 
-## Fork ergonomics for new language versions
-
-Two friction points surfaced when documenting the fork flow (see README →
-*Creating a new language version*). Both currently require manual edits by
-whoever forks the repo.
-
-### 1. Hardcoded `base` in `astro.config.mjs`
-
-The production `base` defaults to `/AtlasOfClimateChange`. A forker must edit it
-by hand to match their repo name, or GitHub Pages will serve assets from the
-wrong path. Consider deriving it automatically — e.g. from a `BASE_PATH`
-environment variable set in the deploy workflow, or from the repo name via
-`${{ github.event.repository.name }}` in `deploy.yml` — so a fork just works
-without touching the config.
-
-### 2. Shared Decap OAuth backend
-
-`public/admin/config.yml` points `base_url` at a single Cloudflare Worker OAuth
-proxy tied to one GitHub OAuth app. Each fork needs its **own** OAuth proxy +
-GitHub OAuth app for CMS login; the shared one won't authorize other repos.
-Options to smooth this out: document the Worker setup as a reusable template,
-or provide a one-click/deployable OAuth proxy. Until then, forkers fall back to
-`local_backend: true` or editing Markdown directly on GitHub.
-nastav local_backend podle env variables.
-
 ## Deployment
 
 ### Custom domain
 
 Currently deploys to the GitHub Pages project URL
 (`https://<user>.github.io/<repo>/`). Set up the real custom domain before
-launch: add a `CNAME`, point DNS at GitHub Pages, and set `site`/`base` in
-`astro.config.mjs` to serve at the domain root (`base: '/'`).
+launch: add a `CNAME`, point DNS at GitHub Pages, and set `siteUrl`/`basePath`
+in `public/deploy.config.js` to serve at the domain root (`basePath: '/'`).
 
 ## Deploy ownership
 
-`astro.config.mjs` `site` points at a personal account
-(`hiiampadik.github.io`) and the Decap OAuth proxy runs on a personal Cloudflare
-Worker (`brona-musil.workers.dev`). Before launch, move the deploy + OAuth
-backend to the production / organization account.
+`public/deploy.config.js` defaults point at a personal account —
+`siteUrl: https://hiiampadik.github.io` and the Decap OAuth proxy on a personal
+Cloudflare Worker (`brona-musil.workers.dev`). Before launch, move the deploy +
+OAuth backend to the production / organization account and update the defaults.
 
 ## Pre-launch cleanup
 

@@ -21,7 +21,8 @@ npm run dev      # dev server at http://localhost:4321/  (base path "/")
   Decap admin and CMS image previews resolve at the root) together with the
   Decap `local_backend` proxy (`decap-server`), via `concurrently`.
 - `npm run dev:astro` — Astro dev server only, without the CMS proxy.
-- `npm run build` — production build into `dist/` (base `/AtlasOfClimateChange`).
+- `npm run build` — production build into `dist/` (site URL + base path come from
+  `public/deploy.config.js`; default base `/AtlasOfClimateChange`).
 - `npm run preview` — serve the production build locally.
 
 The CMS admin lives at `/admin/` (`public/admin/`). `local_backend: true` in
@@ -34,6 +35,7 @@ instead of local files.
 
 ```
 public/
+  deploy.config.js  Per-fork deploy identity (site URL, base path, CMS repo/branch/OAuth)
   admin/            Decap CMS (index.html + config.yml)
   images/atlas/     Infographic images (managed by the CMS)
 src/
@@ -85,26 +87,49 @@ GitHub Pages.
 
 ## Creating a new language version (fork)
 
-Each language is its **own repository and its own GitHub Pages deployment**. To
-spin up a new mutation on your GitHub account:
+Each language is its **own repository and its own deployment**. To spin up a new
+mutation on your GitHub account:
 
 1. **Fork this repository** to your GitHub account (or use *Use this template* /
    create a new repo from a copy). Give it a clear name, e.g.
    `AtlasOfClimateChange-DE`.
 
-2. **Point the build at your repo.** In `astro.config.mjs`:
-   - `site` → `https://<your-user>.github.io`
-   - the default `base` → `/<your-repo-name>` (must match the repo name, since
-     GitHub Pages serves a project site at `/<repo-name>/`). If you deploy to a
-     custom domain at the root, set `base` to `/` instead.
+2. **Edit `public/deploy.config.js`** — the **single** file that holds your
+   deployment's identity. The build (`astro.config.mjs`) and the CMS admin both
+   read it, so nothing else needs changing to point the site and CMS at your repo:
 
-3. **Point the CMS at your repo.** In `public/admin/config.yml`:
-   - `backend.repo` → `<your-user>/<your-repo-name>`
-   - `backend.branch` → your default branch (`main` or `master`)
-   - `backend.base_url` → your own Decap OAuth proxy. GitHub login for the CMS
-     needs a small OAuth backend (e.g. a Cloudflare Worker) tied to a **GitHub
-     OAuth app you create**. Until it's set up, edit content locally with
-     `local_backend: true`, or commit Markdown directly on GitHub.
+   | Value | Set it to |
+   |---|---|
+   | `siteUrl` | The full origin your site is served from — `https://<user>.github.io` (GitHub Pages) or `https://your-domain.tld` (custom domain). Drives canonical URLs, Open Graph tags, and the sitemap. |
+   | `basePath` | `/` for a custom domain at the root, or `/<your-repo-name>` for a GitHub Pages *project* site (must match the repo name). |
+   | `cms.repo` | `<your-user>/<your-repo-name>` — where the CMS reads and writes content. |
+   | `cms.branch` | Your default branch (`main` or `master`). |
+   | `cms.oauthBaseUrl` | The OAuth proxy for CMS "Login with GitHub" — see below. |
+
+   Because this is the only file a fork edits (besides CMS content), pulling later
+   improvements from upstream **won't cause merge conflicts** — upstream almost
+   never touches `deploy.config.js`, and it never touches `astro.config.mjs` or
+   `public/admin/config.yml` for deploy identity anymore.
+
+   > Custom domain: also add a `public/CNAME` file containing just your domain
+   > (e.g. `atlas.example.org`), so GitHub Pages serves the site there.
+
+3. **Set up CMS login (OAuth proxy).** Decap's GitHub backend logs editors in
+   through a small, **stateless OAuth broker** — it holds no data and no
+   repository access; it only brokers the GitHub login and hands the resulting
+   token to the browser. Which repo gets written to is decided by `cms.repo`
+   above, not by the proxy. Two options:
+   - **Reuse the shared proxy (default).** Keep `cms.oauthBaseUrl` as shipped.
+     Each editor logs in as their own GitHub user (needs push access to your
+     repo) and writes only to your `cms.repo`. Caveat: the shared proxy must
+     permit your site's origin (ask the maintainer to allow it, or if the
+     Worker restricts origins it won't work for your domain).
+   - **Run your own.** Deploy a Decap OAuth proxy (e.g. a Cloudflare Worker) tied
+     to a **GitHub OAuth App you create**, then point `cms.oauthBaseUrl` at it.
+     See Decap's *GitHub backend* docs for ready-made proxies.
+
+   Until a proxy is available you can still edit content locally with
+   `local_backend: true` (run `npm run dev`), or commit Markdown directly on GitHub.
 
 4. **Translate.** Replace the English text with your language:
    - `src/data/ui.ts` — all interface strings.
