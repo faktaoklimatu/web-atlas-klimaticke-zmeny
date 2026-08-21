@@ -1,5 +1,3 @@
-- zmenšují se obrázky nebo se nahrávají plné velikosti? 
-
 # Open items
 
 Things noted while working, to resolve later.
@@ -40,13 +38,6 @@ Currently deploys to the GitHub Pages project URL
 (`https://<user>.github.io/<repo>/`). Set up the real custom domain before
 launch: add a `CNAME`, point DNS at GitHub Pages, and set `site`/`base` in
 `astro.config.mjs` to serve at the domain root (`base: '/'`).
-
-## Placeholder content
-
-Real content still needs to replace placeholders before launch:
-
-- `src/components/feed/SiteFooter.astro` — social links are `href="#"`; wire up
-  the real Facebook / Instagram / X / LinkedIn URLs.
 
 ## Deploy ownership
 

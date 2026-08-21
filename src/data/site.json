@@ -1,12 +1,8 @@
 {
   "menuLinks": [
     {
-      "label": "Link 1",
-      "url": "https://google.com/"
-    },
-    {
-      "label": "Link 2",
-      "url": "https://google.com/"
+      "label": "Facts on Climate",
+      "url": "https://factsonclimate.org/"
     }
   ],
   "languages": [],
@@ -30,6 +26,16 @@
       "label": "LinkedIn",
       "url": "#",
       "icon": "/images/social/linkedin.svg"
+    },
+    {
+      "icon": "/images/social/threads.svg",
+      "label": "Threads",
+      "url": "https://www.threads.net/@faktaoklimatu"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UCpW-nPyjH68BUfAjzhk7O_Q",
+      "icon": "/images/social/youtube.svg"
     }
   ],
   "atlasPdfUrl": "/images/atlas/ebook_cz_zelenina_kterou_vypestuje_kazdy.pdf",
