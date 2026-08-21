@@ -15,3 +15,5 @@ npm-debug.log*
 .idea/
 # scratch / design source material (atlas exports, PDF, figma export)
 tmp/
+# local-only working notes (kept out of the repo)
+CLAUDE.md
