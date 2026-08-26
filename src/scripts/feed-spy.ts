@@ -1,5 +1,10 @@
 // Scroll-spy for the feed TOC + grid/list toggle. Re-binds on every
 // view-transition navigation via astro:page-load.
+
+// Chosen grid/list view, remembered across view-transition navigations
+// (the module survives body swaps; resets on a full page reload).
+let rememberedView: string | null = null;
+
 function initFeed() {
   const feed = document.querySelector<HTMLElement>('.feed');
   if (!feed) return;
@@ -71,6 +76,26 @@ function initFeed() {
     if (spyLocked) scheduleUnlock();
     requestTick();
   };
+  const buttons = feed.querySelectorAll<HTMLButtonElement>('[data-view-btn]');
+
+  function applyView(view: string) {
+    feed!.setAttribute('data-view', view);
+    feed!.querySelectorAll<HTMLElement>('.feed__view').forEach((panel) => {
+      panel.hidden = panel.getAttribute('data-view-panel') !== view;
+    });
+    // The active view is styled off aria-pressed (blue-gray-200 background)
+    // rather than disabled, so it stays reachable via keyboard/AT.
+    buttons.forEach((b) => {
+      b.setAttribute('aria-pressed', b.getAttribute('data-view-btn') === view ? 'true' : 'false');
+    });
+  }
+
+  // Restore the view chosen earlier this session before any scroll math runs,
+  // so the #slug landing below measures the panel we'll actually show.
+  if (rememberedView && rememberedView !== feed.getAttribute('data-view')) {
+    applyView(rememberedView);
+  }
+
   onScroll();
   window.addEventListener('scroll', onWindowScroll, { passive: true });
   window.addEventListener('resize', requestTick, { passive: true });
@@ -135,20 +160,12 @@ function initFeed() {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  const buttons = feed.querySelectorAll<HTMLButtonElement>('[data-view-btn]');
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const view = btn.getAttribute('data-view-btn');
       if (!view) return;
-      feed.setAttribute('data-view', view);
-      feed.querySelectorAll<HTMLElement>('.feed__view').forEach((panel) => {
-        panel.hidden = panel.getAttribute('data-view-panel') !== view;
-      });
-      // The active view is styled off aria-pressed (blue-gray-200 background)
-      // rather than disabled, so it stays reachable via keyboard/AT.
-      buttons.forEach((b) => {
-        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
-      });
+      rememberedView = view;
+      applyView(view);
       onScroll();
     });
   });
