@@ -29,8 +29,15 @@ const {
 } = Astro.props;
 
 const Tag = href ? 'a' : 'button';
-const hasIconLeft = Astro.slots.has('icon-left');
-const hasIconRight = Astro.slots.has('icon-right');
+
+// `Astro.slots.has` is true whenever a slot is passed, even when its content
+// resolves to nothing (e.g. the footer language switcher's optional flag) —
+// which would leave an empty, space-taking `.btn__icon`. Render the content and
+// only emit the wrapper when it's actually non-empty.
+const iconLeft = Astro.slots.has('icon-left') ? await Astro.slots.render('icon-left') : '';
+const iconRight = Astro.slots.has('icon-right') ? await Astro.slots.render('icon-right') : '';
+const hasIconLeft = iconLeft.trim() !== '';
+const hasIconRight = iconRight.trim() !== '';
 ---
 
 <Tag
@@ -41,9 +48,9 @@ const hasIconRight = Astro.slots.has('icon-right');
   aria-disabled={href && disabled ? 'true' : undefined}
   {...rest}
 >
-  {hasIconLeft && <span class="btn__icon"><slot name="icon-left" /></span>}
+  {hasIconLeft && <span class="btn__icon" set:html={iconLeft} />}
   <span class="btn__label"><slot>Button</slot></span>
-  {hasIconRight && <span class="btn__icon"><slot name="icon-right" /></span>}
+  {hasIconRight && <span class="btn__icon" set:html={iconRight} />}
 </Tag>
 
 <style>

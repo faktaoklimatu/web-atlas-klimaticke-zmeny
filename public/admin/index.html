@@ -17,10 +17,40 @@
       // Loaded base-relative so it resolves in dev (/admin/) and prod
       // (/<base>/admin/) alike. The rest of the config (collections,
       // local_backend, media folders) still comes from config.yml; CMS.init
-      // merges this backend over it.
+      // merges what we pass over it — arrays are concatenated, so we append
+      // the language-gated "Get the Atlas in your language" collection only on
+      // the English fork (deployConfig.lang === 'en') rather than shipping it
+      // in config.yml. Every other fork links the footer straight to the
+      // external languageVersionsUrl instead.
       const { deployConfig } = await import(
         new URL('../deploy.config.js', document.baseURI).href
       );
+
+      const languageCollection = {
+        name: 'language',
+        label: 'Get the Atlas in your language',
+        files: [
+          {
+            name: 'language',
+            label: 'Get the Atlas in your language',
+            file: 'src/content/language/language.md',
+            description:
+              'Content shown on the "Get the Atlas in your language" page (English site only).',
+            fields: [
+              { label: 'Title', name: 'title', widget: 'string' },
+              {
+                label: 'Meta description',
+                name: 'description',
+                widget: 'text',
+                required: false,
+                hint: 'Shown in search results and social previews. Falls back to the site default (Settings → SEO) if left blank.',
+              },
+              { label: 'Body', name: 'body', widget: 'markdown' },
+            ],
+          },
+        ],
+      };
+
       CMS.init({
         config: {
           backend: {
@@ -30,6 +60,9 @@
             base_url: deployConfig.cms.oauthBaseUrl,
             auth_endpoint: '/auth',
           },
+          ...((deployConfig.lang || 'en') === 'en'
+            ? { collections: [languageCollection] }
+            : {}),
         },
       });
     </script>

@@ -11,6 +11,7 @@ import { imgUrl } from '../../utils/img';
 import { renderInlineMarkdown } from '../../utils/markdown';
 import { ui } from '../../data/ui';
 import seo from '../../data/seo.json';
+import { deployConfig } from '../../../public/deploy.config.js';
 
 interface Sibling {
   code: string;
@@ -43,6 +44,14 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// English fork: "Get the Atlas in your language" points at the internal page
+// (src/pages/get-the-atlas-in-your-language/). Every other fork keeps the
+// external languageVersionsUrl from the CMS, hidden when it's blank.
+const isEnglishFork = (deployConfig.lang || 'en') === 'en';
+const languageHref = isEnglishFork
+  ? `${base}/get-the-atlas-in-your-language/`
+  : languageVersionsUrl;
 
 const legalHtml = await renderInlineMarkdown(footerLegal);
 ---
@@ -82,9 +91,14 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
           ))
         }
       </ButtonGroup>
-      {languageVersionsUrl && (
+      {languageHref && (
         <div class="footer__lang-link">
-          <Button variant="text" href={languageVersionsUrl} target="_blank" rel="noopener noreferrer">
+          <Button
+            variant="text"
+            href={languageHref}
+            target={isEnglishFork ? undefined : '_blank'}
+            rel={isEnglishFork ? undefined : 'noopener noreferrer'}
+          >
             {ui.footer.getInYourLanguage}
           </Button>
         </div>

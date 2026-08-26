@@ -51,7 +51,21 @@ const aboutCollection = defineCollection({
   }),
 });
 
+/**
+ * Language — single markdown file for the "Get the Atlas in your language"
+ * page. Same shape as About. Only surfaced (in the CMS and on the site) on the
+ * English fork; see src/pages/get-the-atlas-in-your-language/[...slug].astro.
+ */
+const languageCollection = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/language' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
 export const collections = {
   infographics: infographicsCollection,
   about: aboutCollection,
+  language: languageCollection,
 };

@@ -43,6 +43,7 @@ src/
     index.astro     Homepage feed (chapters → infographics, grid/list, TOC)
     [slug].astro    Infographic detail page (dynamic)
     about.astro     About page (static, CMS-edited content)
+    get-the-atlas-in-your-language/  "Get the Atlas in your language" page (English fork only)
     robots.txt.ts   robots.txt endpoint (points at the generated sitemap)
   layouts/Layout.astro   Base HTML + all SEO tags (meta, canonical, OG/Twitter, hreflang)
   components/        Nav, FancyBar, Button, Tag, CroppedInfographic, feed/*, icons/*
@@ -56,6 +57,7 @@ src/
     seo.json         CMS-managed site title, default description, social share image
   content/infographics/   Markdown content (Decap collection)
   content/about/about.md  About page title + body (single-file Decap collection)
+  content/language/language.md  "Get the Atlas in your language" page (English fork only)
   content.config.ts       Collection schemas
   utils/seo.ts       absoluteUrl() / truncate() helpers used by Layout.astro
   utils/markdown.ts  renderInlineMarkdown() — inline Markdown for short CMS fields (footer legal line)
@@ -74,6 +76,12 @@ GitHub Pages.
 
 - **Infographics** — CMS *Infographics* collection (`src/content/infographics/`).
 - **About page** — CMS *About Page* collection (`src/content/about/about.md`).
+- **Get the Atlas in your language** — CMS *Get the Atlas in your language*
+  collection (`src/content/language/language.md`). Only present on the English
+  fork (`deploy.config.js` `lang: 'en'`); there the footer's "Get the Atlas in
+  your language" link points at this page. On any other fork the collection is
+  hidden and that footer link goes to the external `languageVersionsUrl` from
+  *Settings → Navigation* instead.
 - **Navigation & languages** — CMS *Settings → Navigation & Languages*
   (`src/data/site.json`). The language switcher reads from here, and the
   "External links" box in the About page's sidebar reads from `menuLinks`.

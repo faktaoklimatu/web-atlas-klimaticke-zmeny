@@ -84,6 +84,11 @@ collections:
           - { label: "Meta description", name: "description", widget: "text", required: false, hint: "Shown in search results and social previews. Falls back to the site default (Settings → SEO) if left blank." }
           - { label: "Body", name: "body", widget: "markdown" }
 
+  # NOTE: the "Get the Atlas in your language" collection is NOT defined here —
+  # it's appended at runtime by index.html only on the English fork
+  # (deploy.config.js `lang: 'en'`). Other forks link the footer straight to the
+  # external "language versions" URL instead.
+
   - name: "settings"
     label: "Settings"
     files:
