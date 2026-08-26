@@ -1,6 +1,6 @@
-// At ≤ --bp-lg the sidebar column is hidden; move its blocks into the content
-// flow — Download + Underlying data under the infographic, More articles after
-// the article — and restore the original order back on desktop.
+// At ≤ --bp-lg the sidebar column is hidden; move its blocks to the end of the
+// article — Next/Previous into the end mount, then Underlying data + Download
+// into the inline mount below it — and restore the original order on desktop.
 function initDetailResponsive() {
   const root = document.querySelector<HTMLElement>('.detail');
   if (!root) return;
@@ -23,13 +23,13 @@ function initDetailResponsive() {
     if (mq.matches === compact) return;
     compact = mq.matches;
     if (compact) {
-      if (download) inlineMount!.appendChild(download);
-      if (data) inlineMount!.appendChild(data);
       if (related) endMount!.appendChild(related);
+      if (data) inlineMount!.appendChild(data);
+      if (download) inlineMount!.appendChild(download);
     } else {
-      if (download) metaRoot!.appendChild(download);
-      if (data) metaRoot!.appendChild(data);
       if (related) metaRoot!.appendChild(related);
+      if (data) metaRoot!.appendChild(data);
+      if (download) metaRoot!.appendChild(download);
     }
   }
   apply();
