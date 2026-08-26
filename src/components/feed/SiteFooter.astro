@@ -60,7 +60,7 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
     <div class="footer__brand">
       <p class="footer__label">{seo.siteTitle}</p>
       {atlasPdfUrl && (
-        <Button variant="outlined" href={`${base}${atlasPdfUrl}`} target="_blank" rel="noopener noreferrer">
+        <Button variant="outlined" href={`${base}${atlasPdfUrl}`} download>
           {ui.footer.downloadPdf}
         </Button>
       )}

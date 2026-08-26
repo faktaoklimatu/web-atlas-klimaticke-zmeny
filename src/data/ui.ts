@@ -53,7 +53,7 @@ export const ui = {
 
   footer: {
     followUs: 'Follow us on social media',
-    downloadPdf: 'Download PDF',
+    downloadPdf: 'Download Atlas in PDF',
     languageLabel: 'Available language versions',
     getInYourLanguage: 'Get the Atlas in your language',
   },

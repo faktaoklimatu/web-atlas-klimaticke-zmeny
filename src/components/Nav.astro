@@ -58,8 +58,7 @@ const aboutHref = `${base}/about/`;
         <a
           class="nav__link type-nav-link"
           href={`${base}${atlasPdfUrl}`}
-          target="_blank"
-          rel="noopener noreferrer"
+          download
         >{ui.nav.downloadPdf}</a>
       )}
 
@@ -136,8 +135,7 @@ const aboutHref = `${base}/about/`;
             <a
               class="nav-menu__item type-nav-link"
               href={`${base}${atlasPdfUrl}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              download
             >{ui.nav.downloadPdf}</a>
           )}
           {siblings.length > 0 && (
