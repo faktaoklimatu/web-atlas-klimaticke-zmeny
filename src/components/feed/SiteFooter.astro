@@ -8,6 +8,7 @@
 import ButtonGroup from '../ButtonGroup.astro';
 import Button from '../Button.astro';
 import { imgUrl } from '../../utils/img';
+import { renderInlineMarkdown } from '../../utils/markdown';
 import { ui } from '../../data/ui';
 import seo from '../../data/seo.json';
 
@@ -42,6 +43,8 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const legalHtml = await renderInlineMarkdown(footerLegal);
 ---
 
 <footer class="footer">
@@ -89,7 +92,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
 
     <div class="footer__legal">
-      <p class="footer__label">{footerLegal}</p>
+      <p class="footer__label" set:html={legalHtml}></p>
     </div>
 
 </footer>
@@ -145,4 +148,5 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   .footer__legal { text-align: left; }
   .footer__legal .footer__label { margin: 0; }
+  .footer__legal :global(a) { color: inherit; text-decoration: underline; }
 </style>

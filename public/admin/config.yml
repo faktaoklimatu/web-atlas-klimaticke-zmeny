@@ -137,8 +137,11 @@ collections:
             hint: "Shown as a link below the language switcher in the footer."
           - label: "Footer legal text"
             name: "footerLegal"
-            widget: "text"
-            hint: "Copyright, license, and contact info — shown as a single paragraph in the footer."
+            widget: "markdown"
+            minimal: true
+            buttons: ["bold", "italic", "link"]
+            editor_components: []
+            hint: "Copyright, license, and contact info — shown as a single paragraph in the footer. Add links with the link button; bare emails/URLs become clickable automatically."
 
       - name: "seo"
         label: "SEO"

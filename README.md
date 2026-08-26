@@ -58,6 +58,8 @@ src/
   content/about/about.md  About page title + body (single-file Decap collection)
   content.config.ts       Collection schemas
   utils/seo.ts       absoluteUrl() / truncate() helpers used by Layout.astro
+  utils/markdown.ts  renderInlineMarkdown() — inline Markdown for short CMS fields (footer legal line)
+  utils/satteri-plugins.mjs  shared Sätteri link plugins (base + external), used by config + markdown.ts
   styles/            tokens.css, typography.css, global.css
 ```
 
