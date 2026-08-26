@@ -162,6 +162,12 @@ const aboutHref = `${base}/about/`;
     /* 0 = hero, 1 = compact. Driven linearly from scroll (see <script>);
        every size below interpolates between the two states via this var. */
     --nav-progress: 0;
+    /* Title hero/compact endpoints — vars so a media query can shrink the
+       hero size on smaller desktops without touching the interpolation math. */
+    --nav-title-hero: 72px;
+    --nav-title-compact: 24px;
+    --nav-track-hero: -2.88px;
+    --nav-track-compact: -0.48px;
     position: fixed;
     top: var(--size-2-5); /* 10px — sits below the FancyBar */
     left: 0;
@@ -202,11 +208,16 @@ const aboutHref = `${base}/about/`;
   .nav__title {
     font-family: var(--font-sans);
     font-weight: 600;
-    /* 72px (hero) → 24px (compact) */
-    font-size: calc(72px - 48px * var(--nav-progress));
+    /* hero → compact, interpolated by --nav-progress */
+    font-size: calc(
+      var(--nav-title-hero) -
+        (var(--nav-title-hero) - var(--nav-title-compact)) * var(--nav-progress)
+    );
     line-height: 1.2;
-    /* -2.88px → -0.48px */
-    letter-spacing: calc(-2.88px + 2.4px * var(--nav-progress));
+    letter-spacing: calc(
+      var(--nav-track-hero) +
+        (var(--nav-track-compact) - var(--nav-track-hero)) * var(--nav-progress)
+    );
     white-space: nowrap;
   }
 
@@ -401,6 +412,17 @@ const aboutHref = `${base}/about/`;
   @media (prefers-reduced-motion: reduce) {
     .nav-overlay__panel,
     .nav-overlay__backdrop { transition: none; }
+  }
+
+  /* Smaller desktop (≤ --bp-xl 1280): the 72px hero title crowds out the nav
+     links (they wrap ~1058px). Shrink the hero endpoint — the compact endpoint
+     and the scroll interpolation are unchanged, so the bar is a touch shorter
+     and the scroll-shrink travels a shorter distance. */
+  @media (max-width: 1280px) {
+    .nav {
+      --nav-title-hero: 48px;
+      --nav-track-hero: -1.6px;
+    }
   }
 
   /* --- Small screens: fixed compact bar (--bp-lg 1024) ---

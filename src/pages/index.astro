@@ -397,6 +397,9 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   }
 
   @media (max-width: 1280px) {
+    /* Hero nav is ~28px shorter here (smaller hero title — see Nav), so the
+       feed clears it with proportionally less top space. */
+    .feed { --feed-top: 242px; }
     .feed__content {padding: var(--feed-top) 0 0 var(--size-9);}
   }
 
