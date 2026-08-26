@@ -137,6 +137,21 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
 
     <div class="feed__spacer"></div>
 
+    <!-- Floating Contents button (small screens): appears bottom-left once the
+         mobile bar's Contents button has scrolled out of view; opens the same
+         TOC overlay. Shown/hidden by feed-overlay via .is-visible. -->
+    <button
+      type="button"
+      class="feed__toc-btn feed__toc-fab type-mono"
+      data-toc-open
+      data-toc-fab
+      aria-haspopup="dialog"
+      aria-expanded="false"
+    >
+      <ListIcon size={16} />
+      <span>{ui.feed.contents}</span>
+    </button>
+
     <!-- TOC overlay (small screens): slides up from the bottom, always leaving
          a top gap so the nav stays visible. JS moves the SideNav into its body.
          Kept inside .feed so the scroll-spy still finds .sidenav after the move. -->
@@ -328,6 +343,28 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   }
   @media (hover: hover) {
     .feed__toc-btn:hover span { text-decoration: underline; }
+  }
+
+  /* Floating Contents button — fixed bottom-left, revealed once scrolled past
+     the mobile bar. Kept out of the layout until .is-visible so it can't
+     interfere on desktop (where JS never adds the class). */
+  .feed__toc-fab {
+    position: fixed;
+    left: 50%;
+    bottom: 0; /* 24px */
+    border-bottom: 0;
+    border-radius: var(--size-1-5) var(--size-1-5) 0 0;
+    z-index: 90;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px) translateX(-50%);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+  .feed__toc-fab.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%);
   }
 
   /* --- TOC overlay (bottom sheet) --- */

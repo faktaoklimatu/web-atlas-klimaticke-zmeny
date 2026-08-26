@@ -9,8 +9,10 @@ function initFeedOverlay() {
   const overlayBody = feed.querySelector<HTMLElement>('[data-toc-body]');
   const overlayPanel = feed.querySelector<HTMLElement>('[data-toc-panel]');
   const mobileBar = feed.querySelector<HTMLElement>('[data-mobile-bar]');
-  const openBtn = feed.querySelector<HTMLElement>('[data-toc-open]');
-  if (!overlay || !overlayBody || !mobileBar || !openBtn) return;
+  const openBtns = Array.from(feed.querySelectorAll<HTMLElement>('[data-toc-open]'));
+  const fab = feed.querySelector<HTMLElement>('[data-toc-fab]');
+  if (!overlay || !overlayBody || !mobileBar || openBtns.length === 0) return;
+  let lastOpener = openBtns[0];
 
   const sidenav = feed.querySelector<HTMLElement>('.sidenav');
   const sidebarSticky = feed.querySelector<HTMLElement>('.feed__sidebar-sticky');
@@ -49,7 +51,7 @@ function initFeedOverlay() {
     overlay!.hidden = false;
     requestAnimationFrame(() => overlay!.classList.add('is-open'));
     document.documentElement.classList.add('is-toc-locked');
-    openBtn!.setAttribute('aria-expanded', 'true');
+    openBtns.forEach((b) => b.setAttribute('aria-expanded', 'true'));
     setBackgroundInert(true);
     // Move focus in so keyboard Tab lands inside the dialog, not the page.
     overlayPanel?.focus();
@@ -58,15 +60,21 @@ function initFeedOverlay() {
     if (overlay!.hidden) return;
     overlay!.classList.remove('is-open');
     document.documentElement.classList.remove('is-toc-locked');
-    openBtn!.setAttribute('aria-expanded', 'false');
+    openBtns.forEach((b) => b.setAttribute('aria-expanded', 'false'));
     setBackgroundInert(false);
-    if (overlay!.contains(document.activeElement)) openBtn!.focus();
+    // Return focus to whichever button opened the sheet (inline bar or FAB).
+    if (overlay!.contains(document.activeElement)) lastOpener.focus();
     closeTimer = setTimeout(() => {
       overlay!.hidden = true;
     }, 360);
   }
 
-  openBtn.addEventListener('click', openOverlay);
+  openBtns.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      lastOpener = btn;
+      openOverlay();
+    })
+  );
   overlay
     .querySelectorAll('[data-toc-close]')
     .forEach((el) => el.addEventListener('click', closeOverlay));
@@ -87,6 +95,21 @@ function initFeedOverlay() {
   };
   document.addEventListener('keydown', onKey);
 
+  // Floating Contents button: visible only while compact AND the inline
+  // Contents button has scrolled out of view.
+  let barOffscreen = false;
+  function updateFab() {
+    fab?.classList.toggle('is-visible', !!compact && barOffscreen);
+  }
+  const io = new IntersectionObserver(
+    ([entry]) => {
+      barOffscreen = !entry.isIntersecting;
+      updateFab();
+    },
+    { threshold: 0 }
+  );
+  io.observe(mobileBar);
+
   let compact: boolean | null = null;
   function apply() {
     if (mq.matches === compact) return;
@@ -99,6 +122,7 @@ function initFeedOverlay() {
       if (toggle && desktopToolbar) desktopToolbar.appendChild(toggle);
       closeOverlay();
     }
+    updateFab();
   }
   apply();
   mq.addEventListener('change', apply);
@@ -107,6 +131,7 @@ function initFeedOverlay() {
     'astro:before-swap',
     () => {
       mq.removeEventListener('change', apply);
+      io.disconnect();
       document.removeEventListener('keydown', onKey);
       document.documentElement.classList.remove('is-toc-locked');
     },
