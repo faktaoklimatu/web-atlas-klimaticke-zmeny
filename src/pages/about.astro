@@ -27,7 +27,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <Layout title={`${title} — ${seo.siteTitle}`} description={description || seo.defaultDescription}>
   <FancyBar />
-  <Nav compact siblings={site.languages} />
+  <Nav compact siblings={site.languages} atlasPdfUrl={site.atlasPdfUrl} />
 
   <!-- Fixed split background (same as the homepage/detail page). -->
   <div class="about-bg" aria-hidden="true">

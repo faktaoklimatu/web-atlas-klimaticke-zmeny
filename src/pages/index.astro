@@ -26,7 +26,7 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   canonicalPath={`${base}/`}
 >
   <FancyBar />
-  <Nav siblings={site.languages} />
+  <Nav siblings={site.languages} atlasPdfUrl={site.atlasPdfUrl} />
 
   <div class="feed" data-view="list">
     <!-- Fixed split background — stays put while the page scrolls. -->

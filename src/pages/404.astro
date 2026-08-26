@@ -14,7 +14,7 @@ const homeHref = `${base}/`;
 
 <Layout title={`${ui.notFound.heading} · ${seo.siteTitle}`} description={ui.notFound.subheading} noindex>
   <FancyBar />
-  <Nav compact siblings={site.languages} />
+  <Nav compact siblings={site.languages} atlasPdfUrl={site.atlasPdfUrl} />
 
   <main class="notfound" id="main-content">
     <div class="notfound__inner">

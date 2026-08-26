@@ -5,7 +5,12 @@
       "url": "https://factsonclimate.org/"
     }
   ],
-  "languages": [],
+  "languages": [
+    {
+      "code": "AB",
+      "url": "#"
+    }
+  ],
   "socialLinks": [
     {
       "label": "Facebook",

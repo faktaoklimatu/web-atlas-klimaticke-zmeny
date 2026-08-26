@@ -85,7 +85,7 @@ const structuredData = {
 <Layout title={`${title} — ${seo.siteTitle}`} description={lead} image={data.image} type="article">
   <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
   <FancyBar />
-  <Nav compact siblings={site.languages} />
+  <Nav compact siblings={site.languages} atlasPdfUrl={site.atlasPdfUrl} />
 
   <!-- Fixed split background (same as the feed). -->
   <div class="detail-bg" aria-hidden="true">

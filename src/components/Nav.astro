@@ -8,6 +8,8 @@
  * entries come from `siblings` (later wired to the CMS sibling list).
  */
 import GlobeIcon from './icons/GlobeIcon.astro';
+import ListIcon from './icons/ListIcon.astro';
+import CloseIcon from './icons/CloseIcon.astro';
 import { ui } from '../data/ui';
 
 interface Sibling {
@@ -19,6 +21,8 @@ interface Props {
   /** Language versions for the switcher (CMS: Settings → Navigation). */
   siblings?: Sibling[];
   brandHref?: string;
+  /** Atlas PDF download (CMS: Settings → Navigation, via site.json); link hidden when empty. */
+  atlasPdfUrl?: string;
   /** Start (and stay) in the compact bar — used on detail pages. */
   compact?: boolean;
   class?: string;
@@ -27,6 +31,7 @@ interface Props {
 const {
   siblings = [],
   brandHref = import.meta.env.BASE_URL,
+  atlasPdfUrl,
   compact = false,
   class: className,
 } = Astro.props;
@@ -48,6 +53,15 @@ const aboutHref = `${base}/about/`;
 
     <nav class="nav__links" aria-label={ui.nav.primaryLabel}>
       <a class="nav__link type-nav-link" href={aboutHref}>{ui.nav.about}</a>
+
+      {atlasPdfUrl && (
+        <a
+          class="nav__link type-nav-link"
+          href={`${base}${atlasPdfUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >{ui.nav.downloadPdf}</a>
+      )}
 
       {siblings.length > 0 && (
       <div class="nav__lang" data-lang>
@@ -75,6 +89,71 @@ const aboutHref = `${base}/about/`;
       </div>
       )}
     </nav>
+
+    <!-- Larger phones (≤ --bp-sm): the inline links collapse into this button,
+         which opens the menu overlay below (same icon as the feed's Contents
+         button). -->
+    <button
+      type="button"
+      class="nav__menu-toggle"
+      aria-label={ui.nav.menu}
+      aria-expanded="false"
+      aria-haspopup="true"
+      data-navmenu-open
+    >
+      <ListIcon size={20} />
+    </button>
+  </div>
+
+  <!-- Menu overlay (larger phones): bottom sheet mirroring the feed's TOC
+       overlay. Holds About + Download and, if present, the languages listed
+       directly (no globe). -->
+  <div class="nav-overlay" data-navmenu-overlay hidden>
+    <div class="nav-overlay__backdrop" data-navmenu-close></div>
+    <div
+      class="nav-overlay__panel"
+      role="dialog"
+      aria-modal="true"
+      aria-label={ui.nav.menu}
+      tabindex="-1"
+      data-navmenu-panel
+    >
+      <div class="nav-overlay__header">
+        <span class="nav-overlay__title type-eyebrow">{ui.nav.menu}</span>
+        <button
+          type="button"
+          class="nav-overlay__close"
+          data-navmenu-close
+          aria-label={ui.nav.closeMenu}
+        >
+          <CloseIcon size={20} />
+        </button>
+      </div>
+      <div class="nav-overlay__body">
+        <nav class="nav-menu" aria-label={ui.nav.primaryLabel}>
+          <a class="nav-menu__item type-nav-link" href={aboutHref}>{ui.nav.about}</a>
+          {atlasPdfUrl && (
+            <a
+              class="nav-menu__item type-nav-link"
+              href={`${base}${atlasPdfUrl}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >{ui.nav.downloadPdf}</a>
+          )}
+          {siblings.length > 0 && (
+            <div class="nav-menu__langs">
+              <span class="nav-menu__langs-label type-eyebrow">{ui.nav.languages}</span>
+              {siblings.map((s) => (
+                <a class="nav-menu__item nav-menu__lang type-mono" href={s.url}>
+                  {s.flag && <span class="nav-menu__lang-flag" aria-hidden="true">{s.flag}</span>}
+                  <span>{s.code}</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </nav>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -212,6 +291,118 @@ const aboutHref = `${base}/about/`;
   .nav__lang-flag { font-size: 14px; }
   .nav__lang-code { padding: 0 var(--size-1); }
 
+  /* --- Menu overlay (large phones) --- Hidden above --bp-xs; the toggle and
+     overlay only take over from the inline links at ≤ 480 (see that query). */
+  .nav__menu-toggle {
+    display: none; /* shown ≤ --bp-xs */
+    align-items: center;
+    justify-content: center;
+    width: var(--size-6); /* 24px */
+    height: var(--size-6);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: var(--size-1);
+  }
+  .nav__menu-toggle :global(svg) { display: block; }
+  .nav__menu-toggle:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
+
+  .nav-overlay[hidden] { display: none; }
+  .nav-overlay { position: fixed; inset: 0; z-index: 95; }
+  .nav-overlay__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .nav-overlay.is-open .nav-overlay__backdrop { opacity: 1; }
+  .nav-overlay__panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: calc(100dvh - 84px); /* keep the fixed nav visible */
+    display: flex;
+    flex-direction: column;
+    background: var(--blue-gray-200);
+    border-top-left-radius: var(--size-4);
+    border-top-right-radius: var(--size-4);
+    box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.18);
+    transform: translateY(100%);
+    transition: transform 0.34s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .nav-overlay.is-open .nav-overlay__panel { transform: translateY(0); }
+  .nav-overlay__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-4);
+    padding: var(--size-4) var(--size-5);
+    border-bottom: 1px solid var(--blue-gray-300);
+  }
+  .nav-overlay__title { margin: 0; color: var(--text-primary); }
+  .nav-overlay__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size-9);
+    height: var(--size-9);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: var(--size-1);
+  }
+  .nav-overlay__close:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--blue-600);
+  }
+  .nav-overlay__body {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: var(--size-5);
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-3); /* 12px */
+  }
+  .nav-menu__item {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  .nav-menu__item:hover { text-decoration: underline; }
+  .nav-menu__langs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-2); /* 8px */
+    margin-top: var(--size-2);
+    padding-top: var(--size-3);
+    border-top: 1px solid var(--blue-gray-300);
+  }
+  .nav-menu__langs-label { margin: 0 0 var(--size-1); color: var(--text-secondary); }
+  .nav-menu__lang {
+    display: flex;
+    align-items: center;
+    gap: var(--size-1-5); /* 6px */
+  }
+  .nav-menu__lang-flag { font-size: 14px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-overlay__panel,
+    .nav-overlay__backdrop { transition: none; }
+  }
+
   /* --- Small screens: fixed compact bar (--bp-lg 1024) ---
      The bar stops interpolating with scroll and keeps one small height. The
      subtitle joins the title on the same line in regular weight. Literal font
@@ -244,17 +435,34 @@ const aboutHref = `${base}/about/`;
     .nav__subtitle {
       display: none;
     }
+    .nav__links { gap: var(--size-6); } /* 32px -> 24px */
+  }
+
+  /* Larger phones (--bp-sm 640): the inline links collapse into the menu
+     overlay, opened from the single menu button. */
+  @media (max-width: 640px) {
+    .nav__links { display: none; }
+    .nav__menu-toggle { display: inline-flex; }
   }
 
   /* Large phone (--bp-xs 480): same tighter edge gutter as the rest of the
-     page (36px -> 16px), and the title drops to the same size as the About
-     link beside it. */
+     page (36px -> 16px), and the title drops to the same size as the menu
+     button beside it. */
   @media (max-width: 480px) {
     .nav { padding: var(--size-3) var(--size-4); }
     .nav__title { font-size: 15px; letter-spacing: 0; } /* matches .nav__link (type-nav-link) */
   }
 </style>
 
+<style is:global>
+  /* Scroll lock while the nav menu overlay is open — only the overlay scrolls.
+     Global because Nav renders on every page (the feed's own lock is scoped
+     to its page). */
+  html.is-nav-menu-locked,
+  html.is-nav-menu-locked body { overflow: hidden; }
+</style>
+
 <script>
   import '../scripts/nav';
+  import '../scripts/nav-menu';
 </script>

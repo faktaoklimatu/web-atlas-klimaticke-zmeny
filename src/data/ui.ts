@@ -15,7 +15,11 @@ export const ui = {
     subtitle: 'A Visual Guide to the Science and Data',
     primaryLabel: 'Primary',
     about: 'About',
+    downloadPdf: 'Download Atlas in PDF',
     changeLanguage: 'Change language',
+    menu: 'Menu',
+    closeMenu: 'Close menu',
+    languages: 'Languages',
   },
 
   feed: {
