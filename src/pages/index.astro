@@ -274,7 +274,7 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
     align-items: flex-start; /* tags hug their content instead of stretching */
     gap: var(--size-2); /* 8px */
   }
-  .feed__view--grid .section__header { margin-bottom: 50px; }
+  .feed__view--grid .section__header { margin-bottom: var(--size-6); }
   .feed__view--list .section__header { margin-bottom: var(--size-9); } /* 36px */
 
   .section__title {
@@ -294,7 +294,7 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: var(--size-4); /* 16px */
-    row-gap: var(--size-8); /* 32px */
+    row-gap: var(--size-4); /* 32px */
   }
 
   .section__column {
@@ -397,9 +397,6 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   }
 
   @media (max-width: 1280px) {
-    /* Hero nav is ~28px shorter here (smaller hero title — see Nav), so the
-       feed clears it with proportionally less top space. */
-    .feed { --feed-top: 242px; }
     .feed__content {padding: var(--feed-top) 0 0 var(--size-9);}
   }
 

@@ -162,12 +162,6 @@ const aboutHref = `${base}/about/`;
     /* 0 = hero, 1 = compact. Driven linearly from scroll (see <script>);
        every size below interpolates between the two states via this var. */
     --nav-progress: 0;
-    /* Title hero/compact endpoints — vars so a media query can shrink the
-       hero size on smaller desktops without touching the interpolation math. */
-    --nav-title-hero: 72px;
-    --nav-title-compact: 24px;
-    --nav-track-hero: -2.88px;
-    --nav-track-compact: -0.48px;
     position: fixed;
     top: var(--size-2-5); /* 10px — sits below the FancyBar */
     left: 0;
@@ -208,17 +202,21 @@ const aboutHref = `${base}/about/`;
   .nav__title {
     font-family: var(--font-sans);
     font-weight: 600;
-    /* hero → compact, interpolated by --nav-progress */
-    font-size: calc(
-      var(--nav-title-hero) -
-        (var(--nav-title-hero) - var(--nav-title-compact)) * var(--nav-progress)
-    );
+    /* 72px (hero) → 24px (compact) */
+    font-size: calc(72px - 48px * var(--nav-progress));
     line-height: 1.2;
-    letter-spacing: calc(
-      var(--nav-track-hero) +
-        (var(--nav-track-compact) - var(--nav-track-hero)) * var(--nav-progress)
-    );
+    /* -2.88px → -0.48px */
+    letter-spacing: calc(-2.88px + 2.4px * var(--nav-progress));
     white-space: nowrap;
+    /* The oversized hero title must not dictate nav__inner's intrinsic width —
+       otherwise on narrower desktops it pushes nav__links past the viewport
+       edge. Zero layout width + visible overflow lets it spill to the right,
+       past nav__brand, over the gap toward (but under) the links. Height is
+       unaffected (line-box height still tracks font-size), so the hero bar and
+       its scroll-shrink are unchanged. At ≤ --bp-lg the wrapping compact bar
+       restores auto width. Works because flex items honour an explicit width. */
+    width: 0;
+    overflow: visible;
   }
 
   .nav__subtitle {
@@ -237,7 +235,7 @@ const aboutHref = `${base}/about/`;
 
   .nav__links {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: var(--size-8); /* 32px */
     flex: none;
   }
@@ -414,17 +412,6 @@ const aboutHref = `${base}/about/`;
     .nav-overlay__backdrop { transition: none; }
   }
 
-  /* Smaller desktop (≤ --bp-xl 1280): the 72px hero title crowds out the nav
-     links (they wrap ~1058px). Shrink the hero endpoint — the compact endpoint
-     and the scroll interpolation are unchanged, so the bar is a touch shorter
-     and the scroll-shrink travels a shorter distance. */
-  @media (max-width: 1280px) {
-    .nav {
-      --nav-title-hero: 48px;
-      --nav-track-hero: -1.6px;
-    }
-  }
-
   /* --- Small screens: fixed compact bar (--bp-lg 1024) ---
      The bar stops interpolating with scroll and keeps one small height. The
      subtitle joins the title on the same line in regular weight. Literal font
@@ -453,11 +440,15 @@ const aboutHref = `${base}/about/`;
       font-size: var(--size-5);
       letter-spacing: -0.4px;
       white-space: normal;
+      width: auto; /* small enough to size normally in the wrapping bar */
     }
     .nav__subtitle {
       display: none;
     }
-    .nav__links { gap: var(--size-6); } /* 32px -> 24px */
+    .nav__links {
+      align-items: center;
+      gap: var(--size-6); /* 32px -> 24px */
+    }
   }
 
   /* Larger phones (--bp-sm 640): the inline links collapse into the menu
