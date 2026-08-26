@@ -5,7 +5,7 @@ chapter: the-science
 order: 1
 image: /images/atlas/atlas-_12.png
 downloads:
-  pdf: ""
+  - /images/atlas/atlas-_12.png
 data:
   tableUrl: ""
   sourceUrl: https://gml.noaa.gov/ccgg/trends/

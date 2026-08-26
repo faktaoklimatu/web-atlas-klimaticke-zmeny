@@ -4,6 +4,8 @@ lead: While CO₂ emissions are the dominant force behind warming, methane, nitr
 chapter: the-trajectory
 order: 1
 image: /images/atlas/atlas-_34.png
+downloads:
+  - /images/atlas/atlas-_34.png
 ---
 
 **Greenhouse gases differ in two vital ways: their potency and their permanence. Some, like methane, are powerful at trapping heat but vanish from the atmosphere within a decade. Others, like CO₂, have a lower impact per ton but linger for centuries or millennia, locking in warming for generations to come.**

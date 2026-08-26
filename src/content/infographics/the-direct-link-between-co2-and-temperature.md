@@ -4,6 +4,8 @@ lead: The higher the CO₂ concentration in the atmosphere, the higher the Earth
 chapter: the-science
 order: 6
 image: /images/atlas/atlas-_22.png
+downloads:
+  - /images/atlas/atlas-_22.png
 ---
 
 **The graph reveals a clear relationship: the higher the CO₂ concentration, the higher the global temperature. To stop global warming, the world needs to stop CO₂ emissions.**

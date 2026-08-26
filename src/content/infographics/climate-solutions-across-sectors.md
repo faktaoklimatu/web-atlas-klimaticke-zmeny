@@ -4,6 +4,8 @@ lead: Stopping greenhouse gas emissions requires distinct strategies for differe
 chapter: the-solutions
 order: 2
 image: /images/atlas/atlas-_44.png
+downloads:
+  - /images/atlas/atlas-_44.png
 ---
 
 **Paths towards decarbonising various sectors of the economy fall into six distinct categories, coded A–F in the graphic.**

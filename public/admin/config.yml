@@ -40,14 +40,13 @@ collections:
       - label: "Graphic"
         name: "image"
         widget: "image"
-        hint: "The infographic image. Also offered as a PNG download."
+        hint: "The infographic image shown at the top of the page."
       - label: "Downloads"
         name: "downloads"
-        widget: "object"
+        widget: "list"
         required: false
-        collapsed: true
-        fields:
-          - { label: "PDF", name: "pdf", widget: "file", required: false }
+        hint: "Downloadable files (PNG, PDF, any format). The button label is taken from the file extension automatically. Add a PNG here if you want one offered — it's no longer generated from the graphic above."
+        field: { label: "File", name: "file", widget: "file" }
       - label: "Underlying data"
         name: "data"
         widget: "object"

@@ -4,6 +4,8 @@ lead: "Decarbonization involves three main groups of actors: the state, business
 chapter: the-solutions
 order: 4
 image: /images/atlas/atlas-_48.png
+downloads:
+  - /images/atlas/atlas-_48.png
 ---
 
 **Out of the three key actors, the state holds a unique position. By setting the rules of the game, it creates the systemic framework that makes it easier for businesses and individuals to take the necessary steps toward a low-carbon future.**

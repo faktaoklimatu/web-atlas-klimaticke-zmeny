@@ -4,6 +4,8 @@ lead: Extreme weather events occur more frequently and with greater intensity wi
 chapter: the-impacts
 order: 2
 image: /images/atlas/atlas-_28.png
+downloads:
+  - /images/atlas/atlas-_28.png
 ---
 
 **Extremes such as heat waves, droughts, and heavy rainfall occur more frequently and with greater intensity in a world under climate change. With any additional warming, extremes become greater and more pronounced.**

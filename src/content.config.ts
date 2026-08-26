@@ -24,11 +24,10 @@ const infographicsCollection = defineCollection({
     ]),
     order: z.number().default(0),
     image: z.string(), // public path, e.g. /images/atlas/atlas-_08.png
-    downloads: z
-      .object({
-        pdf: z.string().optional(),
-      })
-      .optional(),
+    // List of downloadable files (public paths). The button label is derived
+    // from each file's extension (e.g. `.pdf` → "PDF"). No longer auto-includes
+    // the cover image — every download, PNG included, is added explicitly.
+    downloads: z.array(z.string()).optional(),
     data: z
       .object({
         tableUrl: z.string().optional(),

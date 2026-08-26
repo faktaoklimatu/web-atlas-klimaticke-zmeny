@@ -4,6 +4,8 @@ lead: The world is now approximately 1.3 °C warmer than in 1850–1900. Over th
 chapter: the-science
 order: 3
 image: /images/atlas/atlas-_16.png
+downloads:
+  - /images/atlas/atlas-_16.png
 ---
 
 **The data from scientific measurements show that temperatures keep rising with increasing CO₂ concentrations, in line with the predictions.**

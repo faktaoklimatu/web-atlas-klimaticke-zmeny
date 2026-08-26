@@ -48,7 +48,12 @@ const lead = data.lead;
 const chapterLabel = chapterName(data.chapter);
 const imgSrc = imgUrl(data.image);
 
-const pdfHref = data.downloads?.pdf || null;
+const downloads = (data.downloads ?? [])
+  .filter((path) => path)
+  .map((path) => ({
+    href: path.startsWith('/') ? `${base}${path}` : path,
+    label: (path.split('.').pop() || '').toUpperCase(),
+  }));
 const tableUrl = data.data?.tableUrl || null;
 const sourceUrl = data.data?.sourceUrl || null;
 const citation = data.data?.citation || '';
@@ -145,15 +150,16 @@ const structuredData = {
                 </section>
               )}
 
-              <section class="meta__block" data-meta="download">
-                <h2 class="meta__label type-eyebrow">{ui.detail.download}</h2>
-                <ButtonGroup direction="row">
-                  {pdfHref && (
-                    <Button variant="text" href={`${base}${pdfHref}`}>{ui.detail.pdf}</Button>
-                  )}
-                  <Button variant="text" href={imgSrc}>{ui.detail.png}</Button>
-                </ButtonGroup>
-              </section>
+              {downloads.length > 0 && (
+                <section class="meta__block" data-meta="download">
+                  <h2 class="meta__label type-eyebrow">{ui.detail.download}</h2>
+                  <ButtonGroup direction="row">
+                    {downloads.map((d) => (
+                      <Button variant="text" href={d.href}>{d.label}</Button>
+                    ))}
+                  </ButtonGroup>
+                </section>
+              )}
             </div>
           </div>
         </aside>

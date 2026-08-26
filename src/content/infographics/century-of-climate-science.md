@@ -5,7 +5,7 @@ chapter: introduction
 order: 2
 image: /images/atlas/atlas-_10.png
 downloads:
-  pdf: ""
+  - /images/atlas/atlas-_10.png
 data:
   tableUrl: ""
   sourceUrl: ""

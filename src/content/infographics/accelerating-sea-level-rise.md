@@ -5,6 +5,8 @@ lead: From 1880 to 2025, global mean sea level rose by about 25 centimetres —
 chapter: the-impacts
 order: 1
 image: /images/atlas/atlas-_26.png
+downloads:
+  - /images/atlas/atlas-_26.png
 ---
 
 **Sea level is rising in most areas of the world and will keep rising for many more centuries due to ice loss and rising ocean temperatures caused by climate change. By 2100 some places could see around 1 meter of sea level rise, but the exact amount depends on future levels of warming.**

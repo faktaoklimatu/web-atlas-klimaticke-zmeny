@@ -4,6 +4,8 @@ lead: Key milestones in the global effort to protect the climate — summits, pa
 chapter: the-solutions
 order: 1
 image: /images/atlas/atlas-_42.png
+downloads:
+  - /images/atlas/atlas-_42.png
 ---
 
 **Climate change is a global challenge requiring long-term collaboration on both national and international levels. While international negotiations can be slow and cumbersome, they establish an important framework for global climate protection and emissions reduction.**

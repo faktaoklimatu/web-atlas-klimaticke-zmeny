@@ -4,6 +4,8 @@ lead: If emissions continue at 2025 levels, the remaining carbon budget for stay
 chapter: the-trajectory
 order: 3
 image: /images/atlas/atlas-_38.png
+downloads:
+  - /images/atlas/atlas-_38.png
 ---
 
 The extent of global warming depends primarily on how much more CO₂ humans add to the atmosphere. Limiting warming to well below 2 °C, in line with the Paris Agreement, is becoming increasingly challenging.

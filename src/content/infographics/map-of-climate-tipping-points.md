@@ -4,6 +4,8 @@ lead: Beyond certain critical thresholds, Earth's response to warming is no long
 chapter: the-impacts
 order: 3
 image: /images/atlas/atlas-_30.png
+downloads:
+  - /images/atlas/atlas-_30.png
 ---
 
 **When warming exceeds tipping points, ecosystems, currents, and ice sheets can no longer maintain stability. While the threshold and the pace vary for each system, the resulting changes are irreversible. For humanity, this means moving beyond the stable climate that supported our civilization for millennia.**

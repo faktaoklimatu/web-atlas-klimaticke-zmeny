@@ -4,6 +4,8 @@ lead: It took the planet at least 7,000 years to warm by 7 °C from the last gla
 chapter: the-science
 order: 5
 image: /images/atlas/atlas-_20.png
+downloads:
+  - /images/atlas/atlas-_20.png
 ---
 
 **Some argue that the climate has always been changing. The climate has indeed always changed – but the rate of current warming is unprecedented in the context of human civilization. It is the speed of change that matters for ecosystems and societies.**

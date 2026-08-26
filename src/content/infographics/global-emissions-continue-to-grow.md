@@ -4,6 +4,8 @@ lead: Global greenhouse gas emissions have nearly doubled over the past 55 years
 chapter: the-trajectory
 order: 2
 image: /images/atlas/atlas-_36.png
+downloads:
+  - /images/atlas/atlas-_36.png
 ---
 
 **Global greenhouse gas emissions are still rising as of the end of 2025, albeit at a slower pace than two decades ago. To meet international climate targets and to avoid even more dangerous warming, global emissions need to fall substantially.**

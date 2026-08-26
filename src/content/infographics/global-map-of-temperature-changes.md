@@ -4,6 +4,8 @@ lead: The warming rate is not uniform around the globe. Continents warm faster t
 chapter: the-science
 order: 4
 image: /images/atlas/atlas-_18.png
+downloads:
+  - /images/atlas/atlas-_18.png
 ---
 
 **Changes over the last six decades have shown that the warming rate varies across different regions, which is consistent with predictions from computer simulations.**

@@ -4,6 +4,8 @@ lead: Earth's climate is set by a balance between energy from the Sun and energy
 chapter: the-science
 order: 7
 image: /images/atlas/atlas-_24.png
+downloads:
+  - /images/atlas/atlas-_24.png
 ---
 
 **The Earth stays habitable because of a delicate balancing act. It sits in the cold vacuum of space, constantly receiving an enormous flow of solar energy that heats it up. To keep its temperature stable, it must release an equal amount of energy back into space. Currently, greenhouse gases emitted by humans have upset this balance, leading to an accumulation of thermal energy within the Earth system.**

@@ -4,6 +4,8 @@ lead: Between 1990 and 2024, EU emissions dropped by over one third — decreasi
 chapter: the-solutions
 order: 3
 image: /images/atlas/atlas-_46.png
+downloads:
+  - /images/atlas/atlas-_46.png
 ---
 
 The European Union reduced its emissions by over one third between 1990 and 2024. This progress reflects a fundamental shift in how the region generates energy and manages its economy.

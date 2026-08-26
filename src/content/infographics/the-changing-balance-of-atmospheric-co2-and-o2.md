@@ -4,6 +4,8 @@ lead: Changes in carbon dioxide and oxygen concentrations show annual cycles of 
 chapter: the-science
 order: 2
 image: /images/atlas/atlas-_14.png
+downloads:
+  - /images/atlas/atlas-_14.png
 ---
 
 **A long-term trend in increasing concentrations of carbon dioxide (CO₂) and declining concentrations of oxygen (O₂) shows that humans have been causing changes in the atmosphere composition by their activity – primarily by burning fossil fuels.**

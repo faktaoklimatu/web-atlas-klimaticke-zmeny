@@ -4,6 +4,8 @@ lead: With current policies, the world is on track for about 2.6 °C of warming 
 chapter: the-trajectory
 order: 4
 image: /images/atlas/atlas-_40.png
+downloads:
+  - /images/atlas/atlas-_40.png
 ---
 
 Future temperatures depend on two factors: future greenhouse gas emissions and the Earth's physical response to those gases. Although significantly less warming is now expected by 2100 than was projected just a decade ago, current policies and climate pledges remain insufficient to limit warming to well below 2 °C – the central goal of the 2015 Paris Agreement.
