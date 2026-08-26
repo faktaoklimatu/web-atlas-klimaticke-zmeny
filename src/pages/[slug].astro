@@ -122,13 +122,13 @@ const structuredData = {
                     {hasDataLinks && (
                       <ButtonGroup direction="column">
                         {tableUrl && (
-                          <Button variant="text" href={tableUrl}>
+                          <Button variant="text" href={tableUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLinkIcon slot="icon-left" size={16} />
                             {ui.detail.dataTable}
                           </Button>
                         )}
                         {sourceUrl && (
-                          <Button variant="text" href={sourceUrl}>
+                          <Button variant="text" href={sourceUrl} target="_blank" rel="noopener noreferrer">
                             <CodeIcon slot="icon-left" size={16} />
                             {ui.detail.dataSource}
                           </Button>
@@ -431,7 +431,7 @@ const structuredData = {
   .detail__section a:hover { color: var(--blue-600); }
 
   /* Rendered markdown body (from the CMS). */
-  .detail__prose { max-width: 600px; }
+  .detail__prose { max-width: 600px; overflow-wrap: break-word; }
   .detail__prose :global(h2) {
     margin: var(--size-8) 0 var(--size-3);
     font-family: var(--font-sans);
@@ -463,6 +463,7 @@ const structuredData = {
     color: inherit;
     text-decoration: underline;
     text-underline-position: from-font;
+    overflow-wrap: anywhere;
   }
 
   /* GFM footnotes ([^1] in the Body): the marker renders as a superscript

@@ -182,7 +182,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   /* Rendered markdown body (from the CMS) — same rules as the detail page. */
-  .about__prose { max-width: 600px; padding-bottom: var(--size-24); /* 96px */ }
+  .about__prose { max-width: 600px; padding-bottom: var(--size-24); /* 96px */ overflow-wrap: break-word; }
   .about__prose :global(h2) {
     margin: var(--size-8) 0 var(--size-3);
     font-family: var(--font-sans);
@@ -214,6 +214,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: inherit;
     text-decoration: underline;
     text-underline-position: from-font;
+    overflow-wrap: anywhere;
   }
   .about__prose :global(a:hover) { color: var(--blue-600); }
 

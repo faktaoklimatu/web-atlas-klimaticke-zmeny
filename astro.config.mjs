@@ -40,6 +40,28 @@ function satteriBaseLinks() {
   };
 }
 
+// Open external Markdown links (footnote references, sources, inline links in
+// infographic bodies) in a new tab. External = absolute http(s) or
+// protocol-relative; everything else is an in-site link handled above.
+function satteriExternalLinks() {
+  return {
+    name: 'satteri-external-links',
+    element: {
+      filter: ['a'],
+      visit(node, ctx) {
+        const href = node.properties?.href;
+        if (
+          typeof href === 'string' &&
+          (/^https?:\/\//.test(href) || href.startsWith('//'))
+        ) {
+          ctx.setProperty(node, 'target', '_blank');
+          ctx.setProperty(node, 'rel', 'noopener noreferrer');
+        }
+      },
+    },
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
@@ -47,6 +69,6 @@ export default defineConfig({
   base,
   integrations: [sitemap({ filter: (page) => !page.endsWith('/404/') })],
   markdown: {
-    processor: satteri({ hastPlugins: [satteriBaseLinks()] }),
+    processor: satteri({ hastPlugins: [satteriBaseLinks(), satteriExternalLinks()] }),
   },
 });
