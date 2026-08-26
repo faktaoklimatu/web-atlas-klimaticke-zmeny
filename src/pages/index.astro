@@ -265,7 +265,7 @@ const detailHref = (slug: string) => `${base}/${slug}/`;
   }
 
   /* Sections */
-  .section { scroll-margin-top: var(--sticky-top); }
+  .section { scroll-margin-top: calc(var(--sticky-top) + var(--size-6)); }
   .section + .section { margin-top: var(--size-16); } /* 64px */
 
   .section__header {

@@ -395,7 +395,7 @@ const structuredData = {
     max-width: 894px;
   }
 
-  .detail__footer { padding-left: var(--size-24); /* 96px, matches the hero/body inset */ }
+  .detail__footer { padding-left: var(--size-24); max-width: 894px; /* 96px inset + width cap, matches the hero/body */ }
   .detail__intro {
     margin: 0;
     color: var(--text-primary);
@@ -529,7 +529,8 @@ const structuredData = {
 
   @media (max-width: 1280px) {
     .detail__hero {padding: calc(var(--top-clear) + var(--size-12)) 0 var(--size-9) var(--size-9);}
-    .detail__body {padding: var(--size-9) 0 var(--size-24) var(--size-9);}
+    .detail__body {padding: var(--size-9) 0 var(--size-12) var(--size-9);}
+    .detail__footer {padding-left: var(--size-9);}
   }
 
   /* =====================================================================

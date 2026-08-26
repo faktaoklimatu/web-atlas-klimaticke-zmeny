@@ -35,7 +35,7 @@ instead of local files.
 
 ```
 public/
-  deploy.config.js  Per-fork deploy identity (site URL, base path, CMS repo/branch/OAuth)
+  deploy.config.js  Per-fork deploy identity (site URL, base path, language, CMS repo/branch/OAuth)
   admin/            Decap CMS (index.html + config.yml)
   images/atlas/     Infographic images (managed by the CMS)
 src/
@@ -53,7 +53,7 @@ src/
     infographics.ts  Feed assembly from the CMS collection
     ui.ts            All fixed UI microcopy (labels, buttons, aria-labels)
     site.json        CMS-managed external links (About sidebar), language switcher + footer
-    seo.json         CMS-managed site title, default description, social share image, locale
+    seo.json         CMS-managed site title, default description, social share image
   content/infographics/   Markdown content (Decap collection)
   content/about/about.md  About page title + body (single-file Decap collection)
   content.config.ts       Collection schemas
@@ -102,6 +102,7 @@ mutation on your GitHub account:
    |---|---|
    | `siteUrl` | The full origin your site is served from — `https://<user>.github.io` (GitHub Pages) or `https://your-domain.tld` (custom domain). Drives canonical URLs, Open Graph tags, and the sitemap. |
    | `basePath` | `/` for a custom domain at the root, or `/<your-repo-name>` for a GitHub Pages *project* site (must match the repo name). |
+   | `lang` | Your fork's ISO language code (`en`, `cs`, …). Sets `<html lang="…">` and `og:locale`. |
    | `cms.repo` | `<your-user>/<your-repo-name>` — where the CMS reads and writes content. |
    | `cms.branch` | Your default branch (`main` or `master`). |
    | `cms.oauthBaseUrl` | The OAuth proxy for CMS "Login with GitHub" — see below. |
@@ -143,8 +144,8 @@ mutation on your GitHub account:
      (e.g. `en`, `cs`) — that's what drives the `hreflang` SEO tags, separate
      from `code`, which is just the switcher's display label.
    - CMS *Settings → SEO* (`src/data/seo.json`) — site title, default meta
-     description, social share image, and `locale` (sets `<html lang="…">` to
-     your language code).
+     description, and social share image. (The page language `<html lang="…">`
+     is set once in `public/deploy.config.js`'s `lang`, above.)
 
 5. **Enable GitHub Pages.** In the fork's *Settings → Pages*, set the source to
    **GitHub Actions**. Pushing to the default branch then builds and deploys via

@@ -9,6 +9,7 @@ import { absoluteUrl, truncate } from '../utils/seo';
 import seo from '../data/seo.json';
 import site from '../data/site.json';
 import { ui } from '../data/ui';
+import { deployConfig } from '../../public/deploy.config.js';
 
 interface LanguageSibling {
   code: string;
@@ -41,7 +42,7 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const lang = seo.locale || 'en';
+const lang = deployConfig.lang || 'en';
 
 const canonicalUrl = absoluteUrl(Astro.site, canonicalPath ?? Astro.url.pathname);
 const ogImage = absoluteUrl(Astro.site, `${base}${image ?? seo.ogImageFallback}`);

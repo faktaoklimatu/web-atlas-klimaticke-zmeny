@@ -143,10 +143,9 @@ collections:
       - name: "seo"
         label: "SEO"
         file: "src/data/seo.json"
-        description: "Site title, default meta description, social share image, and language code used across every page."
+        description: "Site title, default meta description, and social share image used across every page."
         fields:
           - { label: "Site title", name: "siteTitle", widget: "string", hint: "Used in every page's <title>, and as the site name in social share previews." }
-          - { label: "Language code", name: "locale", widget: "string", default: "en", hint: "Sets the page language (<html lang>), e.g. en, cs. One value per site — set per language fork." }
           - { label: "Default meta description", name: "defaultDescription", widget: "text", hint: "Used on the homepage and 404 page, and as a fallback anywhere else with no description of its own." }
           - label: "Default social share image"
             name: "ogImageFallback"

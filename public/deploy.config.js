@@ -12,6 +12,10 @@ export const deployConfig = {
   //   '/RepoName'  → GitHub Pages project site (must match the repo name)
   basePath: '/AtlasOfClimateChange',
 
+  // Language of THIS fork (ISO code, e.g. 'en', 'cs'). Sets <html lang> and
+  // og:locale. One value per fork — the site is single-language.
+  lang: 'en',
+
   // Decap CMS GitHub backend (admin login + content writes).
   cms: {
     repo: 'hiiampadik/AtlasOfClimateChange', // '<owner>/<repo>'
