@@ -3,10 +3,11 @@
  * FancyBar — thin fixed "climate stripe" bar shown above the navigation.
  * Figma: node 54:2044. Stripe widths/colors mirror fancybar.svg, mapped to
  * the nearest design tokens (drawn in CSS so nothing pops in on image load).
+ * A scroll-progress fill (blue-600) sits on top and grows left-to-right with
+ * how far down the page the reader has scrolled — see scroll-progress.ts.
  */
 const stripes = [
-  { width: 70, color: 'var(--blue-500)' },
-  { width: 2.5, color: 'var(--blue-400)' },
+  { width: 72.5, color: 'var(--blue-400)' },
   { width: 2.5, color: 'var(--blue-gray-300)' },
   { width: 2.5, color: 'var(--yellow-50)' },
   { width: 2.5, color: 'var(--yellow-300)' },
@@ -25,6 +26,7 @@ const { class: className } = Astro.props;
   {stripes.map(({ width, color }) => (
     <span class="fancybar__stripe" style={`flex-basis:${width}%; background:${color}`} />
   ))}
+  <span class="fancybar__progress" data-scroll-progress></span>
 </div>
 
 <style>
@@ -41,4 +43,23 @@ const { class: className } = Astro.props;
     flex: 0 0 auto;
     height: 100%;
   }
+
+  .fancybar__progress {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0%;
+    height: 100%;
+    background: var(--blue-600);
+    /* Smooths out the coarser scroll-event cadence of a smooth-scrollIntoView
+       jump (e.g. the sidenav's chapter links) into a steady glide. */
+    transition: width 0.2s linear;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fancybar__progress { transition: none; }
+  }
 </style>
+
+<script>
+  import '../scripts/scroll-progress';
+</script>
