@@ -1,6 +1,6 @@
 ---
-title: Extreme Weather Is Growing More Severe
-lead: Extreme weather events occur more frequently and with greater intensity with any rise in global temperature.
+title: "Extrémní počasí přibývá a sílí"
+lead: "S každým nárůstem globální teploty budou extrémní projevy počasí častější a intenzivnější."
 chapter: the-impacts
 order: 2
 image: /images/atlas/atlas-_28.png

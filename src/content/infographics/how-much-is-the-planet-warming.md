@@ -1,6 +1,6 @@
 ---
-title: How Much Is the Planet Warming?
-lead: The world is now approximately 1.3 °C warmer than in 1850–1900. Over the last thirty years, the warming rate has been around 0.25 °C per decade.
+title: "Jak moc se planeta otepluje?"
+lead: "Svět je nyní o přibližně 1,3 °C teplejší než v letech 1850–1900. V posledních 30 letech se otepluje tempem okolo 0,25 °C za desetiletí."
 chapter: the-science
 order: 3
 image: /images/atlas/atlas-_16.png

@@ -1,8 +1,8 @@
 ---
-title: The Direct Link Between CO₂ and Temperature
-lead: The higher the CO₂ concentration in the atmosphere, the higher the Earth's temperature.
+title: "Přímá vazba mezi CO₂ a teplotou"
+lead: "Čím vyšší jsou koncentrace CO₂ v atmosféře, tím vyšší je teplota planety. Jak vysoké koncentrace CO₂ v atmosféře budou, záleží na tom, kolik emisí lidstvo vypustí."
 chapter: the-science
-order: 6
+order: 7
 image: /images/atlas/atlas-_22.png
 downloads:
   - /images/atlas/atlas-_22.png

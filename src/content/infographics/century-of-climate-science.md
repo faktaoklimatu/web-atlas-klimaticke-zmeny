@@ -1,6 +1,6 @@
 ---
-title: Century of Climate Science
-lead: We have known about climate change caused by CO₂ emissions for more than a hundred years.
+title: "Sto let vědy o klimatu"
+lead: "O klimatické změně způsobené emisemi CO₂ víme více než 100 let."
 chapter: introduction
 order: 2
 image: /images/atlas/atlas-_10.png

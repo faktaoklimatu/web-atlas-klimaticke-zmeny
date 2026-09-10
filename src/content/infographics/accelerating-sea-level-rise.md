@@ -1,7 +1,6 @@
 ---
-title: Accelerating Sea Level Rise
-lead: From 1880 to 2025, global mean sea level rose by about 25 centimetres —
-  and it will keep rising for centuries.
+title: "Zrychlující vzestup hladiny moří"
+lead: "Mezi lety 1880 a 2025 vzrostla globální průměrná hladina moří přibližně o 25 cm. S rostoucí teplotou oceánů a táním ledovců bude hladina i nadále stoupat po celá staletí."
 chapter: the-impacts
 order: 1
 image: /images/atlas/atlas-_26.png

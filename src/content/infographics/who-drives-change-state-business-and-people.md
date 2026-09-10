@@ -1,8 +1,8 @@
 ---
-title: Who Drives Change? State, Business, and People
-lead: "Decarbonization involves three main groups of actors: the state, businesses, and people. Success depends on their cooperation."
+title: "Kdo přináší změnu? Stát, firmy a lidé"
+lead: "Na dekarbonizaci se podílejí tři hlavní skupiny aktérů: stát, firmy a lidé. Úspěch závisí na jejich spolupráci, protože každá z těchto skupin disponuje jinými nástroji ke snižování emisí."
 chapter: the-solutions
-order: 4
+order: 5
 image: /images/atlas/atlas-_48.png
 downloads:
   - /images/atlas/atlas-_48.png

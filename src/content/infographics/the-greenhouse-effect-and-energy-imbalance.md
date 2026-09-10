@@ -1,8 +1,8 @@
 ---
-title: The Greenhouse Effect and Energy Imbalance
-lead: Earth's climate is set by a balance between energy from the Sun and energy radiated back to space. Human activity has now disrupted this equilibrium.
+title: "Skleníkový efekt a energetická nerovnováha Země"
+lead: "Klima Země určuje tepelná rovnováha mezi energií přijatou ze Slunce a energií vyzářenou zpět do vesmíru. Lidmi způsobené změny v atmosféře tuto rovnováhu narušily."
 chapter: the-science
-order: 7
+order: 8
 image: /images/atlas/atlas-_24.png
 downloads:
   - /images/atlas/atlas-_24.png

@@ -1,6 +1,6 @@
 ---
-title: Which Greenhouse Gases Matter Most?
-lead: While CO₂ emissions are the dominant force behind warming, methane, nitrous oxide, and F-gases also play a significant role.
+title: "Na jakých skleníkových plynech nejvíc záleží?"
+lead: "Zatímco emise CO₂ jsou hlavní příčinou globálního oteplování, významnou roli při posilování skleníkového efektu hrají také metan (CH₄), oxid dusný (N₂O) a fluorované plyny (F-plyny)."
 chapter: the-trajectory
 order: 1
 image: /images/atlas/atlas-_34.png

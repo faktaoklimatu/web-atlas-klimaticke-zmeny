@@ -1,6 +1,6 @@
 ---
-title: Global Map of Temperature Changes
-lead: The warming rate is not uniform around the globe. Continents warm faster than oceans, and the Northern Hemisphere faster than the Southern.
+title: "Mapa teplotních změn ve světě"
+lead: "Mezi lety 1961 a 2025 probíhala změna klimatu na různých místech planety různě rychle. Kontinenty se oteplují rychleji než oceány a severní polokoule se otepluje rychleji než jižní."
 chapter: the-science
 order: 4
 image: /images/atlas/atlas-_18.png

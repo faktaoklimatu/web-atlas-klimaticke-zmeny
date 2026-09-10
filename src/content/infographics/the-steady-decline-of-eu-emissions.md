@@ -1,6 +1,6 @@
 ---
-title: The Steady Decline of EU Emissions
-lead: Between 1990 and 2024, EU emissions dropped by over one third — decreasing in every sector except transportation.
+title: "Emise v EU dlouhodobě klesají"
+lead: "Mezi lety 1990 a 2024 klesly emise v EU o 36 %. Emise se snížily ve všech sektorech s výjimkou dopravy."
 chapter: the-solutions
 order: 3
 image: /images/atlas/atlas-_46.png

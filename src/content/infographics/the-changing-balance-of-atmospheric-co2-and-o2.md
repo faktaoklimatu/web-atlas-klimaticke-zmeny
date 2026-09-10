@@ -1,6 +1,6 @@
 ---
-title: The Changing Balance of Atmospheric CO₂ & O₂
-lead: Changes in carbon dioxide and oxygen concentrations show annual cycles of respiration and photosynthesis, as well as the long-term effects of fossil fuel combustion.
+title: "Měnící se rovnováha CO₂ a O₂ v atmosféře"
+lead: "Časový průběh koncentrací CO₂ a kyslíku ukazuje roční cykly fotosyntézy a dýchání rostlin i dlouhodobé důsledky spalování fosilních paliv."
 chapter: the-science
 order: 2
 image: /images/atlas/atlas-_14.png

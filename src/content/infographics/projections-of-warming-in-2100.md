@@ -1,6 +1,6 @@
 ---
-title: Projections of Warming in 2100
-lead: With current policies, the world is on track for about 2.6 °C of warming by the end of this century.
+title: "Scénáře oteplení v roce 2100"
+lead: "Současná opatření směřují svět k oteplení o 2,6 °C do konce století. Pouze v případě, že státy dodrží všechny své klimatické přísliby, se podaří nárůst teploty omezit na zhruba 1,9 °C v roce 2100."
 chapter: the-trajectory
 order: 4
 image: /images/atlas/atlas-_40.png

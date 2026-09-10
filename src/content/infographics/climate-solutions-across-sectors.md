@@ -1,6 +1,6 @@
 ---
-title: Climate Solutions Across Sectors
-lead: Stopping greenhouse gas emissions requires distinct strategies for different sectors of the economy.
+title: "Opatření a řešení napříč sektory"
+lead: "Zastavení emisí skleníkových plynů vyžaduje odlišné strategie pro různá odvětví. Hluboká dekarbonizace většinou spoléhá na kombinaci několika řešení spíše než na jediný univerzální recept."
 chapter: the-solutions
 order: 2
 image: /images/atlas/atlas-_44.png

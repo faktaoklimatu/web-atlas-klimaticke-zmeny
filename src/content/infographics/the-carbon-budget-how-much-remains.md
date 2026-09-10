@@ -1,6 +1,6 @@
 ---
-title: "The Carbon Budget: How Much Remains?"
-lead: If emissions continue at 2025 levels, the remaining carbon budget for staying below 1.5 °C will be exhausted in 2030.
+title: "Uhlíkový rozpočet: Kolik ještě zbývá?"
+lead: "Pokud emise CO₂ zůstanou na úrovni roku 2025, vyčerpá se uhlíkový rozpočet, při kterém se oteplení udrží pod 1,5 °C, už v roce 2030; pro hranici 2 °C v roce 2051."
 chapter: the-trajectory
 order: 3
 image: /images/atlas/atlas-_38.png

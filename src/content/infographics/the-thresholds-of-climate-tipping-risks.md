@@ -1,6 +1,6 @@
 ---
-title: The Thresholds of Climate Tipping Risks
-lead: Five of Earth's vital climate components are already at risk of irreversible change.
+title: "Teplotní prahy pro body zlomu"
+lead: "U pěti klíčových složek klimatického systému Země již dnes hrozí nevratné změny. Při oteplení o 2 °C se spuštění sedmi bodů zlomu stává pravděpodobným, zatímco dalších šest se ocitá v pásmu rizika."
 chapter: the-impacts
 order: 4
 image: /images/atlas/atlas-_32.png

@@ -1,6 +1,6 @@
 ---
-title: Causes and Effects of Climate Change
-lead: Climate change is much more than rising temperatures. It is a long chain of interconnected causes and effects.
+title: "Příčiny a následky změny klimatu"
+lead: "Klimatická změna je mnohem víc než jen nárůst teploty. Je to dlouhý řetězec vzájemně propojených příčin a následků."
 chapter: introduction
 order: 1
 image: /images/atlas/atlas-_08.png

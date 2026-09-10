@@ -1,6 +1,6 @@
 ---
-title: Global Emissions Continue to Grow
-lead: Global greenhouse gas emissions have nearly doubled over the past 55 years.
+title: "Globální emise stále rostou"
+lead: "Globální emise skleníkových plynů se za posledních 55 let téměř zdvojnásobily. Jejich růst vrcholil v nultých letech (2000–2009), výrazně zpomalil v desátých letech (2010–2019), ale po roce 2020 začal opět zrychlovat."
 chapter: the-trajectory
 order: 2
 image: /images/atlas/atlas-_36.png

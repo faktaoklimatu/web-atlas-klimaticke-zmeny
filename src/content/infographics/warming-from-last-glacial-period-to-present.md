@@ -1,8 +1,8 @@
 ---
-title: Warming from the Last Glacial Period to the Present
-lead: It took the planet at least 7,000 years to warm by 7 °C from the last glacial period. It took only the last 100 years to warm by 1.3 °C.
+title: "Oteplování od doby ledové až po současnost"
+lead: "V přechodu od poslední doby ledové se planeta oteplovala tempem asi 1 °C za tisíciletí. V současnosti se otepluje více než desetkrát rychleji."
 chapter: the-science
-order: 5
+order: 6
 image: /images/atlas/atlas-_20.png
 downloads:
   - /images/atlas/atlas-_20.png

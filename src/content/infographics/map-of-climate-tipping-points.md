@@ -1,6 +1,6 @@
 ---
-title: Map of Climate Tipping Points
-lead: Beyond certain critical thresholds, Earth's response to warming is no longer linear or predictable.
+title: "Mapa klimatických bodů zlomu"
+lead: "Nad kritickými teplotními prahy již Země nereaguje na oteplování lineárně ani předvídatelně. Aktivace těchto bodů zlomu přinese rozsáhlé a nevratné změny naší planety."
 chapter: the-impacts
 order: 3
 image: /images/atlas/atlas-_30.png
