@@ -8,31 +8,29 @@ downloads:
   - /images/atlas/atlas-_32.png
 ---
 
-The risk of crossing climate tipping points is an imminent reality, not a distant concern. Within the Paris Agreement warming range of 1.5 °C to 2 °C, several systems are already likely to tip. These include the collapse of major ice sheets, the widespread die-off of coral reefs, and the abrupt thawing of permafrost.
+**Riziko aktivace klimatických bodů zlomu je bezprostřední, nikoli vzdálenou hrozbou. Již v rozmezí oteplení o 1,5 °C–2 °C stanoveném Pařížskou dohodou pravděpodobně dojde k narušení stability několika systémů. To zahrnuje kolaps velkých ledovcových štítů, rozsáhlé odumírání korálových útesů a náhlé tání permafrostu.**
 
-Major climate tipping points include (continued from [Map of Climate Tipping Points](/mapa-klimatickych-bodu-zlomu/)):
+**Mezi hlavní body zlomu patří**: *(pokračování z [předchozí dvoustrany](/mapa-klimatickych-bodu-zlomu/))*
 
-## Permafrost thaw and collapse
+## Tání a kolaps permafrostu
 
-Permanently frozen soils and sediments in vast boreal regions of Siberia and North America contain more carbon than is currently in the atmosphere – and as permafrost thaws, this carbon can be partially released as CO₂ and methane.
+Trvale zmrzlá půda a sedimenty v rozsáhlých severských oblastech Sibiře a Severní Ameriky obsahují více uhlíku, než kolik se ho aktuálně nachází v atmosféře. Jak permafrost taje, může se tento uhlík částečně uvolňovat ve formě CO₂ a metanu.
 
-While gradual thawing is already underway, warming beyond 1.5 °C may trigger **abrupt permafrost thaw** in some regions, nearly doubling emissions compared to gradual melting.
+Zatímco postupné tání již probíhá, oteplení nad 1,5 °C může v některých oblastech spustit **náhlé tání permafrostu**, které emise oproti postupnému tání téměř zdvojnásobí. Při oteplení nad 4 °C by rychlé vysychání oblastí bohatých na uhlík mohlo vést ke **kolapsu permafrostu** či k efektu **„kompostové bomby“**. V tomto scénáři rychlý rozklad organického materiálu produkuje vlastní teplo, které v samovolném cyklu rozklad dále urychluje. Výsledné uvolnění skleníkových plynů by mohlo během pouhých 50 let zvýšit globální teplotu o dalších 0,2–0,4 °C.[^1]
 
-Beyond 4 °C of warming, the abrupt drying of carbon-rich areas could lead to **permafrost collapse** or a "**compost bomb**" effect. In this scenario, the rapid decomposition of organic material produces its own heat, which further accelerates decomposition in a self-sustaining cycle. The resulting release of greenhouse gases could raise global temperatures by an additional 0.2–0.4 °C in just 50 years.[^1]
+## Kolaps atlantické cirkulace
 
-## Atlantic circulation collapse
+**Atlantická meridionální cirkulace** (**AMOC**) funguje jako ústřední topení planety – přenáší obrovské množství tepla z tropů do severního Atlantiku a ohřívá severozápadní Evropu. Tato cirkulace je samovolná: slaná voda z tropů se v severním Atlantiku ochlazuje, zvyšuje svou hustotu a klesá ke dnu, čímž vytváří hlubinné oceánské proudy, které tečou zpět na jih.
 
-**The Atlantic Meridional Overturning Circulation (AMOC)** acts as the planet's central heating system, carrying massive amounts of heat from the tropics toward the North Atlantic and warming Northwestern Europe. This circulation is self-sustaining: salty tropical water cools and becomes denser in the North Atlantic, causing it to sink and create deep currents flowing back south.
+Globální oteplování dodává do severního Atlantiku sladkou vodu (z tajícího Grónského ledovcového štítu i zvýšených srážek v Arktidě), což brání klesání vody ke dnu. Studie naznačují, že **AMOC již oslabila asi o 15 %**. Ačkoli se úplný kolaps během 21. století považuje za nepravděpodobný, při oteplení kolem 4 °C se již pravděpodobným stává. Takový kolaps by vedl k regionálnímu ochlazení v severním Atlantiku o 4–10 °C a zásadně by proměnil klima v Evropě.
 
-Global warming adds freshwater to the North Atlantic – from both the melting Greenland ice sheet and increased Arctic rainfall – which prevents the water from sinking. Studies suggest the **AMOC has already weakened by about 15%**. While a total collapse is considered unlikely during the 21st century, it becomes likely if warming reaches approximately 4 °C. Such a collapse would lead to regional cooling in the North Atlantic of 4–10 °C, profoundly altering the climate of Europe.
+S AMOC úzce souvisí **subpolární vír v Labradorském moři**, menší rotující proud mezi Grónskem, Kanadou a Islandem. Je zranitelnější a bodu zlomu může dosáhnout mnohem dříve – zhruba při oteplení o 1,8 °C. Jeho kolaps by způsobil regionální ochlazení o 2–3 °C a zvýšil četnost extrémního počasí v Evropě.
 
-Closely linked to the AMOC is the **Labrador Sea Subpolar Gyre**, a smaller rotating current between Greenland, Canada, and Iceland. It is more vulnerable and may reach a tipping point much sooner – at roughly 1.8 °C of warming. Its collapse would cause regional cooling of 2–3 °C and increase weather extremes in Europe.
+## Odumírání amazonského deštného pralesa
 
-## Amazon rainforest dieback
+Amazonie, největší a druhově nejbohatší deštný prales na Zemi, byla historicky klíčovým úložištěm uhlíku. Kombinace odlesňování, sucha a lesních požárů vyvolaných změnou klimatu (do roku 2021 došlo ke ztrátě asi 18 % pralesa[^2]) však způsobila, že se **Amazonie** jako celek stala **zdrojem emisí uhlíku**.
 
-The Amazon, the largest and most biodiverse rainforest on Earth, was historically a vital carbon sink. However, a combination of deforestation and climate-induced droughts and wildfires (about 18% of the forest has been lost as of 2021)[^2] has caused the Amazon basin as a whole to become **a net carbon source**.
+S pokračujícím oteplováním se tento trend bude zhoršovat – v jižních a východních oblastech pralesa ubude srážek a prodlouží se období sucha. Vědci odhadují, že při oteplení o 3,5 °C je pravděpodobné **částečné odumírání postihující zhruba 40 % Amazonie**, což povede k poškození pralesa nebo k jeho proměně v savanu. Toto samovolné vysychání se může aktivovat ještě dříve, pokud odlesňování dosáhne 20–25 %. Odumírání pralesa by dále narušilo regionální srážkový režim a v příštím století zvýšilo globální teplotu přibližně o 0,1 °C.
 
-As warming continues, the trend will only worsen − rainfall will decline and dry seasons will lengthen in southern and eastern areas of the forest. Scientists estimate that at 3.5 °C of warming, a **partial dieback affecting roughly 40% of the Amazon** becomes likely, shifting the region into a degraded, or savanna-like state. This self-reinforcing drying could be triggered even sooner if deforestation reaches 20–25%. The dieback would further disrupt regional rainfall and raise global temperatures by approximately 0.1 °C over the following century.
-
-[^1]: Temperature thresholds, time horizons, and other details on this page are based on a thorough assessment of the tipping points by McKay, D.A. et al. (2022). Exceeding 1.5°C global warming could trigger multiple climate tipping points. Science 377, eabn7950. DOI: [10.1126/science.abn7950](https://doi.org/10.1126/science.abn7950).
+[^1]: Teplotní prahy, časové odhady a další detaily na této stránce se zakládají na celkovém vyhodnocení bodů zlomu publikovaném v McKay, D. A. et al. (2022). Exceeding 1.5 °C global warming could trigger multiple climate tipping points. Science 377, eabn7950. DOI: [10.1126/science.abn7950](https://doi.org/10.1126/science.abn7950).
 [^2]: Science Panel for the Amazon (2021). [Amazon Assessment Report 2021. Executive Summary](https://www.sp-amazon.org/publications/#ar2021). United Nations Sustainable Development Solutions Network.

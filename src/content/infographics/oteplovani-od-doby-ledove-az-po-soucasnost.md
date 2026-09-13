@@ -8,31 +8,31 @@ downloads:
   - /images/atlas/atlas-_20.png
 ---
 
-**Some argue that the climate has always been changing. The climate has indeed always changed – but the rate of current warming is unprecedented in the context of human civilization. It is the speed of change that matters for ecosystems and societies.**
+**Častou námitkou proti závažnosti dnešní situace je tvrzení, že klima se měnilo vždy. To je sice pravda, ale tempo současného oteplování je v dějinách lidské civilizace bezprecedentní. Právě tato rychlost přitom rozhoduje o tom, jak citelně změny zasáhnou ekosystémy i naši společnost.**
 
-In the long geological timescale of Earth's history, it is possible to find periods in which the climate was much colder than today (glacial periods of ice ages) as well as much warmer (e.g. the age of dinosaurs). However, climate changes were always relatively slow.
+V dlouhém geologickém měřítku historie Země lze nalézt období výrazně chladnější než současnost (glaciály dob ledových) i období podstatně teplejší (např. éra dinosaurů). Klimatické změny však vždy byly relativně pozvolné.
 
-From this historical perspective, **the temperature change in the last hundred years shown in the graph is huge and abrupt** – such a trend is not natural for the world's climate.
+Z tohoto historického pohledu je **teplotní změna v posledních sto letech**, kterou zachycuje graf, **skoková – takový vývoj světového klimatu není přirozený**.
 
-**Calculations and computer simulations** also show that at the end of this century the planet will be about 1.5–3.5 °C warmer than in pre-industrial era, depending on how quickly greenhouse gas emissions are reduced[^1] (see also: [Projections of Warming in 2100](/scenare-otepleni-v-roce-2100/)).
+**Výpočty a počítačové modely** také ukazují, že na konci tohoto století bude planeta o přibližně 1,5–3,5 °C teplejší než v předindustriálním období, v závislosti na tom, jak rychle se budou snižovat emise skleníkových plynů[^1] (více o [projekcích oteplení v roce 2100](/scenare-otepleni-v-roce-2100/)).
 
-## What does the temperature change mean for humans and for the living world?
+## Co znamená změna teploty pro člověka a co pro svět?
 
-During the Last Glacial Maximum (peaking between 26,000 and 20,000 years ago), Canada and northern Europe were covered by vast ice sheets, and cold tundra stretched all the way down to the Mediterranean coast. Ice sheets locked up huge quantities of water so global ocean levels were about 120 meters lower than today.
+Během posledního glaciálního maxima (vrcholícího přibližně před 26 000–20 000 lety) pokrývaly Kanadu a severní Evropu rozsáhlé pevninské ledovce (ledové příkrovy) a chladná tundra se táhla až k pobřeží Středozemního moře. Ledovce zadržovaly obrovské množství vody, proto byly hladiny světových oceánů asi o 120 m níže než dnes.
 
-In the following ten thousand years, temperatures rose slowly and the world became 7 °C warmer.[^2] Glaciers melted away and the natural world adapted to this change – including humans who could now settle in previously uninhabitable northern areas. This warming period was followed by a long era in which the annual global temperature did not change very much, which was favourable for civilization growth.
+V následujících deseti tisících letech teploty pomalu rostly a svět se oteplil o 7 °C.[^2] Ledovce roztály a příroda se této změně přizpůsobila – včetně lidí, kteří nyní osídlili také do té doby nehostinné severní oblasti. Následovala dlouhá éra, v níž se průměrná roční globální teplota příliš neměnila, což bylo příznivé pro rozvoj civilizace.
 
-**Current warming**,[^3] however, **is at least 10 times faster and does not give ecosystems and species sufficient time to adapt**. This abrupt warming may have far-reaching consequences for life on the planet as well as for human civilization (see also: [climate tipping points](/mapa-klimatickych-bodu-zlomu/) and [The Thresholds of Climate Tipping Risks](/teplotni-prahy-pro-body-zlomu/)).
+**Současné oteplování**[^3] je však nejméně desetkrát rychlejší a **nedává ekosystémům ani jednotlivým druhům dostatek času na adaptaci**. Toto prudké oteplování může mít dalekosáhlé důsledky pro život na planetě i pro lidskou civilizaci (více o [klimatických bodech zlomu](/mapa-klimatickych-bodu-zlomu/) a [jejich teplotních prazích](/teplotni-prahy-pro-body-zlomu/)).
 
-## How do scientists measure past temperatures?
+## Jak vědci zjišťují historické teploty?
 
-Air temperatures have been reliably measured since the 18th century. Temperatures in earlier or even pre-historic times can be calculated based on some natural processes affected by temperature changes. One example is dendrochronology – the dating of tree rings. When a piece of wood is found by archaeologists as a part of their excavations, the growth rings allow scientists to estimate temperatures in the period when the tree was growing.
+Měření pomocí spolehlivých teploměrů máme k dispozici přibližně od 18. století. Při zjišťování teploty ve vzdálenější minulosti využívají vědci toho, že mnoho přírodních procesů závisí na teplotě. Známým příkladem je tloušťka letokruhů stromů – když při archeologických vykopávkách najdeme kus dřeva a určíme jeho stáří, můžeme z letokruhů usuzovat na teploty, které panovaly v době, kdy dřevo rostlo.
 
-Another method studies pollen grains found at bottoms of lakes – this pollen provides useful information about plants growing by the lake in the past and researchers can thus estimate the temperatures in those times.[^4]
+Další metoda zkoumá pylová zrna nalezená na dnech jezer – podle pylu vědci poznají, jaké rostliny u jezera rostly v minulosti, a z toho mohou usuzovat na tehdejší teplotu.[^4]
 
-Key data about past temperatures comes from the **isotope analysis of marine sediments**. In water (H₂O), oxygen exists as different isotopes (¹⁶O and ¹⁸O), the ratio of which changes depending on the planet's climate. By analysing the calcium carbonate shells (CaCO₃) of dead organisms from the seafloor, scientists can determine the composition of ancient seawater and from that, reconstruct temperatures with reasonable accuracy even in the distant past.
+Klíčové údaje o teplotách v minulosti poskytuje **izotopová analýza mořských usazenin**. Ve vodě (H₂O) existují různé izotopy kyslíku (¹⁶O a ¹⁸O), jejichž poměr se mění podle klimatu na planetě. Rozbor vápencových schránek (CaCO₃) odumřelých organismů z mořského dna tak vědcům umožňuje zjistit složení tehdejší vody a poměrně přesně z toho určit teplotu v dávných dobách.
 
-[^1]: The value of 3.5 °C comes as the upper range of warming in the 2080–2100 period in IPCC's SSP2-4.5 scenario. This "Middle of the Road" scenario supposes slow progress toward sustainability with greenhouse gas emissions peaking between 2040 and 2050 and then steadily declining. It is by no means the worst case scenario – if emissions continue to rise throughout the 21st century, the warming might be even bigger. See Cross-Section Box TS.1, Table 1 in Intergovernmental Panel on Climate Change. (2021). Technical Summary. In Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to AR6. DOI: [10.1017/9781009157896.002](https://doi.org/10.1017/9781009157896.002).
-[^2]: The dataset comes from Osman, M.B., Tierney, J.E., Zhu, J. et al. (2021). Globally resolved surface temperatures since the Last Glacial Maximum. Nature 599, 239-244. DOI: [10.1038/s41586-021-03984-4](https://doi.org/10.1038/s41586-021-03984-4).
-[^3]: Dataset comes from NASA Goddard Institute for Space Studies, [The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). Dataset accessed 2026-01-22.
+[^1]: Hodnota 3,5 °C představuje horní hranici rozmezí pro oteplení v období 2080–2100 podle scénáře SSP2-4,5 od IPCC. Tento scénář „střední cesty“ předpokládá, že pokrok směrem k udržitelnosti bude pomalý a emise skleníkových plynů dosáhnou vrcholu mezi lety 2040 a 2050 a poté budou postupně klesat. Zdaleka nejde o nejhorší možný scénář – pokud by emise rostly po celé 21. století, oteplení by mohlo být ještě větší. Viz Cross-Section Box TS.1, Table 1 v Intergovernmental Panel on Climate Change. (2021). Technical Summary. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to AR6. DOI: [10.1017/9781009157896.002](https://doi.org/10.1017/9781009157896.002).
+[^2]: Dataset viz Osman, M. B., Tierney, J. E., Zhu, J. et al. (2021). Globally resolved surface temperatures since the Last Glacial Maximum. Nature 599, 239–244. DOI: [10.1038/s41586-021-03984-4](https://doi.org/10.1038/s41586-021-03984-4).
+[^3]: Používáme dataset od [NASA Goddard Institute for Space Studies, The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). [Cit. 2026-01-22].
 [^4]: Chevalier, M., et al. (2020). Pollen-based climate reconstruction techniques for late Quaternary studies. Earth-Science Reviews, 210, 103384. DOI: [10.1016/j.earscirev.2020.103384](https://doi.org/10.1016/j.earscirev.2020.103384).

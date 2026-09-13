@@ -8,42 +8,38 @@ downloads:
   - /images/atlas/atlas-_44.png
 ---
 
-**Paths towards decarbonising various sectors of the economy fall into six distinct categories, coded A–F in the graphic.**
+**Způsoby dekarbonizace různých odvětví ekonomiky lze rozdělit do šesti hlavních kategorií, které jsou v grafice označeny písmeny A–F.**
 
-**Decarbonization** refers to the process of reducing or eliminating greenhouse gas emissions from the economy.[^1] The ultimate goal is Net Zero – a state where any remaining emissions are balanced by an equivalent amount of carbon removal.
+*Dekarbonizace je proces snižování nebo úplného odstraňování emisí skleníkových plynů z ekonomiky.[^1] Konečným cílem je klimatická neutralita (Net Zero) – stav, kdy jsou veškeré zbývající emise vyváženy odpovídajícím množstvím CO₂ odstraněným z atmosféry.*
 
-## Energy efficiency
+## A Energetické úspory
 
-**Reducing the amount of energy required to achieve the same result.** Examples include thermal insulation for buildings, or waste heat recovery in factories. **Electrification** also drives efficiency, as electric motors waste far less energy as heat than internal combustion engines.
+**Snižování množství energie potřebné k dosažení stejného výsledku.** Příkladem je zateplování budov nebo využívání odpadního tepla v průmyslu. K úsporám přispívá také elektrifikace, protože elektromotory pracují s mnohem menšími ztrátami a vyprodukují výrazně méně odpadního tepla než motory spalovací.
 
-## Electrification
+## B Elektrifikace
 
-**Replacing fossil-fuel-burning equipment with electric alternatives.** Most road transport can switch to electric vehicles (EVs), while heat pumps can replace gas boilers in homes and industry. This strategy is most effective when the electricity comes from clean sources.
+**Nahrazování zařízení spalujících fosilní paliva elektrickými alternativami.** Většina silniční dopravy může přejít na elektromobily (EV), zatímco v domácnostech i v průmyslu lze plynové kotle nahradit tepelnými čerpadly. Tato strategie přináší největší úspory emisí v případě, že elektřina pochází z nízkoemisních zdrojů.
 
-## Clean energy production
+## C Výroba čisté elektřiny a tepla
 
-The global power sector is undergoing a massive transformation. In 2004, **wind and solar provided less than 1%** of global electricity; today, they provide nearly 20%. When combined with nuclear, hydro, and biomass, low-emission sources now account for **over 40% of global generation**.[^2] This shift is making it possible to gradually phase out coal and gas power plants or use them only as back-up sources. Reaching 100% requires expanding energy storage (batteries), strengthening transmission grids, and increasing demand flexibility.
+Globální energetika prochází masivní transformací. Zatímco v roce 2004 dodával **vítr a slunce** méně než 1 % světové elektřiny, dnes je to téměř 20 %. Spolu s jadernou a vodní energií či biomasou tvoří nízkoemisní zdroje už **přes 40 % globální výroby**.[^2] Tento posun umožňuje postupně odstavovat uhelné a plynové elektrárny nebo je využívat pouze jako záložní zdroje. Plná dekarbonizace výroby (dosažení 100 %) vyžaduje rozvoj akumulace energie, posilování přenosových soustav a zvyšování flexibility na straně spotřeby.
 
-## Changes in fuels and technologies
+## D Změny paliv a technologických postupů
 
-In sectors where electricity isn't practical (like long-haul shipping or aviation), a **transition to low-emission fuels** like green hydrogen, methanol, ammonia, or advanced biofuels are an option. **Innovations in production processes** include modifications to cement compositions, the use of hydrogen in iron production, or regenerative and precision farming in agriculture. **Reducing methane emissions** – by fixing leaks in fossil fuel infrastructure, improving livestock management, and capturing gas from decomposing organic waste – remains one of the highest-impact near-term measures given methane's potency as a greenhouse gas.
+V odvětvích, kde elektrifikace není praktická (např. dálková námořní doprava nebo letectví), představují alternativu **nízkoemisní paliva** jako zelený vodík, methanol, amoniak nebo pokročilá biopaliva. **Technologické inovace** v průmyslu zahrnují úpravu složení cementu či využití vodíku při výrobě železa. V zemědělství jde o zavádění regenerativních a precizních postupů. Klíčovým opatřením v krátkodobém horizontu zůstává **omezení emisí metanu** (vzhledem k jeho silnému skleníkovému účinku) – ať už zamezováním úniků z fosilní infrastruktury, lepším řízením chovů hospodářských zvířat nebo zachycováním plynu z organického odpadu.
 
-## Carbon management and removal
+## E Zachytávání a odstraňování CO₂
 
-- Mitigation: Carbon Capture and Storage (CCS) involves trapping CO₂ at the source (like a factory chimney) before it reaches the atmosphere, and pumping it underground.
-- **Carbon dioxide removal (CDR)**: This involves taking CO₂ out of the atmosphere. Natural methods include reforestation and soil restoration. Technological methods include Direct Air Capture (DAC), enhancing ocean alkalinity or biochar production, though most of these technologies remain expensive to scale.
+**Zmírňování (mitigace):** Zachycování a ukládání uhlíku (CCS) spočívá v zachycení CO₂ přímo u zdroje (např. v průmyslovém komíně) dříve, než unikne do atmosféry, a jeho následném trvalém uložení pod zem.
 
-## Changes in consumer behaviour
+**Odstraňování oxidu uhličitého (CDR)**: Zahrnuje aktivní odebírání CO₂ z volné atmosféry. Přírodní metody spoléhají na zalesňování nebo zvyšování schopnosti půdy vázat uhlík. Technologické metody zahrnují přímé zachycování ze vzduchu (DAC), zvyšování zásaditosti oceánů či výrobu biouhlu. Většina těchto technologií je však zatím pro nasazení ve velkém měřítku finančně velmi nákladná.
 
-**Individual choices can significantly reduce emissions.** The highest-impact shifts include:
+## F Změny v chování spotřebitelů
 
-- using public transit
-- adopting electric vehicles or opting for active travel (walking/cycling)
-- reducing air travel
-- adopting plant-based diets
-- insulating homes or installing residential solar rooftops
+**Rozhodnutí jednotlivců mohou emise výrazně snížit.** Mezi kroky s největším dopadem patří využívání veřejné dopravy a elektromobilů, aktivní mobilita (chůze, jízda na kole), omezení letecké dopravy, přechod na rostlinnou stravu, zateplování domů či instalace vlastní fotovoltaiky. Tyto změny často přinášejí i další benefity, jako je zlepšení veřejného zdraví nebo méně vytížená městská doprava.
 
-These changes often provide co-benefits, such as improved public health and reduced urban congestion.
+*Podrobné informace o snižování emisí skleníkových plynů jsme zpracovali v publikaci [Atlas dekarbonizace Česka](https://faktaoklimatu.cz/atlas-dekarbonizace).[^3]*
 
-[^1]: Data on global greenhouse emissions in sectors come from the EDGAR 2025 dataset: EDGAR (Emissions Database for Global Atmospheric Research) Community GHG Database, a collaboration between the European Commission, Joint Research Centre (JRC), and the International Energy Agency (IEA). European Commission, JRC (Datasets). [[https://edgar.jrc.ec.europa.eu/report_2025](https://edgar.jrc.ec.europa.eu/report_2025)]
+[^1]: Data o světových emisích skleníkových plynů v jednotlivých sektorech pocházejí z databáze [EDGAR 2025](https://edgar.jrc.ec.europa.eu/report_2025) (Emissions Database for Global Atmospheric Research) Community GHG Database. Tato databáze vznikla ve spolupráci Evropské komise, Společného výzkumného střediska (JRC) a Mezinárodní energetické agentury (IEA). Zahrnuje sady dat IEA-EDGAR CO₂, EDGAR CH₄, EDGAR N₂O a EDGAR F-GASES ve verzi EDGAR_2025_GHG (2025). Údaj o CO₂ z odlesňování a využití půdy (LULUCF) pochází ze zprávy Global Carbon Budget 2025: Friedlingstein, P. et al. (v recenzním řízení, 2025). Global Carbon Budget 2025. Earth Syst. Sci. Data Discuss. [preprint]. DOI: [10.5194/essd-2025-659](https://doi.org/10.5194/essd-2025-659).
 [^2]: International Energy Agency (2025). [Global Energy Review 2025](https://www.iea.org/reports/global-energy-review-2025/key-findings).
+[^3]: Přibyla, O., Krčál, J., Daniš, P., Kolouch Grabovská, K., Snováková, A. (2025). [Atlas dekarbonizace Česka](https://faktaoklimatu.cz/atlas-dekarbonizace). Fakta o klimatu.

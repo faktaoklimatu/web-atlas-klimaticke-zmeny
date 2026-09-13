@@ -8,36 +8,36 @@ downloads:
   - /images/atlas/atlas-_48.png
 ---
 
-**Out of the three key actors, the state holds a unique position. By setting the rules of the game, it creates the systemic framework that makes it easier for businesses and individuals to take the necessary steps toward a low-carbon future.**
+**Z trojice hlavních aktérů má jedinečné postavení stát. Určuje „pravidla hry“ a vytváří tak systémový rámec, který firmám i jednotlivcům usnadňuje cestu k nízkoemisní budoucnosti.**
 
-## The State
+## Stát
 
-The role of government — from local municipalities to supranational bodies such as the EU — is to create conditions for a transition that is swift, efficient, socially just, economically beneficial, and publicly supported. To achieve this, governments use a mix of four policy types:
+Úlohou státu – a dalších úrovní správy od obcí až po nadnárodní celky jako EU – je vytvářet podmínky pro dekarbonizaci, která bude rychlá, efektivní, ekonomicky výhodná, sociálně spravedlivá a veřejně podporovaná. K dosažení tohoto cíle využívají vlády kombinaci čtyř typů politik:
 
-- **Regulatory:** Setting binding targets, performance standards (e.g., fuel efficiency for cars), and building codes.
-- **Economic:** Carbon pricing (taxes or trading systems), subsidies for clean technology, and tax reliefs for green investments.
-- **Infrastructure Investment:** Funding large-scale projects like modernized electricity grids, high-speed rail, and public charging networks that private investors may not fund alone.
-- **Awareness & Transparency:** Establishing rules for energy labeling, carbon footprint disclosure, and public awareness campaigns to help citizens make informed choices.
+- **Regulační:** Stanovování závazných cílů, výkonnostních norem (např. emisní limity pro auta) a technických předpisů (např. pro energetickou náročnost budov).
+- **Ekonomické:** Zpoplatnění uhlíku (uhlíkové daně nebo systémy obchodování s emisemi), dotace na čisté technologie a daňové úlevy pro zelené investice.
+- **Infrastrukturní:** Financování rozsáhlých projektů, jako jsou modernizace elektrických sítí, vysokorychlostní železnice nebo sítě nabíjecích stanic, které by soukromí investoři sami nedokázali ufinancovat.
+- **Informační a osvětové:** Nastavování pravidel pro energetické štítkování, povinné zveřejňování uhlíkové stopy a podpora kampaní, které občanům pomáhají činit informovaná rozhodnutí.
 
-The scale of investment needed for the transition far exceeds what governments alone can provide. Therefore, one of the most vital functions of climate policy is to provide the **stability** and **clarity** needed to mobilize massive amounts of private investment.
+Rozsah investic potřebných pro transformaci zdaleka přesahuje možnosti veřejných rozpočtů. Jednou z nejdůležitějších funkcí klimatické politiky je proto zajistit **stabilitu** a **srozumitelnost**, které jsou nezbytné pro mobilizaci masivních soukromých investic.
 
-## Businesses
+## Firmy
 
-Companies are the engines of the technical transition. They decarbonize by:
+Firmy jsou motorem technologické transformace. Dekarbonizaci provádějí prostřednictvím:
 
-- Switching to clean electricity and electrifying manufacturing processes.
-- Improving resource efficiency and reducing waste through circular economy models.
-- Developing and scaling clean technologies and low-emission innovations.
-- Investing in the necessary changes.
+- přechodu na nízkoemisní elektřinu a elektrifikace výrobních procesů,
+- zvyšování efektivity využívání zdrojů a omezování odpadu skrze principy cirkulární ekonomiky,
+- vývoje a zavádění čistých technologií a nízkoemisních inovací,
+- mobilizace investic do transformace svých provozů a dodavatelských řetězců.
 
-While service-sector companies may only need to switch to clean electricity and operate from a low-energy building, heavy industries like steel, cement, and chemicals require a fundamental transformation of their production processes. These sectors are the most critical for achieving deep emission cuts.
+Zatímco v sektoru služeb často postačí přechod na čistou elektřinu a provoz v nízkoenergetické budově, těžký průmysl (výroba oceli, cementu či chemikálií) vyžaduje zásadní proměnu výrobních postupů. Právě tyto energeticky náročné sektory jsou pro dosažení hlubokých emisních škrtů klíčové.
 
-## People
+## Lidé
 
-The largest share of global emissions is linked to heavy industry and energy production, where individuals have limited direct control. However, **the active participation** of individual people – as citizens, voters, employees, and purchasers of goods/services – will be essential to the success of decarbonisation even in those sectors. All people can initiate, advocate for, and implement change.
+Největší podíl globálních emisí souvisí s těžkým průmyslem a energetikou, kde mají jednotlivci jen omezenou přímou kontrolu. **Aktivní zapojení** lidí – jako občanů, voličů, zaměstnanců i spotřebitelů – však bude pro úspěch dekarbonizace zásadní i v těchto odvětvích. Každý člověk může změnu iniciovat, prosazovat nebo se na ní přímo podílet.
 
-Furthermore, people have direct influence over emissions from their homes, food, and transport. **Shifts in consumer behaviour** like using public transit or adopting a more plant-based diet and **investments** in insulation, heat pumps, rooftop solar, and electric vehicles provide immediate and significant emission reductions.
+Lidé mají navíc přímý vliv na emise spojené s bydlením, stravou a dopravou. **Změny v chování** (využívání veřejné dopravy, větší podíl rostlinné stravy) i individuální **investice** (zateplení, tepelná čerpadla, vlastní fotovoltaika či elektromobily) přinášejí okamžité a významné snížení emisí.
 
-## Other actors
+## Další aktéři
 
-The transition is also supported by international organizations (like the UN), non-governmental organizations (NGOs), trade unions, banks, and educational institutions, all of which help bridge the gaps between the state, businesses, and the public.
+Transformaci podporují také mezinárodní organizace (např. OSN), nevládní organizace (NNO), odbory, finanční a vzdělávací instituce. Ti všichni pomáhají propojovat jednotlivé aktéry a stavět pomyslné mosty mezi státem, firmami a veřejností.

@@ -8,28 +8,28 @@ downloads:
   - /images/atlas/atlas-_30.png
 ---
 
-**When warming exceeds tipping points, ecosystems, currents, and ice sheets can no longer maintain stability. While the threshold and the pace vary for each system, the resulting changes are irreversible. For humanity, this means moving beyond the stable climate that supported our civilization for millennia.**
+**Pokud oteplení překročí body zlomu, ekosystémy, mořské proudy a ledovcové štíty ztratí svou stabilitu. Ačkoli má každý z těchto systémů jinou kritickou mez i tempo kolapsu, výsledné změny jsou vždy nevratné. Pro lidstvo to znamená opuštění stabilního klimatu, které po tisíciletí umožňovalo rozkvět naší civilizace.**
 
-## What are climate tipping points?
+## Co jsou klimatické body zlomu?
 
-Imagine you are leaning over the side of a canoe to look at fish. You can lean quite far and the boat stays upright. But then at a specific point the centre of gravity shifts so much that the boat, carrying you with it, starts to inevitably flip over. No matter what happens next, the system's own physics finish the job. Similar dynamics work in ecosystems, ice sheets or ocean currents – warming beyond a certain level pushes them out of stability.
+Představte si, že se vykláníte z kánoe, abyste se podívali na ryby pod hladinou. Můžete se vyklonit poměrně daleko a loď stále zůstává stabilní. V určitém bodě se však těžiště posune natolik, že se loď i s vámi začne nezadržitelně přetáčet dnem vzhůru. Bez ohledu na to, co uděláte dál, fyzikální zákony dokončí práci za vás. Podobná dynamika funguje v ekosystémech, ledovcích nebo oceánských proudech – oteplení nad určitou mez je zcela destabilizuje.
 
-## Major climate tipping points
+**Mezi hlavní klimatické body zlomu patří:**
 
-### Ice sheets collapse
+## Kolaps ledovcových štítů
 
-There are a few major ice sheets on Earth and each is exposed to its own dynamics. Two of them, the Greenland and West Antarctica ice sheets, are already in the state of accelerated loss and may be at or near their tipping points.
+Na Zemi se nachází několik velkých ledovcových štítů a každý z nich podléhá vlastní dynamice. Dva z nich – v Grónsku a v Západní Antarktidě – už jsou ve stadiu, kdy přicházejí o led čím dál rychleji a mohou se blížit ke svým bodům zlomu.
 
-**The Greenland ice sheet** covers 1.7 million km², roughly 80% of Greenland, and is over 3,000 m thick. As a mountain of ice, its surface lies in high, cold air. But with global warming, the surface melts and the ice sheet gets thinner. **The surface then drops into lower, warmer altitudes of the atmosphere, which causes even more melting**. Once the ice sheet drops below a certain critical elevation, it can no longer grow back even if we stop emissions, because the surface is now permanently in a warm-air zone. The complete melting of the Greenland ice sheet would cause a global sea level rise of 7 m and would probably take several thousand years.[^1]
+**Grónský ledovcový štít** pokrývá 1,7 milionu km² (zhruba 80 % rozlohy Grónska) a je i přes 3 000 m silný. Jedná se o tak velký útvar, že v krajině tvoří regulérní pohoří a jeho horní vrstva sahá vysoko do oblasti chladného vzduchu. Vlivem globálního oteplování však led odtává a celá masa se ztenčuje. **Jak povrch ledovce klesá do nižších a teplejších vrstev atmosféry, tání to pouze umocňuje**. A jakmile ledovec klesne pod určitou kritickou mez, nedokáže se už obnovit, ani kdybychom emise zastavili, protože jeho povrch trvale zůstane v zóně teplého vzduchu. Úplné roztání grónského ledovcového štítu by způsobilo globální zvýšení hladiny moří o 7 m a tento proces by pravděpodobně trval několik tisíc let.[^1]
 
-**The West Antarctica ice sheet** covers 2 million km² with ice over 2,000 m thick. Most of the **ice sits on bedrock that is below sea level and even slopes downward** as you go further inland. The warming ocean water melts the ice and causes it to retreat. Once the retreat reaches a downward slope in the bedrock, the loss of ice may become self-sustaining. This is because if the slopes go down toward the interior, it exposes a taller, thicker face of ice to the ocean, and thicker ice flows faster into the sea (more weight means more pressure pushing ice out to sea). The complete collapse of the West Antarctic ice sheet would raise global sea levels by up to 5 m in several thousand years.
+**Západoantarktický ledovcový štít** pokrývá 2 miliony km² a led je zde silný přes 2 000 m. Většina ledu spočívá na **skalním podloží, které leží pod úrovní mořské hladiny a směrem do vnitrozemí se dokonce svažuje**. Stále teplejší oceánská voda led rozpouští zespodu a způsobuje ústup ledovce. Jakmile ustupující ledovec dosáhne místa, kde se podloží svažuje do vnitrozemí, další ztráta ledu může probíhat samovolně. Je to proto, že klesající svah vystavuje oceánu stále vyšší a silnější čelo ledovce. Čím je led silnější, tím rychleji odtéká do moře (větší váha znamená větší tlak vytlačující led do oceánu). Úplný kolaps západoantarktického štítu by zvedl hladinu světových oceánů až o 5 m během několika tisíc let.
 
-### Coral reefs die-off
+## Úhyn korálových útesů
 
-Coral reefs are built on a delicate partnership: the corals provide the limestone architecture, while microscopic algae living within them provide food via photosynthesis. When the sea becomes too warm, the algae begin producing harmful chemicals, forcing the coral to expel them. This leaves the coral white and starving – a process known as **bleaching** – and it dies if the water doesn't cool down quickly. These events are abrupt; a single marine heatwave can turn a vibrant reef ecosystem into a graveyard in just a few months.
+Korálové útesy jsou založeny na křehkém partnerství: koráli vytvářejí vápencovou architekturu, zatímco mikroskopické řasy žijící uvnitř nich dodávají potravu prostřednictvím fotosyntézy. Když se moře příliš oteplí, řasy začnou produkovat škodlivé chemické látky, což korály donutí je vypudit. Korál **zbělá** (takzvané bělení korálů) a hladoví, a pokud se voda rychle neochladí, umírá. Tyto události jsou náhlé; jediná mořská vlna veder může během pouhých několika měsíců proměnit životem kypící ekosystém v pohřebiště.
 
-Large parts of the Great Barrier Reef have recently experienced recurring bleaching events and many corals have died. Scientists estimate that **at 1.5 °C of global warming, 70–90% of tropical and subtropical reefs will be lost**, with near total loss by 2.0 °C. Coral collapse will eliminate one of the Earth's richest ecosystems in biodiversity, affecting a vast marine food web, and the livelihoods of hundreds of millions of people.
+Velké části Velkého bariérového útesu v poslední době zasáhlo bělení a mnoho korálů uhynulo. Vědci odhadují, že **při oteplení o 1,5 °C zanikne 70–90 % tropických a subtropických útesů**, přičemž při 2 °C dojde k jejich téměř úplnému zániku. Úhyn korálů by zničil jeden z druhově nejbohatších ekosystémů planety, což by zasáhlo rozsáhlý mořský potravní řetězec i obživu stovek milionů lidí.
 
-The remaining tipping points — permafrost thaw, Atlantic circulation collapse, and Amazon dieback — continue on [The Thresholds of Climate Tipping Risks](/teplotni-prahy-pro-body-zlomu/).
+*Text s dalšími body zlomu pokračuje na stránce [Teplotní prahy pro body zlomu](/teplotni-prahy-pro-body-zlomu/).*
 
-[^1]: Temperature thresholds, time horizons, and other details on this page are based on a thorough assessment of the tipping points by McKay, D.A. et al. (2022). Exceeding 1.5°C global warming could trigger multiple climate tipping points. Science 377, eabn7950. DOI: [10.1126/science.abn7950](https://doi.org/10.1126/science.abn7950).
+[^1]: Teplotní prahy, časové odhady a další detaily na této stránce se zakládají na celkovém vyhodnocení bodů zlomu publikovaném v McKay, D. A. et al. (2022). Exceeding 1.5 °C global warming could trigger multiple climate tipping points. Science 377, eabn7950. DOI: [10.1126/science.abn7950](https://doi.org/10.1126/science.abn7950).

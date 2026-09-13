@@ -8,25 +8,25 @@ downloads:
   - /images/atlas/atlas-_16.png
 ---
 
-**The data from scientific measurements show that temperatures keep rising with increasing CO₂ concentrations, in line with the predictions.**
+**Naměřené hodnoty svědčí o tom, že teploty se stále zvyšují s rostoucími koncentracemi CO₂, přesně tak, jak vědci předpovídali.**
 
-The graph shows the trend in **global temperature anomaly** (deviation from normal) **over the past 145 years**.[^1] Ever since around 1910, the world has been warming. It does not mean that every year is warmer than the year before – there is a natural variation, but the trend is clear. As of 2025 the **top 10 hottest years on record were all the last 10 years** (2016–2025).
+Graf zachycuje vývoj **globální teplotní anomálie** (odchylky od normálu) **za posledních 145 let**.[^1] Přibližně od roku 1910 se svět otepluje. Neznamená to, že každý rok je teplejší než ten předchozí – kolísání souvisí s přirozenou variabilitou klimatu, celkový trend je však zcela zřejmý. Ostatně – na konci roku 2025 platilo, že **10 nejteplejších let v historii měření bylo právě posledních 10 let** (2016–2025).
 
-In 2024, global warming has reached 1.47 °C relative to the pre-industrial era, according to NASA, and has even surpassed the 1.5 °C threshold according to other temperature datasets.[^2] However, 2024 is just a single year. Taken as a five-year average, **the world is currently (as of 2026) about 1.3 °C warmer** than in the pre-industrial era – in line with climate model predictions.
+V roce 2024 průměrné globální oteplení podle NASA dosáhlo 1,47 °C oproti předindustriálnímu období a podle jiných teplotních datasetů dokonce překročilo hranici 1,5 °C.[^2] Jeden rok ale ještě nic neznamená. Pokud počítáme s pětiletým průměrem teplot, **svět je v současnosti zhruba o 1,3 °C teplejší** než v době před průmyslovou revolucí, což je plně v souladu s předpověďmi klimatických modelů.
 
-## What is a reference period?
+## Co je to referenční období?
 
-Whenever we say how much the global temperature has increased, we need to be clear since when (i.e. what the reference period for that warming is). For example, 2024 was 1.47 °C warmer than the average temperature in 1850–1900, but only 0.78 °C warmer than the average temperature in 1981–2010 (because the later period was on average already 0.69 °C warmer than the former).
+Kdykoli hovoříme o tom, o kolik se svět oteplil, musíme také upřesnit, od kdy tento nárůst teploty měříme (jaké je referenční období). Například rok 2024 byl o 1,47 °C teplejší než průměrná teplota v letech 1850–1900, ale pouze o 0,78 °C teplejší než průměrná teplota v letech 1981–2010 (protože to druhé období bylo již v průměru o 0,69 °C teplejší než období první).
 
-**Climate scientists often use 1850–1900 as a reference period** (also called "the pre-industrial era"). This term is not strictly accurate, because the industrial revolution had already been underway at that time. But the concentrations of CO₂ in the atmosphere were around 280–300 ppm back then, and Earth's temperature was not yet affected by the strengthening greenhouse effect very much.
+**V klimatologii se jako referenční období často používá období 1850–1900**, označované také jako „předindustriální“. Není to zcela přesné, neboť průmyslová revoluce v té době již probíhala, nicméně koncentrace CO₂ v atmosféře se tehdy pohybovaly okolo 280–300 ppm – teplota Země tedy ještě nebyla příliš ovlivněna zesilujícím se skleníkovým efektem.
 
-Any warming mentioned here is measured against this pre-industrial baseline, which is worth keeping in mind when comparing figures from other sources.
+Všechny hodnoty oteplení uvedené v této publikaci se vztahují právě k předindustriálnímu období 1850–1900. To je třeba mít na paměti při porovnání hodnot oteplení s jinými zdroji.
 
-## What is a temperature anomaly?
+## Co je to teplotní anomálie?
 
-Because the Earth's surface is varied, calculating a mean temperature raises both methodological and practical difficulties. Therefore, on a global scale it is more useful to talk about a temperature anomaly. Nevertheless, mean temperatures can also be useful – e.g. for smaller entities such as cities or small countries.
+Protože zemský povrch je různorodý, výpočet průměrné teploty naráží na metodologické i praktické obtíže. V celoplanetárním měřítku je proto vhodnější pracovat s takzvanou teplotní anomálií. Průměrnou roční teplotu má smysl sledovat u menších celků, jako jsou města nebo malé státy.
 
-A global temperature anomaly for any given year says how much warmer the world is in that year when compared to the average temperature in the reference period. The global temperature anomaly in 2024 was 1.47 °C – meaning that year was globally (on average) 1.47 °C warmer than the global average of 1850–1900. This average masks large variations between warming in different regions of the world. All continents were even warmer than global average warming of 1.47 °C in 2024 (with Europe warming at roughly twice the global average rate), as warming above land (and in the Northern Hemisphere) is stronger than warming above oceans (See also: [Global Map of Temperature Changes](/mapa-teplotnich-zmen-ve-svete/)).
+**Globální teplotní anomálie** pro daný rok udává, o kolik byl svět teplejší v porovnání s průměrnou teplotou v referenčním období. Globální teplotní anomálie v roce 2024 byla 1,47 °C – to znamená, že v celoplanetárním průměru byl tento rok o 1,47 °C teplejší než období 1850–1900. Tento průměr ale zakrývá veliké rozdíly v oteplování v různých částech světa. Všechny kontinenty se v roce 2024 oteplily ještě více, než činil globální průměr 1,47 °C (Evropa se otepluje přibližně dvojnásobnou rychlostí oproti globálnímu průměru), protože oteplování nad pevninou (a na severní polokouli) je větší než oteplování nad oceány (viz [Mapu teplotních změn ve světě](/mapa-teplotnich-zmen-ve-svete/)).
 
-[^1]: Dataset comes from NASA Goddard Institute for Space Studies, [The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). Dataset accessed 2026-01-22.
-[^2]: Copernicus Climate Change Service set the global temperature anomaly in 2024 relative to pre-industrial period at 1.6 °C. Copernicus Climate Change Service (2025). [Global Climate Highlights 2024](https://climate.copernicus.eu/global-climate-highlights-2024).
+[^1]: Používáme dataset od [NASA Goddard Institute for Space Studies, The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). [Cit. 2026-01-22].
+[^2]: Copernicus Climate Change Service stanovil globální teplotní anomálii v roce 2024 oproti předindustriálnímu období na 1,6 °C. Copernicus Climate Change Service (2025). [Global Climate Highlights 2024](https://climate.copernicus.eu/global-climate-highlights-2024).

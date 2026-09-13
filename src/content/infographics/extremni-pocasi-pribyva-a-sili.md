@@ -8,34 +8,32 @@ downloads:
   - /images/atlas/atlas-_28.png
 ---
 
-**Extremes such as heat waves, droughts, and heavy rainfall occur more frequently and with greater intensity in a world under climate change. With any additional warming, extremes become greater and more pronounced.**
+**Extrémní jevy, jako jsou vlny veder, sucha a přívalové srážky, se ve světě zasaženém změnou klimatu vyskytují častěji a s větší intenzitou. S každým dalším oteplením se tyto extrémy stávají výraznějšími a ničivějšími.**
 
-The graphics depict **projected changes in frequency and intensity of selected extreme weather events**. Each dot represents one year in a hypothetical set of ten years. Dark dots indicate years with extreme events occurring, light dots years without the extremes. Events that occurred once per decade in the pre-industrial period now occur with higher frequency and are also more intense.[^1]
+Grafika znázorňuje **očekávané změny v četnosti a intenzitě vybraných extrémních jevů**. Každý bod představuje jeden rok v hypotetickém desetiletí. Tmavé body označují roky s výskytem extrémního jevu, světlé body roky bez extrémů. Jevy, které se v době před průmyslovou revolucí vyskytovaly jednou za deset let, jsou dnes častější a zároveň intenzivnější.[^1]
 
-## Where are we now on the graph?
+**Kde se na grafu nacházíme právě teď?** Oteplení (k roku 2026) dosahuje přibližně 1,3 °C ve srovnání s dobou před průmyslovou revolucí (viz [Jak moc se planeta otepluje?](/jak-moc-se-planeta-otepluje/)) a očekává se, že hranice 1,5 °C bude překročena kolem roku 2030.
 
-Warming is now (as of 2026) about 1.3 °C relative to the pre-industrial era (See also: [How Much Is the Planet Warming?](/jak-moc-se-planeta-otepluje/)) and the 1.5 °C threshold is expected to be reached around 2030.
+## Extrémy počasí jsou propojené
 
-## Weather extremes are connected
+Mnoho extrémních jevů je spolu provázáno v **komplexní síti vzájemných vlivů**. Například vydatné srážky mohou vyvolat povodně, vysoké teplotní extrémy zhoršují nebo prodlužují sucha a sucho následně vytváří podmínky pro lesní požáry.
 
-Many extreme events are linked to one another in a **complex web of mutual influences**. For example, heavy precipitation can trigger floods, hot temperature extremes exacerbate or prolong droughts, and droughts may then create conditions for wildfires.
+Globální oteplování vede **k častějšímu suchu a zároveň k intenzivnějším srážkám**. Rostoucí teploty zvyšují výpar, což způsobuje sucho, ale zároveň se tím do atmosféry dostává více vlhkosti. **Teplejší atmosféra dokáže pojmout výrazně více vodní páry** (přibližně o 7 % na každý 1 °C oteplení), což vede k prudším bouřím, dešťům a tropickým cyklónám.
 
-Global warming leads to **more droughts and heavy precipitation at the same time**. Rising temperatures boost evaporation, which can cause more droughts and also bring more moisture to the atmosphere. A **warmer atmosphere can contain significantly more moisture** (about 7% more water vapour for each 1 °C), which leads to more intense storms, rainfall, and tropical cyclones.
+Vlivem změny klimatu **srážek** celosvětově mírně přibývá, ale jejich **rozložení v čase a prostoru se výrazně mění**. Obecně platí, že vlhké oblasti se stávají ještě vlhčími (tropické a polární oblasti), zatímco suché oblasti dále vysychají (subtropy, jako je Středomoří, jihozápad USA nebo části jižní Afriky). Mění se také samotný charakter srážek – jsou méně časté, ale intenzivnější: deštivých dnů ubývá a nahrazují je delší období sucha, která přerušují prudké lijáky.[^2]
 
-With climate change, there is slightly more precipitation globally, but the **spatial and temporal distribution of this precipitation changes significantly**. In general, wetter areas are getting even wetter (tropical and polar regions), whereas drier areas are getting even drier (subtropics like the Mediterranean, the US Southwest, and parts of southern Africa). We are also seeing a shift toward fewer but more intense precipitation events: there are fewer days of rain and instead longer periods of droughts interrupted by downpours.[^2]
+## Způsobuje změna klimatu všechny extrémy?
 
-## Are all extreme weather events caused by climate change?
+Nikoli. Přísně vzato, žádný konkrétní jev není nikdy způsoben výhradně globálním oteplováním, ale pravděpodobnost jeho výskytu se oteplováním zvyšuje. Nakolik hraje roli změna klimatu, lze u každé události posoudit pomocí takzvaných **atribučních studií**. Co nám říkají?
 
-Not necessarily. Strictly speaking, any given event is never caused by global warming, but the likelihood of it occurring increases with global warming. The role of climate change can be assessed for each event in what is called **attribution studies**. What do they tell us?
+Pravděpodobnost vln veder se kvůli současnému oteplování dramaticky zvyšuje. Nedávná studie publikovaná v časopise Nature uvádí, že z 213 velkých vln veder mezi lety 2000 a 2023 změna klimatu způsobila, že více než čtvrtina z nich (55 případů) byla desetitisíckrát pravděpodobnější – bez vlivu člověka by tyto vlny veder byly prakticky nemožné.[^3]
 
-- Heatwaves are very often much more likely to occur because of present warming. In a recent study published in Nature, a group of scientists concluded that out of 213 major heatwaves between 2000 and 2023, climate change has made 55 (over a quarter) of them 10,000+ times more likely – these heatwaves would have been virtually impossible without human influence.[^3]
+U jiných extrémů roste pravděpodobnost sice prokazatelně, ale ve výrazně menší míře. Například vydatné srážky, které přinesly ničivé záplavy ve střední Evropě v září 2024 nebo ve Španělsku v říjnu 2024, byly v důsledku změny klimatu přibližně dvakrát pravděpodobnější.[^4]
 
-- Some extremes are somewhat more likely to occur due to global warming. For example, the heavy precipitation, which brought devastating floods to Central Europe in September 2024 or to Spain in October 2024, was about twice as likely to occur because of climate change.[^4]
+U některých jevů však spojitost se změnou klimatu zůstává slabá nebo zcela chybí. Příkladem je extrémní sucho na jižním Madagaskaru z let 2019–2021, které v regionu vyvolalo kritický nedostatek potravin. Odborná studie ukázala, že změna klimatu v něm měla jen minimální podíl – hlavním viníkem byla přirozená variabilita srážek.[^5]
 
-- For some events, however, the link to climate change remains weak or absent. A study of the severe drought in southern Madagascar in 2019–21, which caused significant food insecurity, concluded that climate change played only a limited role – natural rainfall variability was the primary driver.[^5]
-
-[^1]: The graph is adapted from Figure SPM.6 of IPCC's AR6 WGI Summary for Policymakers: Intergovernmental Panel on Climate Change. (2021). Summary for Policymakers. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to AR6. DOI: [10.1017/9781009157896.001](https://doi.org/10.1017/9781009157896.001).
-[^2]: Fowler, H.J., Lenderink, G., Prein, A.F. et al. (2021). Anthropogenic intensification of short-duration rainfall extremes. Nature Reviews Earth & Environment, 2, 107-122. DOI: [10.1038/s43017-020-00128-6](https://doi.org/10.1038/s43017-020-00128-6).
-[^3]: Quilcaille, Y., Gudmundsson, L., Schumacher, D.L. et al. (2025). Systematic attribution of heatwaves to the emissions of carbon majors. Nature 645, 392-398. DOI: [10.1038/s41586-025-09450-9](https://doi.org/10.1038/s41586-025-09450-9).
-[^4]: Kimutai, J., Vautard, R., Zachariah, M. et al. (2024). Climate change and high exposure increased costs and disruption to lives and livelihoods from flooding associated with exceptionally heavy rainfall in Central Europe. Centre for Environmental Policy. DOI: [10.25561/114694](https://doi.org/10.25561/114694). World Weather Attribution. (2024, 4 November). [Extreme downpours increasing in southeastern Spain as fossil fuel emissions heat the climate](https://www.worldweatherattribution.org/extreme-downpours-increasing-in-southern-spain-as-fossil-fuel-emissions-heat-the-climate/).
-[^5]: Harrington et al. (2022). Limited role of climate change in extreme low rainfall associated with southern Madagascar food insecurity, 2019-21. Environmental Research: Climate, 1, 2. DOI: [10.1088/2752-5295/aca695](https://doi.org/10.1088/2752-5295/aca695).
+[^1]: Grafika je adaptací Figure SPM.6 ze Summary for Policymakers ze zprávy AR6 WGI od IPCC: Intergovernmental Panel on Climate Change. (2021). Summary for Policymakers. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to AR6. DOI: [10.1017/9781009157896.001](https://doi.org/10.1017/9781009157896.001).
+[^2]: Fowler, H. J., Lenderink, G., Prein, A. F. et al. (2021). Anthropogenic intensification of short-duration rainfall extremes. Nature Reviews Earth & Environment, 2, 107–122. DOI: [10.1038/s43017-020-00128-6](https://doi.org/10.1038/s43017-020-00128-6).
+[^3]: Quilcaille, Y., Gudmundsson, L., Schumacher, D. L. et al. (2025). Systematic attribution of heatwaves to the emissions of carbon majors. Nature 645, 392–398. DOI: [10.1038/s41586-025-09450-9](https://doi.org/10.1038/s41586-025-09450-9).
+[^4]: Kimutai, J., Vautard, R., Zachariah, M. et al. (2024). Climate change and high exposure increased costs and disruption to lives and livelihoods from flooding associated with exceptionally heavy rainfall in Central Europe. Centre for Environmental Policy. DOI: [10.25561/114694](https://doi.org/10.25561/114694). World Weather Attribution. (2024, 4. listopadu). [Extreme downpours increasing in southeastern Spain as fossil fuel emissions heat the climate](https://www.worldweatherattribution.org/extreme-downpours-increasing-in-southern-spain-as-fossil-fuel-emissions-heat-the-climate/).
+[^5]: Harrington et al. (2022). Limited role of climate change in extreme low rainfall associated with southern Madagascar food insecurity, 2019–21. Environmental Research: Climate, 1, 2. DOI: [10.1088/2752-5295/aca695](https://doi.org/10.1088/2752-5295/aca695).

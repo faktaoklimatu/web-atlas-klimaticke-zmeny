@@ -8,27 +8,27 @@ downloads:
   - /images/atlas/atlas-_18.png
 ---
 
-**Changes over the last six decades have shown that the warming rate varies across different regions, which is consistent with predictions from computer simulations.**
+**Změny za posledních šest desetiletí ukázaly, že rychlost oteplování se v různých regionech liší, což odpovídá předpovědím počítačových modelů.**
 
-The map shows in detail how much temperatures changed between 1961 and 2025 in different parts of the world.[^1] Landmasses are warming faster than oceans. The warming is the fastest over the Arctic – the climate above some Arctic islands is now more than 5 °C warmer than it was six decades ago. **Europe**, with its landmass relatively close to the Arctic, **is the fastest warming continent**.
+Mapa podrobně zachycuje, o kolik se změnila teplota na jednotlivých místech planety v období 1961–2025.[^1] Pevniny se oteplují rychleji než oceány. K největšímu oteplení dochází v Arktidě – některé ostrovy za polárním kruhem se za posledních 60 let oteplily o více než 5 °C. **Evropa**, s pevninou v relativní blízkosti Arktidy, **je nejrychleji se oteplujícím kontinentem**.
 
-Nonetheless, there are still regions which are not warming at all or even getting slightly cooler.
+Přesto stále ještě existují oblasti, které se neoteplují vůbec, nebo se dokonce mírně ochlazují.
 
-## Why is the North warming so fast?
+## Proč se sever otepluje tak rychle?
 
-The amplification of warming over the Arctic Ocean is related to different physical properties of ice and water. While dark ocean water absorbs roughly 90–95% of incoming radiation, and reflects just 5–10%, sea ice reflects up to 90% of it – this **degree of reflectance** is called **albedo**.
+Zesílené oteplování nad Severním ledovým oceánem do velké míry souvisí s odlišnými fyzikálními vlastnostmi ledu a vody. Zatímco tmavá mořská voda pohlcuje přibližně 90–95 % dopadajícího slunečního záření a odráží jen 5–10 %, bílý mořský led odráží až 90 % – tato **míra odrazivosti povrchu se nazývá albedo**.
 
-Due to increasing temperatures over the Arctic Ocean, sea ice is melting. As a result, more water surface is ice-free and more solar radiation is being absorbed, which leads to further warming of the ocean, further temperature increase, more ice melting, and so on.
+Zvýšení teploty v Severním ledovém oceánu vede k tání mořského ledu. Tím se odkrývá větší tmavá plocha hladiny, která pohlcuje více slunečního záření, a to vede k dalšímu ohřívání oceánu, dalšímu zvyšování teploty a dalšímu tání.
 
-*Ocean water warming → water absorbing more sunlight → sea ice melting → more ice-free water surface — and the loop repeats.*
+*Mořský led taje → voda pohlcuje více slunečního záření → voda v oceánu se otepluje → větší plocha hladiny bez ledu – a cyklus se opakuje.*
 
-## Why is the warming not amplified in the South?
+## Proč zesílené oteplování neprobíhá také na jihu?
 
-The feedback loop of sea ice melting and ocean warming is much less common in the Southern Hemisphere, as the ice in the Antarctic is mainly on land and up to several kilometres thick. When the surface melts, it just uncovers deeper layers of ice, but the albedo remains unchanged.
+Tato řetězová reakce tání mořského ledu a oteplování oceánu je na jižní polokouli mnohem méně obvyklá, protože led v Antarktidě leží převážně na pevnině a je až několik kilometrů silný. Když led taje, odhalují se jen jeho hlubší vrstvy a odrazivost povrchu se tak nemění.
 
-However, the reasons why some areas around the South Pole are experiencing less warming or even slight cooling are much more complex. E.g., stratospheric ozone acts as a greenhouse gas, so its depletion over Antarctica has had a local cooling effect in the upper atmosphere. Strong westerly winds and ocean currents (notably, the Antarctic Circumpolar Current) circle the continent as a heat barrier. And even the melting of the ice sheet (the result of global warming) adds so much fresh cold water to the sea surface that it leads to its cooling.[^2]
+Důvody, proč některé oblasti kolem jižního pólu zaznamenávají menší oteplování, nebo dokonce mírné ochlazování, jsou však mnohem složitější. Například stratosférický ozon působí jako skleníkový plyn, takže jeho úbytek nad Antarktidou vedl k místnímu ochlazení ve vyšších vrstvách atmosféry. Silné západní větry a oceánské proudy (Antarktický cirkumpolární proud) obkružují kontinent a fungují jako tepelná bariéra. I samotné tání ledovcového štítu (důsledek globálního oteplování) přidává do moře tolik chladné sladké vody, že ochlazuje hladinu i okolní vzduch.[^2]
 
-Even so, despite such regional cooling trends, the Antarctic continent as a whole is **losing ice mass at an accelerating rate**, driven primarily by warming ocean waters melting its ice shelves from below (see also: [rising sea levels](/zrychlujici-vzestup-hladiny-mori/) and [tipping points of ice sheets](/mapa-klimatickych-bodu-zlomu/)).
+Navzdory těmto regionálním trendům, které vedou k ochlazení, však antarktický kontinent jako celek **stále rychleji ztrácí obrovské množství ledu**. Způsobuje to především oteplující se voda v oceánu, která zespodu narušuje šelfové ledovce (více o [vzestupu hladiny moří](/zrychlujici-vzestup-hladiny-mori/) a [bodech zlomu ledovcových štítů](/mapa-klimatickych-bodu-zlomu/)).
 
-[^1]: Temperature data come from NASA Goddard Institute for Space Studies, [The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). Dataset accessed 2026-01-22.
+[^1]: Teplotní data pocházejí od [NASA Goddard Institute for Space Studies, The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). [Cit. 2026-01-22].
 [^2]: Kaufman, Z., Wilson, E., Purich, A., Beadling, R., & Li, Y. (2025). The impact of underestimated Southern Ocean freshening on simulated historical sea surface temperature trends. Geophysical Research Letters, 52, e2024GL112639. DOI: [10.1029/2024GL112639](https://doi.org/10.1029/2024GL112639).

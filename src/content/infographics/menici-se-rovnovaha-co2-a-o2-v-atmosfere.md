@@ -8,30 +8,30 @@ downloads:
   - /images/atlas/atlas-_14.png
 ---
 
-**A long-term trend in increasing concentrations of carbon dioxide (CO₂) and declining concentrations of oxygen (O₂) shows that humans have been causing changes in the atmosphere composition by their activity – primarily by burning fossil fuels.**
+**Dlouhodobý nárůst koncentrace oxidu uhličitého a pokles koncentrace kyslíku ukazují, že složení atmosféry se mění v důsledku lidské činnosti – především vlivem spalování fosilních paliv.**
 
-CO₂ concentrations[^1] oscillate during the year, but **are increasing in the long term: about 26 ppm just in the last decade** (2015–2025). Concentrations were around 315 ppm in 1960, and reached around 425 ppm in 2025 – which means they have risen by 35% in only 65 years.
+**Koncentrace oxidu uhličitého (CO₂)**[^1] během roku kolísá, **dlouhodobě** však **roste: jen za poslední desetiletí** (2015–2025) **se zvýšila přibližně o 26 ppm**. Zatímco v roce 1960 se hodnoty pohybovaly kolem 315 ppm, v roce 2025 již dosahovaly přibližně 425 ppm – za pouhých 65 let tedy vzrostly o 35 %.
 
-The graph also shows a trend in O₂ concentrations[^2]: how much it changed each year compared to the reference year (1991). O₂ concentrations also oscillate during the year but **are declining in the long term: around 55 ppm just in the last decade**.
+Graf rovněž zachycuje vývoj **koncentrace kyslíku (O₂)**[^2] – tedy to, o kolik se v daném roce změnila oproti referenčnímu roku 1991. Koncentrace O₂ také během roku kolísá, avšak **dlouhodobě klesá: jen za poslední desetiletí přibližně o 55 ppm**.
 
-## How are CO₂ and O₂ concentrations measured?
+## Jak se měří koncentrace CO₂ a O₂?
 
-The method for exact determination of CO₂ concentrations (to 0.1 ppm, i.e. 0.00001%) was developed by **Charles Keeling** in 1952. He was surprised by the results of his measurements at first as the concentrations appeared to be changing randomly, depending on the direction of the wind. Then he realized that his results in San Francisco were influenced by nearby forests (photosynthesis) and local factories (combustion) and that concentrations must be measured at a place which is far enough from such factors. So he moved to the central Pacific: to Mauna Loa in Hawaii. It was not until he got to this remote location that his measurements started to make sense – concentrations proved stable in Hawaii. Keeling noticed that **concentrations oscillate during the year – falling from May to October and rising in the remaining part of the year**. He was observing Earth's "breathing".
+Metodu pro přesné stanovení koncentrací CO₂ (s přesností na 0,1 ppm, tedy 0,00001 %) vyvinul **Charles Keeling** v roce 1952. Nejprve ho výsledky měření překvapily – koncentrace se náhodně měnily podle toho, odkud právě foukal vítr. Došlo mu, že jeho měření v San Franciscu ovlivňují okolní lesy (fotosyntéza) a továrny (spalování) a že potřebuje měřit na místě, které bude od takových vlivů hodně vzdálené. Přesunul se proto doprostřed Tichého oceánu: na Mauna Loa na Havaji. Teprve na tak odlehlém místě začala jeho měření dávat smysl – koncentrace zůstávaly stabilní. Keeling si všiml, že **hodnoty během roku kolísají – od května do října klesají a po zbytek roku zase stoupají**. Pozoroval „dýchání“ celé planety.
 
-*During photosynthesis, plants capture CO₂ from the air and produce O₂. Conversely, they use O₂ and release CO₂ during respiration.*
+*Při fotosyntéze rostliny spotřebovávají oxid uhličitý z atmosféry a vytvářejí kyslík. Při buněčném dýchání naopak kyslík spotřebovávají a uvolňují oxid uhličitý.*
 
-CO₂ + H₂O → O₂ + carbohydrates
+*CO₂ + H₂O ⇄ O₂ + sacharidy*
 
-Most of the world's forests are located in the Northern Hemisphere. In summer, when deciduous trees are in full leaf, photosynthesis prevails; plants capture CO₂ and use the carbon to build their trunks and foliage. In winter, photosynthesis stops and plants begin to release CO₂ through respiration, as they burn energy to maintain their cells, even in a dormant state. Meanwhile, soil microbes decompose fallen leaves, further releasing CO₂ back into the air.
+Většina světových lesů se nachází na severní polokouli. V létě listnaté stromy rostou a mají listy a převládá fotosyntéza – rostliny pohlcují CO₂ ze vzduchu a ukládají uhlík do svých kmenů a listů. V zimě fotosyntéza výrazně zpomalí, ale rostliny i nadále dýchají a uvolňují CO₂, protože spotřebovávají energii na udržování svých buněk i v období vegetačního klidu. Půdní mikroorganismy navíc rozkládají spadané listí, čímž do ovzduší uvolňují další CO₂.
 
-Keeling observed this oscillation between summer and winter but also noticed **a long-term increase in CO₂ concentrations** which he believed was **caused by the burning of coal, oil, and natural gas**.
+Kromě tohoto kolísání mezi létem a zimou si Keeling všiml i **dlouhodobého nárůstu koncentrace CO₂**, který přičítal **spalování uhlí, ropy a zemního plynu**.
 
-*During combustion, O₂ is consumed and CO₂ released. When coal is burned, the chemical reaction is simple: C + O₂ → CO₂.*
+*Při spalování se spotřebovává kyslík a uvolňuje oxid uhličitý. Při spalování uhlí je chemická reakce jednoduchá: C + O₂ → CO₂.*
 
-*When natural gas is burned, even more O₂ is consumed as water vapour is produced as well: CH₄ + 2 O₂ → CO₂ + 2 H₂O*
+*Při spalování zemního plynu se kyslíku spotřebovává ještě více, protože jako vedlejší produkt vzniká i vodní pára: CH₄ + 2 O₂ → CO₂ + 2 H₂O.*
 
-The fact that rising CO₂ concentrations are caused by combustion was proven by Keeling's son Ralph, who found a precise method to measure concentrations of oxygen in 1988. His results show an **unnatural long-term decline in O₂ concentrations**. Subsequent research, including isotopic analysis, confirmed that the rise in atmospheric CO₂ is attributable to fossil fuel combustion.[^3]
+Důkaz, že nárůst koncentrace CO₂ v atmosféře je důsledkem spalování, přinesl Keelingův syn Ralph. Ten v roce 1988 objevil způsob, jak přesně změřit koncentraci kyslíku. Jeho měření ukazují na **dlouhodobý nepřirozený pokles koncentrace O₂** v atmosféře. Následný výzkum včetně izotopové analýzy potvrdil, že nárůst atmosférického CO₂ lze přičíst právě spalování fosilních paliv.[^3]
 
-[^1]: The dataset of averaged monthly CO2 concentrations as measured in Mauna Loa Observatory in Hawaii is accessible on NOAA, Global Monitoring Library, [Trends in CO2, CH4, N2O, SF6](https://gml.noaa.gov/ccgg/trends/).
-[^2]: The dataset of averaged monthly O2 concentrations as measured in Mauna Loa Observatory in Hawaii is accessible via the [Scripps O2 Program](https://scrippso2.ucsd.edu/data/mlo.html). Dataset accessed 2026-01-22.
-[^3]: E.g. Graven, H., Keeling, R.F., Rogelj, J. (2020). Changes to Carbon Isotopes in Atmospheric CO2 Over the Industrial Era and Into the Future. Global Biogeochemical Cycles, 34 (11). DOI: [10.1029/2019GB006170](https://doi.org/10.1029/2019GB006170).
+[^1]: Dataset průměrných měsíčních koncentrací CO₂ měřených na observatoři Mauna Loa na Havaji je dostupný na [NOAA, Global Monitoring Library, Trends in CO2, CH4, N2O, SF6](https://gml.noaa.gov/ccgg/trends/). [Cit. 2026-01-22].
+[^2]: Dataset průměrných měsíčních koncentrací O₂ měřených na observatoři Mauna Loa na Havaji je dostupný na [Scripps O₂ Program](https://scrippso2.ucsd.edu/data/mauna-loa-observatory-hawaii/). [Cit. 2026-01-22].
+[^3]: Například Graven, H., Keeling, R. F., Rogelj, J. (2020). Changes to Carbon Isotopes in Atmospheric CO₂ Over the Industrial Era and Into the Future. Global Biogeochemical Cycles, 34 (11). DOI: [10.1029/2019GB006170](https://doi.org/10.1029/2019GB006170).

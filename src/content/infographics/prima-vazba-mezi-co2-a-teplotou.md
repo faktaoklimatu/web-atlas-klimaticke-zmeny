@@ -8,39 +8,39 @@ downloads:
   - /images/atlas/atlas-_22.png
 ---
 
-**The graph reveals a clear relationship: the higher the CO₂ concentration, the higher the global temperature. To stop global warming, the world needs to stop CO₂ emissions.**
+**Graf odhaluje zřejmou závislost: čím vyšší jsou koncentrace CO₂, tím je vyšší globální teplota. Má-li se globální oteplování zastavit, bude třeba zastavit emise CO₂.**
 
-The points in the graph show individual years in the period of 1884–2024. The location of each point corresponds to the CO₂ concentration values in Mauna Loa in that year (on the horizontal axis)[^1] and the global temperature anomaly values for that year (on the vertical axis).[^2]
+Body v grafu zobrazují jednotlivé roky v období 1884–2024. Umístění každého bodu odpovídá hodnotě koncentrací CO₂ na Mauna Loa v daném roce (na vodorovné ose)[^1] a hodnotě globální teplotní anomálie pro daný rok (na svislé ose)[^2].
 
-The graph indicates that within the range of concentrations shown, the relationship is approximately linear – **each 10 ppm increase in CO₂ concentration leads to a temperature increase of about 0.1 °C** – though over larger ranges this proportionality becomes less precise.
+Graf naznačuje, že v zobrazeném rozmezí je vztah obou veličin téměř lineární – **každý nárůst koncentrací CO₂ o 10 ppm vede k oteplení přibližně o 0,1 °C** (ačkoli v širším rozsahu hodnot už tato přímá úměrnost neplatí).
 
-The dots in the graph are colour-coded and grouped (each period of 20 years has its own colour). It is clear that the increase in CO₂ concentrations has been accelerating in recent years, corresponding to increasing annual CO₂ emissions.
+Body ukazující jednotlivé roky jsou barevně odlišeny (vždy po 20 letech), a je tak vidět, že se nárůst koncentrací CO₂ v posledních letech zrychluje. To odpovídá rostoucím ročním emisím CO₂.
 
-The right part of the graph shows the expected global warming for higher CO₂ concentrations in the future, provided CO₂ emissions continue.
+Pravá část grafu zobrazuje očekávané globální oteplování při vyšších koncentracích CO₂ v budoucnosti, pokud budou emise dále pokračovat.
 
-## How are other greenhouse gases and aerosols affecting the warming beyond CO₂?
+## Jak vedle CO₂ ovlivňují oteplování další skleníkové plyny a aerosoly?
 
-**Carbon dioxide is responsible for over half of observed global warming**. The remaining part is due to **other greenhouse gases**, mainly methane, nitrous oxide, and F-gases: their concentrations in the atmosphere are also increasing.[^3] (See also: [all main greenhouse gases](/na-jakych-sklenikovych-plynech-nejvic-zalezi/).)
+**Oxid uhličitý zodpovídá za více než polovinu pozorovaného globálního oteplování**. Zbývající část připadá na **ostatní skleníkové plyny**, především metan, oxid dusný a F-plyny – jejich koncentrace v atmosféře také rostou.[^3] (Více o [všech hlavních skleníkových plynech](/na-jakych-sklenikovych-plynech-nejvic-zalezi/).)
 
-Along with greenhouse gases, humankind also emits **aerosols**, which have **a cooling effect** on the planet – they reflect solar radiation and participate in the formation of clouds.
+Spolu se skleníkovými plyny vypouští lidstvo také **aerosoly**, které mají na planetu **ochlazující účinek** – odrážejí sluneční záření a podílejí se na tvorbě mraků.
 
-The global warming shown in the graph on the vertical axis includes all of these phenomena, but only CO₂ concentrations are plotted on the horizontal axis. Thus, the claim of proportionality between increasing concentration of CO₂ and warming is somewhat simplified. While **CO₂ concentration is the dominant factor**, it is not the only one.
+Globální oteplování zobrazené na svislé ose grafu zahrnuje všechny tyto jevy, avšak na vodorovnou osu jsou vyneseny pouze koncentrace CO₂. Tvrzení o úměrnosti mezi rostoucími koncentracemi CO₂ a oteplováním je proto poněkud zjednodušující – **koncentrace CO₂ jsou faktorem dominantním**, ale nikoli jediným.
 
-## What happens if emissions stop?
+## Co se stane, když emise ustanou?
 
-As simple as this question seems, the answer is complex and depends entirely on which emissions are stopped.
+Jakkoli jednoduchá se tato otázka může zdát, odpověď je složitá a závisí na tom, které emise se opravdu podaří zastavit.
 
-If only **CO₂ emissions** were to **stop** – the dominant warming factor – global **temperatures** would **stabilise within a few years**.[^4]
+Pokud by se **zastavily** pouze **emise CO₂** – dominantního faktoru oteplování – globální **teploty** by se **stabilizovaly v průběhu několika let**.[^4]
 
-However, in the real world, **CO₂ emissions are closely tied to aerosols**. Most cooling aerosols are formed from substances such as sulphur dioxide, which are direct byproducts of burning the same fossil fuels that produce CO₂.
+V reálném světě jsou však **emise CO₂ úzce spjaty s aerosoly**. Většina ochlazujících aerosolů vzniká z látek, jako je oxid siřičitý, které jsou přímými vedlejšími produkty spalování stejných fosilních paliv, jež vytvářejí CO₂.
 
-So if the world **stopped** both **CO₂ and related aerosol emissions** simultaneously, **temperatures** would actually **rise** – first rapidly, then more gradually – **by about 0.5 °C**. This is because the cooling "mask" of aerosols washes out of the atmosphere, while the CO₂ remains.[^5]
+Pokud by tedy svět **zastavil emise CO₂ i souvisejících aerosolů** současně, **teploty** by ve skutečnosti **vzrostly** — nejprve rychle, poté postupně — **přibližně o 0,5 °C**. Je to proto, že ochlazující efekt aerosolů v atmosféře rychle vymizí, zatímco CO₂ zůstává.[^5]
 
-Finally, if **all greenhouse gas and aerosol emissions stopped**, we would see an initial rapid temperature spike as aerosols disappeared, followed by a gradual cooling trend as methane and other short-lived greenhouse gases broke down. This would eventually lead to a **slight** overall **decrease in global temperature**.[^6]
+**Scénář zastavení emisí všech** skleníkových plynů a aerosolů má specifický vývoj. Rychlé zmizení aerosolů nejprve způsobí prudký nárůst teploty. Poté ale začne teplota zase klesat s tím, jak se z atmosféry odbourá metan a další krátkodobé skleníkové plyny. Celý tento proces by nakonec vedl k **mírnému** celkovému **poklesu globální teploty**.[^6]
 
-[^1]: Mean annual CO2 concentration data in Mauna Loa come from NOAA, Global Monitoring Library, [Trends in CO2, CH4, N2O, SF6](https://gml.noaa.gov/ccgg/trends/). Dataset accessed 2026-01-22.
-[^2]: Temperature data come from NASA Goddard Institute for Space Studies, [The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). Dataset accessed 2026-01-22.
-[^3]: For detailed decomposition of different contributions to warming see Figure SMP.2 in IPCC AR6 WGI Summary for Policymakers. Intergovernmental Panel on Climate Change. (2021). Summary for Policymakers. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to AR6. DOI: [10.1017/9781009157896.001](https://doi.org/10.1017/9781009157896.001).
-[^4]: Hausfather, Z. (2021, 29 April). [Explainer: Will global warming 'stop' as soon as net-zero emissions are reached?](https://www.carbonbrief.org/explainer-will-global-warming-stop-as-soon-as-net-zero-emissions-are-reached/) CarbonBrief.
-[^5]: Hausfather, Z. (2025, 10 June). [Explainer: How human-caused aerosols are 'masking' global warming](https://www.carbonbrief.org/explainer-how-human-caused-aerosols-are-masking-global-warming/). CarbonBrief.
-[^6]: For details see Figure 1.5 in IPCC SR15. Intergovernmental Panel on Climate Change (2018). Global Warming of 1.5°C. An IPCC Special Report on the impacts of global warming of 1.5°C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty. DOI: [10.1017/9781009157940](https://doi.org/10.1017/9781009157940).
+[^1]: Hodnoty průměrných ročních koncentrací CO₂ na Mauna Loa pocházejí z [NOAA, Global Monitoring Library, Trends in CO2, CH4, N2O, SF6](https://gml.noaa.gov/ccgg/trends/). [Cit. 2026-01-22].
+[^2]: Pro teplotu používáme dataset [NASA Goddard Institute for Space Studies, The GISS Surface Temperature Analysis version 4 (GISTEMP v4)](https://data.giss.nasa.gov/gistemp/). [Cit. 2026-01-22].
+[^3]: Nakolik přesně různé plyny a další faktory přispívají k současnému oteplení podrobně zachycuje Figure SMP.2 v Summary for Policymakers zprávy IPCC AR6 WGI. Intergovernmental Panel on Climate Change. (2021). Summary for Policymakers. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to AR6. DOI: [10.1017/9781009157896.001](https://doi.org/10.1017/9781009157896.001).
+[^4]: Hausfather, Z. (2021, 29. dubna). [Explainer: Will global warming ‚stop‘ as soon as net-zero emissions are reached?](https://www.carbonbrief.org/explainer-will-global-warming-stop-as-soon-as-net-zero-emissions-are-reached/) CarbonBrief.
+[^5]: Hausfather, Z. (2025, 10. června). [Explainer: How human-caused aerosols are ‚masking‘ global warming](https://www.carbonbrief.org/explainer-how-human-caused-aerosols-are-masking-global-warming/). CarbonBrief.
+[^6]: Viz Figure 1.5 ve zprávě IPCC SR15. Intergovernmental Panel on Climate Change (2018). Global Warming of 1.5 °C. An IPCC Special Report on the impacts of global warming of 1.5 °C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty. DOI: [10.1017/9781009157940](https://doi.org/10.1017/9781009157940).
