@@ -20,7 +20,7 @@ The right part of the graph shows the expected global warming for higher CO₂ c
 
 ## How are other greenhouse gases and aerosols affecting the warming beyond CO₂?
 
-**Carbon dioxide is responsible for over half of observed global warming**. The remaining part is due to **other greenhouse gases**, mainly methane, nitrous oxide, and F-gases: their concentrations in the atmosphere are also increasing.[^3] (See also: [all main greenhouse gases](/which-greenhouse-gases-matter-most/).)
+**Carbon dioxide is responsible for over half of observed global warming**. The remaining part is due to **other greenhouse gases**, mainly methane, nitrous oxide, and F-gases: their concentrations in the atmosphere are also increasing.[^3] (See also: [all main greenhouse gases](/na-jakych-sklenikovych-plynech-nejvic-zalezi/).)
 
 Along with greenhouse gases, humankind also emits **aerosols**, which have **a cooling effect** on the planet – they reflect solar radiation and participate in the formation of clouds.
 

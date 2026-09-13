@@ -20,7 +20,7 @@ There are two main reasons for sea level rise and both are connected to climate 
 
 **Ice loss**, particularly in Greenland and Antarctica, has been the largest contributor to the sea level rise over the last couple of decades.
 
-Secondly, ocean temperatures are rising because over 90% of heat accumulating on Earth due to the strengthened greenhouse effect (see also: [greenhouse effect](/the-greenhouse-effect-and-energy-imbalance/)) is absorbed by the oceans. Warming oceans lead to **water expansion** which has contributed to about one third of sea level rise over the last decades.
+Secondly, ocean temperatures are rising because over 90% of heat accumulating on Earth due to the strengthened greenhouse effect (see also: [greenhouse effect](/sklenikovy-efekt-a-energeticka-nerovnovaha-zeme/)) is absorbed by the oceans. Warming oceans lead to **water expansion** which has contributed to about one third of sea level rise over the last decades.
 
 ## The rise is uneven over the world
 

@@ -11,8 +11,8 @@ data:
   sourceUrl: https://gml.noaa.gov/ccgg/trends/
   citation: NOAA Global Monitoring Laboratory
 related:
-  - causes-and-effects-of-climate-change
-  - century-of-climate-science
+  - priciny-a-nasledky-zmeny-klimatu
+  - sto-let-vedy-o-klimatu
 ---
 
 **The last time atmospheric CO₂ concentrations were as high as today was around four million years ago. Earth was about 3 °C warmer, sea levels 20 metres higher, mastodons and three-toed horses roamed across Europe, and the earliest human ancestors in Africa were only just beginning to walk consistently upright.**
@@ -37,7 +37,7 @@ Moreover, there is ample evidence that the rise in CO₂ concentrations is cause
 
 - The rise of CO₂ concentrations corresponds to the amount of fossil fuels burned each year (when some absorption of CO₂ by the ocean is factored).
 - Carbon atoms in CO₂ are not all the same – they exist as different isotopes. Different sources of CO₂ have unique isotopic fingerprints. Because fossil fuels are millions of years old, they contain virtually no ¹⁴C, which decays over time. Isotope analyses of atmospheric CO₂ show declining concentrations of ¹⁴C, meaning that an increasing proportion of atmospheric CO₂ comes from fossil fuel emissions.[^2]
-- The rise of CO₂ concentrations is paralleled by the decline of O₂ concentrations, which corresponds to the O₂ loss by burning fossil fuels (See also: [The Changing Balance of Atmospheric CO₂ & O₂](/the-changing-balance-of-atmospheric-co2-and-o2/).)
+- The rise of CO₂ concentrations is paralleled by the decline of O₂ concentrations, which corresponds to the O₂ loss by burning fossil fuels (See also: [The Changing Balance of Atmospheric CO₂ & O₂](/menici-se-rovnovaha-co2-a-o2-v-atmosfere/).)
 
 [^1]: For ice core data see NOAA, Antarctic Ice Cores Revised 800KYr CO2 Data [[https://www.ncei.noaa.gov/access/paleo-search/study/17975](https://www.ncei.noaa.gov/access/paleo-search/study/17975)]. Full citation: Bereiter, B., Eggleston, S., Schmitt, J., Nehrbass-Ahles, C., Stocker, T.F., Fischer, H., Kipfstuhl, S., Chappellaz, J. (2015). Revision of the EPICA Dome C CO2 record from 800 to 600 kyr before present. Geophysical Research Letters, 42(2), 542-549. DOI: [10.1002/2014GL061957](https://doi.org/10.1002/2014GL061957). For direct measurements data in Mauna Loa Observatory in Hawaii see NOAA, Global Monitoring Library, [Trends in CO2, CH4, N2O, SF6](https://gml.noaa.gov/ccgg/trends/). Dataset accessed 2026-01-22.
 [^2]: NOAA, Global Monitoring Library. [The Data: The Story Told from CO2 Samples](https://gml.noaa.gov/outreach/isotopes/mixing.html).

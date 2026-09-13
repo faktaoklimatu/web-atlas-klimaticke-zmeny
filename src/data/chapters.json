@@ -2,33 +2,33 @@
   "chapters": [
     {
       "id": "introduction",
-      "name": "Introduction",
-      "tagline": "The Big Picture",
+      "name": "Úvod",
+      "tagline": "Klimatická změna v souvislostech",
       "subheading": "",
       "order": 1
     },
     {
       "id": "the-science",
-      "name": "The Science",
-      "tagline": "Concentrations and Temperatures",
+      "name": "Fyzikální základy",
+      "tagline": "Koncentrace a teploty",
       "order": 2
     },
     {
       "id": "the-impacts",
-      "name": "The Impacts",
-      "tagline": "A Changing Planet",
+      "name": "Dopady",
+      "tagline": "Měnící se planeta",
       "order": 3
     },
     {
       "id": "the-trajectory",
-      "name": "The Trajectory",
-      "tagline": "Emissions and Future Warming",
+      "name": "Výhledy",
+      "tagline": "Emise a budoucí oteplení",
       "order": 4
     },
     {
       "id": "the-solutions",
-      "name": "The Solutions",
-      "tagline": "Pathways to Change",
+      "name": "Řešení",
+      "tagline": "Cesty ke změně",
       "order": 5
     }
   ]

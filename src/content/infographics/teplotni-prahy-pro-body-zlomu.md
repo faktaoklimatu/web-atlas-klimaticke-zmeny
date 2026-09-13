@@ -10,7 +10,7 @@ downloads:
 
 The risk of crossing climate tipping points is an imminent reality, not a distant concern. Within the Paris Agreement warming range of 1.5 °C to 2 °C, several systems are already likely to tip. These include the collapse of major ice sheets, the widespread die-off of coral reefs, and the abrupt thawing of permafrost.
 
-Major climate tipping points include (continued from [Map of Climate Tipping Points](/map-of-climate-tipping-points/)):
+Major climate tipping points include (continued from [Map of Climate Tipping Points](/mapa-klimatickych-bodu-zlomu/)):
 
 ## Permafrost thaw and collapse
 

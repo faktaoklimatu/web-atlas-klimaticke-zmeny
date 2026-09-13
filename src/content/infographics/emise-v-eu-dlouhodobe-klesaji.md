@@ -10,7 +10,7 @@ downloads:
 
 The European Union reduced its emissions by over one third between 1990 and 2024. This progress reflects a fundamental shift in how the region generates energy and manages its economy.
 
-The emissions depicted include CO₂ from fossil fuel combustion and industrial processes, methane (CH₄), nitrous oxide (N₂O), and other greenhouse gases converted to CO₂ equivalent (CO₂eq). This measure indicates the amount of CO₂ that would have the same greenhouse effect over a 100-year period. (See also: [greenhouse gases](/which-greenhouse-gases-matter-most/).)
+The emissions depicted include CO₂ from fossil fuel combustion and industrial processes, methane (CH₄), nitrous oxide (N₂O), and other greenhouse gases converted to CO₂ equivalent (CO₂eq). This measure indicates the amount of CO₂ that would have the same greenhouse effect over a 100-year period. (See also: [greenhouse gases](/na-jakych-sklenikovych-plynech-nejvic-zalezi/).)
 
 The left side of the graph shows the total annual emissions for the EU-27, while the right side highlights relative changes by sector. In more than three decades, the total fell from 4.9 billion tonnes of CO₂eq to 3.1 billion tonnes,[^1] with the pace of reduction accelerating over the last fifteen years. The sharp dip in 2020 reflects the COVID-19 economic slowdown, while the subsequent trend shows a return to policy-driven declines.
 
