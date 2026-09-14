@@ -79,6 +79,9 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
       </div>
     </div>
 
+    {/* ponytail: language switcher + "get it in your language" hidden for now;
+        uncomment to bring back (siblings/languageHref still wired above). */}
+    {/*
     <div class="footer__languages">
       <p class="footer__label">{ui.footer.languageLabel}</p>
       <ButtonGroup role="group" aria-label={ui.footer.languageLabel}>
@@ -104,6 +107,7 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
         </div>
       )}
     </div>
+    */}
 
     <div class="footer__legal">
       <p class="footer__label" set:html={legalHtml}></p>
