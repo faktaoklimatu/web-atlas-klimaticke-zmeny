@@ -37,7 +37,8 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const aboutHref = `${base}/about/`;
+// ponytail: "O Atlasu" points at the main site, not the internal /about/ page.
+const aboutHref = 'https://faktaoklimatu.cz/atlas';
 ---
 
 <header
