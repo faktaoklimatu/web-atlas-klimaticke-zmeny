@@ -16,7 +16,7 @@ data:
 
 Zhruba k polovině poklesu českých emisí došlo **během 90. let v důsledku restrukturalizace hospodářství, nikoliv cílených klimatických opatření**. Po období stagnace se trend poklesu začal opět zrychlovat až po roce 2018 vlivem klimatických politik EU.
 
-Pro srovnání, pokles emisí v Česku o 50 % je výrazně vyšší než průměr v EU, kde se emise za stejné období snížily o 36 % (viz [Emise v EU dlouhodobě klesají](/the-steady-decline-of-eu-emissions/)). To je ale dáno extrémně vysokým výchozím stavem v roce 1990, kdy československá ekonomika patřila k emisně nejnáročnějším na světě. S **9 tunami CO₂eq na obyvatele v roce 2024** Česko stále o dost převyšuje unijní průměr 7 tun.
+Pro srovnání, pokles emisí v Česku o 50 % je výrazně vyšší než průměr v EU, kde se emise za stejné období snížily o 36 % (viz [Emise v EU dlouhodobě klesají](/emise-v-eu-dlouhodobe-klesaji/)). To je ale dáno extrémně vysokým výchozím stavem v roce 1990, kdy československá ekonomika patřila k emisně nejnáročnějším na světě. S **9 tunami CO₂eq na obyvatele v roce 2024** Česko stále o dost převyšuje unijní průměr 7 tun.
 
 ## Jaké jsou trendy v jednotlivých sektorech v Česku?
 

@@ -31,11 +31,11 @@ collections:
         name: "chapter"
         widget: "select"
         options:
-          - { label: "Introduction", value: "introduction" }
-          - { label: "The Science", value: "the-science" }
-          - { label: "The Impacts", value: "the-impacts" }
-          - { label: "The Trajectory", value: "the-trajectory" }
-          - { label: "The Solutions", value: "the-solutions" }
+          - { label: "Úvod", value: "introduction" }
+          - { label: "Fyzikální základy", value: "the-science" }
+          - { label: "Dopady", value: "the-impacts" }
+          - { label: "Výhledy", value: "the-trajectory" }
+          - { label: "Řešení", value: "the-solutions" }
       - { label: "Order", name: "order", widget: "number", value_type: "int", default: 1, hint: "Position within the chapter." }
       - label: "Graphic"
         name: "image"

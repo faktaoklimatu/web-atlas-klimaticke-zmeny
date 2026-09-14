@@ -14,7 +14,7 @@ data:
 
 **Nárůst průměrné teploty, způsobený změnou klimatu, je pozorovatelný i v Česku. Teplé zimy bez sněhu, častější přívalové deště i tropické letní dny, stejně jako velké sucho, kůrovcové kalamity či rozšíření klíšťat – to vše patří mezi důsledky, na kterých se podílejí rostoucí koncentrace skleníkových plynů v atmosféře.**
 
-Česko se za posledních 60 let oteplilo o 2,3 °C. Ve světě došlo k oteplení za odpovídající dobu v průměru přibližně o 1,1 °C. Lze tedy říci, že **Česko se otepluje zhruba dvakrát rychleji než svět** – to je dáno jeho vnitrozemskou polohou. Tento rámcový odhad platí i pro očekávané oteplení v budoucnosti – pokud se planeta oproti předindustriálnímu období oteplí do roku 2100 například o 2,6 °C (scénář stávajících politik a opatření, viz [Scénáře oteplení v roce 2100](/projections-of-warming-in-2100/)), pro Česko to bude znamenat oteplení o více než 5 °C.
+Česko se za posledních 60 let oteplilo o 2,3 °C. Ve světě došlo k oteplení za odpovídající dobu v průměru přibližně o 1,1 °C. Lze tedy říci, že **Česko se otepluje zhruba dvakrát rychleji než svět** – to je dáno jeho vnitrozemskou polohou. Tento rámcový odhad platí i pro očekávané oteplení v budoucnosti – pokud se planeta oproti předindustriálnímu období oteplí do roku 2100 například o 2,6 °C (scénář stávajících politik a opatření, viz [Scénáře oteplení v roce 2100](/scenare-otepleni-v-roce-2100/)), pro Česko to bude znamenat oteplení o více než 5 °C.
 
 V Česku tím vůbec nejteplejším byl (do roku 2025) rok 2024 s průměrnou roční teplotou 10,3 °C – a jednalo se o nejteplejší rok také globálně. Tato shoda však neplatí vždy, například hned následující rok 2025 byl v Česku až třináctý nejteplejší, zatímco ve světě skončil hned na druhém místě.
 
