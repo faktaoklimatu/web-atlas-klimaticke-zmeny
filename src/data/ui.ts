@@ -12,9 +12,9 @@ export const ui = {
 
   nav: {
     title: 'Atlas klimatické změny',
-    subtitle: 'Vizuální průvodce vědou a daty',
+    subtitle: 'Vizuální průvodce vědou a daty',
     primaryLabel: 'Hlavní',
-    about: 'O Atlasu',
+    about: 'O Atlasu',
     downloadPdf: 'Stáhni Atlas jako PDF',
     changeLanguage: 'Změnit jazyk',
     menu: 'Menu',
@@ -35,7 +35,7 @@ export const ui = {
     back: 'Zpět domů',
     download: 'Stáhnout',
     underlyingData: 'Podkladová data',
-    dataTable: 'Naše tabulka s daty',
+    dataTable: 'Naše tabulka s daty',
     dataSource: 'Zdroj dat',
     previousInfographic: 'Předchozí infografika',
     nextInfographic: 'Další infografika',
