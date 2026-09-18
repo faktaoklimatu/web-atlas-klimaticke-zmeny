@@ -1,7 +1,7 @@
 {
   "menuLinks": [
     {
-      "label": "Fakta o klimatu",
+      "label": "Fakta o klimatu",
       "url": "https://faktaoklimatu.cz/"
     }
   ],
@@ -40,5 +40,5 @@
   ],
   "atlasPdfUrl": "/images/atlas/atlas-zmeny-klimatu-online.pdf",
   "languageVersionsUrl": "https://google.com/",
-  "footerLegal": "© 2026 Otevřená data o klimatu, z.ú. · CC BY 4.0 · info@faktaoklimatu.cz"
+  "footerLegal": "© 2026 Otevřená data o klimatu, z.ú. · CC BY 4.0 · info@faktaoklimatu.cz"
 }

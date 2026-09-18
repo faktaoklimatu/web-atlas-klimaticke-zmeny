@@ -23,7 +23,7 @@ const infographicsCollection = defineCollection({
       'the-solutions',
     ]),
     order: z.number().default(0),
-    image: z.string(), // public path, e.g. /images/atlas/atlas-_08.png
+    image: z.string(), // public path, e.g. /images/atlas/priciny-a-nasledky-zmeny-klimatu.png
     // List of downloadable files (public paths). The button label is derived
     // from each file's extension (e.g. `.pdf` → "PDF"). No longer auto-includes
     // the cover image — every download, PNG included, is added explicitly.
