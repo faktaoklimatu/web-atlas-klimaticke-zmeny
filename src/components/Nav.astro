@@ -53,7 +53,7 @@ const aboutHref = 'https://faktaoklimatu.cz/atlas';
     </a>
 
     <nav class="nav__links" aria-label={ui.nav.primaryLabel}>
-      <a class="nav__link type-nav-link" href={aboutHref}>{ui.nav.about}</a>
+      <a class="nav__link type-nav-link" href={aboutHref} target="_blank" rel="noopener noreferrer">{ui.nav.about}</a>
 
       {atlasPdfUrl && (
         <a
@@ -131,7 +131,7 @@ const aboutHref = 'https://faktaoklimatu.cz/atlas';
       </div>
       <div class="nav-overlay__body">
         <nav class="nav-menu" aria-label={ui.nav.primaryLabel}>
-          <a class="nav-menu__item type-nav-link" href={aboutHref}>{ui.nav.about}</a>
+          <a class="nav-menu__item type-nav-link" href={aboutHref} target="_blank" rel="noopener noreferrer">{ui.nav.about}</a>
           {atlasPdfUrl && (
             <a
               class="nav-menu__item type-nav-link"
