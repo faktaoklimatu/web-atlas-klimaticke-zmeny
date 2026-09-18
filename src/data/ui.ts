@@ -11,7 +11,7 @@ export const ui = {
   },
 
   nav: {
-    title: 'Atlas změny klimatu',
+    title: 'Atlas klimatické změny',
     subtitle: 'Vizuální průvodce vědou a daty',
     primaryLabel: 'Hlavní',
     about: 'O Atlasu',
