@@ -3,9 +3,9 @@ title: "Koncentrace CO₂ na maximu za 800 000 let"
 lead: "Dnešní koncentrace CO₂ dosahují hodnot, které na Zemi nebyly za celou dobu existence lidstva."
 chapter: the-science
 order: 1
-image: /images/atlas/atlas-_12.png
+image: /images/atlas/koncentrace-co2-na-maximu-za-800000-let.png
 downloads:
-  - /images/atlas/atlas-_12.png
+  - /images/atlas/koncentrace-co2-na-maximu-za-800000-let.png
 data:
   tableUrl: ""
   sourceUrl: https://gml.noaa.gov/ccgg/trends/

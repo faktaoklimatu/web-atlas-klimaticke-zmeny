@@ -3,9 +3,9 @@ title: "Sto let vědy o klimatu"
 lead: "O klimatické změně způsobené emisemi CO₂ víme více než 100 let."
 chapter: introduction
 order: 2
-image: /images/atlas/atlas-_10.png
+image: /images/atlas/sto-let-vedy-o-klimatu.png
 downloads:
-  - /images/atlas/atlas-_10.png
+  - /images/atlas/sto-let-vedy-o-klimatu.png
 data:
   tableUrl: ""
   sourceUrl: ""

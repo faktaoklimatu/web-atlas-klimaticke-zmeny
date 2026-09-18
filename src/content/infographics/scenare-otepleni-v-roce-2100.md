@@ -3,9 +3,9 @@ title: "Scénáře oteplení v roce 2100"
 lead: "Současná opatření směřují svět k oteplení o 2,6 °C do konce století. Pouze v případě, že státy dodrží všechny své klimatické přísliby, se podaří nárůst teploty omezit na zhruba 1,9 °C v roce 2100."
 chapter: the-trajectory
 order: 4
-image: /images/atlas/atlas-_40.png
+image: /images/atlas/scenare-otepleni-v-roce-2100.png
 downloads:
-  - /images/atlas/atlas-_40.png
+  - /images/atlas/scenare-otepleni-v-roce-2100.png
 ---
 
 **Budoucí teploty závisí na dvou faktorech: na budoucích emisích skleníkových plynů a na fyzikální reakci Země na tyto plyny. Přestože se nyní pro rok 2100 očekává výrazně nižší oteplení, než se předpovídalo ještě před deseti lety, stávající politiky a klimatické přísliby stále nestačí na to, aby se oteplení udrželo výrazně pod hranicí 2 °C — což je hlavním cílem Pařížské dohody.**

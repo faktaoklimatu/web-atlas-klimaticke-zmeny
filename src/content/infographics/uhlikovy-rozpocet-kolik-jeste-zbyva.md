@@ -3,9 +3,9 @@ title: "Uhlíkový rozpočet: Kolik ještě zbývá?"
 lead: "Pokud emise CO₂ zůstanou na úrovni roku 2025, vyčerpá se uhlíkový rozpočet, při kterém se oteplení udrží pod 1,5 °C, už v roce 2030; pro hranici 2 °C v roce 2051."
 chapter: the-trajectory
 order: 3
-image: /images/atlas/atlas-_38.png
+image: /images/atlas/uhlikovy-rozpocet-kolik-jeste-zbyva.png
 downloads:
-  - /images/atlas/atlas-_38.png
+  - /images/atlas/uhlikovy-rozpocet-kolik-jeste-zbyva.png
 ---
 
 **Míra globálního oteplování závisí především na tom, kolik CO₂ lidstvo ještě vypustí do atmosféry. Udržet oteplení výrazně pod hranicí 2 °C, v souladu s Pařížskou dohodou, se jeví jako stále nesnadnější úkol.**

@@ -3,9 +3,9 @@ title: "Historie mezinárodních klimatických dohod"
 lead: "Časová osa zachycuje klíčové události světového úsilí v ochraně klimatu – přehled hlavních mezinárodních klimatických setkání, jejich aktérů a výstupů."
 chapter: the-solutions
 order: 1
-image: /images/atlas/atlas-_42.png
+image: /images/atlas/historie-mezinarodnich-klimatickych-dohod.png
 downloads:
-  - /images/atlas/atlas-_42.png
+  - /images/atlas/historie-mezinarodnich-klimatickych-dohod.png
 ---
 
 **Změna klimatu představuje globální výzvu, která vyžaduje dlouhodobou spolupráci na národní i mezinárodní úrovni. Mezinárodní vyjednávání sice bývají pomalá a těžkopádná, vytvářejí však důležitý rámec pro ochranu klimatu a snižování emisí po celém světě.**

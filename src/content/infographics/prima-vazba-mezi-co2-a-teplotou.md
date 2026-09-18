@@ -3,9 +3,9 @@ title: "Přímá vazba mezi CO₂ a teplotou"
 lead: "Čím vyšší jsou koncentrace CO₂ v atmosféře, tím vyšší je teplota planety. Jak vysoké koncentrace CO₂ v atmosféře budou, záleží na tom, kolik emisí lidstvo vypustí."
 chapter: the-science
 order: 7
-image: /images/atlas/atlas-_22.png
+image: /images/atlas/prima-vazba-mezi-co2-a-teplotou.png
 downloads:
-  - /images/atlas/atlas-_22.png
+  - /images/atlas/prima-vazba-mezi-co2-a-teplotou.png
 ---
 
 **Graf odhaluje zřejmou závislost: čím vyšší jsou koncentrace CO₂, tím je vyšší globální teplota. Má-li se globální oteplování zastavit, bude třeba zastavit emise CO₂.**

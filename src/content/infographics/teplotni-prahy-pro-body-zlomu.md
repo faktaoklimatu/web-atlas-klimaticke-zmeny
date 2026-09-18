@@ -3,9 +3,9 @@ title: "Teplotní prahy pro body zlomu"
 lead: "U pěti klíčových složek klimatického systému Země již dnes hrozí nevratné změny. Při oteplení o 2 °C se spuštění sedmi bodů zlomu stává pravděpodobným, zatímco dalších šest se ocitá v pásmu rizika."
 chapter: the-impacts
 order: 4
-image: /images/atlas/atlas-_32.png
+image: /images/atlas/teplotni-prahy-pro-body-zlomu.png
 downloads:
-  - /images/atlas/atlas-_32.png
+  - /images/atlas/teplotni-prahy-pro-body-zlomu.png
 ---
 
 **Riziko aktivace klimatických bodů zlomu je bezprostřední, nikoli vzdálenou hrozbou. Již v rozmezí oteplení o 1,5 °C–2 °C stanoveném Pařížskou dohodou pravděpodobně dojde k narušení stability několika systémů. To zahrnuje kolaps velkých ledovcových štítů, rozsáhlé odumírání korálových útesů a náhlé tání permafrostu.**

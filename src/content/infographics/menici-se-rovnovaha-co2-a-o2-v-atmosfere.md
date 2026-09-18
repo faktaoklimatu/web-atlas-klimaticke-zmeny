@@ -3,9 +3,9 @@ title: "Měnící se rovnováha CO₂ a O₂ v atmosféře"
 lead: "Časový průběh koncentrací CO₂ a kyslíku ukazuje roční cykly fotosyntézy a dýchání rostlin i dlouhodobé důsledky spalování fosilních paliv."
 chapter: the-science
 order: 2
-image: /images/atlas/atlas-_14.png
+image: /images/atlas/menici-se-rovnovaha-co2-a-o2-v-atmosfere.png
 downloads:
-  - /images/atlas/atlas-_14.png
+  - /images/atlas/menici-se-rovnovaha-co2-a-o2-v-atmosfere.png
 ---
 
 **Dlouhodobý nárůst koncentrace oxidu uhličitého a pokles koncentrace kyslíku ukazují, že složení atmosféry se mění v důsledku lidské činnosti – především vlivem spalování fosilních paliv.**

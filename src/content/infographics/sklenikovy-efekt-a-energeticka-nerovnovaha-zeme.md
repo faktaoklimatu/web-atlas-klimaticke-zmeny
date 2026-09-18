@@ -3,9 +3,9 @@ title: "Skleníkový efekt a energetická nerovnováha Země"
 lead: "Klima Země určuje tepelná rovnováha mezi energií přijatou ze Slunce a energií vyzářenou zpět do vesmíru. Lidmi způsobené změny v atmosféře tuto rovnováhu narušily."
 chapter: the-science
 order: 8
-image: /images/atlas/atlas-_24.png
+image: /images/atlas/sklenikovy-efekt-a-energeticka-nerovnovaha-zeme.png
 downloads:
-  - /images/atlas/atlas-_24.png
+  - /images/atlas/sklenikovy-efekt-a-energeticka-nerovnovaha-zeme.png
 ---
 
 **Země zůstává obyvatelnou díky křehké rovnováze. Nachází se v chladném vakuu vesmíru a neustále přijímá obrovský tok sluneční energie, která ji zahřívá. Aby její teplota zůstala stabilní, musí stejné množství energie vyzářit zpět do vesmíru. Skleníkové plyny produkované lidmi tuto rovnováhu narušily a způsobují hromadění tepelné energie v zemském systému.**

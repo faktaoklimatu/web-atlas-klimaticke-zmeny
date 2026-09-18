@@ -3,9 +3,9 @@ title: "Extrémní počasí přibývá a sílí"
 lead: "S každým nárůstem globální teploty budou extrémní projevy počasí častější a intenzivnější."
 chapter: the-impacts
 order: 2
-image: /images/atlas/atlas-_28.png
+image: /images/atlas/extremni-pocasi-pribyva-a-sili.png
 downloads:
-  - /images/atlas/atlas-_28.png
+  - /images/atlas/extremni-pocasi-pribyva-a-sili.png
 ---
 
 **Extrémní jevy, jako jsou vlny veder, sucha a přívalové srážky, se ve světě zasaženém změnou klimatu vyskytují častěji a s větší intenzitou. S každým dalším oteplením se tyto extrémy stávají výraznějšími a ničivějšími.**

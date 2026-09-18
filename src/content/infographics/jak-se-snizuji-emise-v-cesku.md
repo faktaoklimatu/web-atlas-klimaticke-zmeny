@@ -3,9 +3,9 @@ title: "Jak se snižují emise v Česku?"
 lead: "Mezi lety 1990 a 2024 klesly emise skleníkových plynů v ČR na polovinu."
 chapter: the-solutions
 order: 4
-image: /images/atlas/atlas-jak-se-snizuji-emise-v-cesku.png
+image: /images/atlas/jak-se-snizuji-emise-v-cesku.png
 downloads:
-  - /images/atlas/atlas-jak-se-snizuji-emise-v-cesku.png
+  - /images/atlas/jak-se-snizuji-emise-v-cesku.png
 data:
   tableUrl: ""
   sourceUrl: "https://doi.org/10.2908/env_air_gge"

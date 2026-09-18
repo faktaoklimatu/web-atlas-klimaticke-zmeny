@@ -3,9 +3,9 @@ title: "Česko se otepluje rychleji než svět"
 lead: "Teplota se od roku 1961 zvýšila o 2,3 °C."
 chapter: the-science
 order: 5
-image: /images/atlas/atlas-cesko-se-otepluje-rychleji.png
+image: /images/atlas/cesko-se-otepluje-rychleji-nez-svet.png
 downloads:
-  - /images/atlas/atlas-cesko-se-otepluje-rychleji.png
+  - /images/atlas/cesko-se-otepluje-rychleji-nez-svet.png
 data:
   tableUrl: ""
   sourceUrl: "https://opendata.chmi.cz/meteorology/products/regional_averages/temperature/"

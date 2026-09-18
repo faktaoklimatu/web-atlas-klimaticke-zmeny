@@ -3,9 +3,9 @@ title: "Příčiny a následky změny klimatu"
 lead: "Klimatická změna je mnohem víc než jen nárůst teploty. Je to dlouhý řetězec vzájemně propojených příčin a následků."
 chapter: introduction
 order: 1
-image: /images/atlas/atlas-_08.png
+image: /images/atlas/priciny-a-nasledky-zmeny-klimatu.png
 downloads:
-  - /images/atlas/atlas-_08.png
+  - /images/atlas/priciny-a-nasledky-zmeny-klimatu.png
 data:
   tableUrl: ""
   sourceUrl: ""

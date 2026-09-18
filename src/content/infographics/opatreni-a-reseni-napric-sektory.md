@@ -3,9 +3,9 @@ title: "Opatření a řešení napříč sektory"
 lead: "Zastavení emisí skleníkových plynů vyžaduje odlišné strategie pro různá odvětví. Hluboká dekarbonizace většinou spoléhá na kombinaci několika řešení spíše než na jediný univerzální recept."
 chapter: the-solutions
 order: 2
-image: /images/atlas/atlas-_44.png
+image: /images/atlas/opatreni-a-reseni-napric-sektory.png
 downloads:
-  - /images/atlas/atlas-_44.png
+  - /images/atlas/opatreni-a-reseni-napric-sektory.png
 ---
 
 **Způsoby dekarbonizace různých odvětví ekonomiky lze rozdělit do šesti hlavních kategorií, které jsou v grafice označeny písmeny A–F.**

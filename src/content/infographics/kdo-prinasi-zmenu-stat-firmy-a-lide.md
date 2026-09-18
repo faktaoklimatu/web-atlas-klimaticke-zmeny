@@ -3,9 +3,9 @@ title: "Kdo přináší změnu? Stát, firmy a lidé"
 lead: "Na dekarbonizaci se podílejí tři hlavní skupiny aktérů: stát, firmy a lidé. Úspěch závisí na jejich spolupráci, protože každá z těchto skupin disponuje jinými nástroji ke snižování emisí."
 chapter: the-solutions
 order: 5
-image: /images/atlas/atlas-_48.png
+image: /images/atlas/kdo-prinasi-zmenu-stat-firmy-a-lide.png
 downloads:
-  - /images/atlas/atlas-_48.png
+  - /images/atlas/kdo-prinasi-zmenu-stat-firmy-a-lide.png
 ---
 
 **Z trojice hlavních aktérů má jedinečné postavení stát. Určuje „pravidla hry“ a vytváří tak systémový rámec, který firmám i jednotlivcům usnadňuje cestu k nízkoemisní budoucnosti.**

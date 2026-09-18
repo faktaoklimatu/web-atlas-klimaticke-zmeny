@@ -3,9 +3,9 @@ title: "Jak moc se planeta otepluje?"
 lead: "Svět je nyní o přibližně 1,3 °C teplejší než v letech 1850–1900. V posledních 30 letech se otepluje tempem okolo 0,25 °C za desetiletí."
 chapter: the-science
 order: 3
-image: /images/atlas/atlas-_16.png
+image: /images/atlas/jak-moc-se-planeta-otepluje.png
 downloads:
-  - /images/atlas/atlas-_16.png
+  - /images/atlas/jak-moc-se-planeta-otepluje.png
 ---
 
 **Naměřené hodnoty svědčí o tom, že teploty se stále zvyšují s rostoucími koncentracemi CO₂, přesně tak, jak vědci předpovídali.**

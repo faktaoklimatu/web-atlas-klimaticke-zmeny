@@ -9,7 +9,7 @@ export interface FeedInfographic {
   slug: string;
   title: string;
   lead: string;
-  image: string; // public path, e.g. /images/atlas/atlas-_08.png
+  image: string; // public path, e.g. /images/atlas/priciny-a-nasledky-zmeny-klimatu.png
   chapterId: string;
 }
 

@@ -3,9 +3,9 @@ title: "Oteplování od doby ledové až po současnost"
 lead: "V přechodu od poslední doby ledové se planeta oteplovala tempem asi 1 °C za tisíciletí. V současnosti se otepluje více než desetkrát rychleji."
 chapter: the-science
 order: 6
-image: /images/atlas/atlas-_20.png
+image: /images/atlas/oteplovani-od-doby-ledove-az-po-soucasnost.png
 downloads:
-  - /images/atlas/atlas-_20.png
+  - /images/atlas/oteplovani-od-doby-ledove-az-po-soucasnost.png
 ---
 
 **Častou námitkou proti závažnosti dnešní situace je tvrzení, že klima se měnilo vždy. To je sice pravda, ale tempo současného oteplování je v dějinách lidské civilizace bezprecedentní. Právě tato rychlost přitom rozhoduje o tom, jak citelně změny zasáhnou ekosystémy i naši společnost.**

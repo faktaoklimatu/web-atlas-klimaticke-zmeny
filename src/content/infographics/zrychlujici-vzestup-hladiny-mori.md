@@ -3,9 +3,9 @@ title: "Zrychlující vzestup hladiny moří"
 lead: "Mezi lety 1880 a 2025 vzrostla globální průměrná hladina moří přibližně o 25 cm. S rostoucí teplotou oceánů a táním ledovců bude hladina i nadále stoupat po celá staletí."
 chapter: the-impacts
 order: 1
-image: /images/atlas/atlas-_26.png
+image: /images/atlas/zrychlujici-vzestup-hladiny-mori.png
 downloads:
-  - /images/atlas/atlas-_26.png
+  - /images/atlas/zrychlujici-vzestup-hladiny-mori.png
 ---
 
 **Hladina moří ve většině oblastí světa stoupá a v důsledku tání ledu a oteplování oceánů způsobeného změnou klimatu bude stoupat ještě mnoho staletí. Do roku 2100 by mohla hladina na některých místech vzrůst až o 1 metr – vše závisí na tom, do jaké míry se bude planeta dále oteplovat.**

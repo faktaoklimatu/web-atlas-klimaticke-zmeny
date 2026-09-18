@@ -3,9 +3,9 @@ title: "Globální emise stále rostou"
 lead: "Globální emise skleníkových plynů se za posledních 55 let téměř zdvojnásobily. Jejich růst vrcholil v nultých letech (2000–2009), výrazně zpomalil v desátých letech (2010–2019), ale po roce 2020 začal opět zrychlovat."
 chapter: the-trajectory
 order: 2
-image: /images/atlas/atlas-_36.png
+image: /images/atlas/globalni-emise-stale-rostou.png
 downloads:
-  - /images/atlas/atlas-_36.png
+  - /images/atlas/globalni-emise-stale-rostou.png
 ---
 
 **Globální emise skleníkových plynů ke konci roku 2025 stále rostly, i když pomalejším tempem než před dvěma desetiletími. Aby bylo možné splnit mezinárodní klimatické cíle a vyhnout se ještě nebezpečnějšímu oteplování, musí světové emise začít výrazně klesat.**

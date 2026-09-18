@@ -3,9 +3,9 @@ title: "Emise v EU dlouhodobě klesají"
 lead: "Mezi lety 1990 a 2024 klesly emise v EU o 36 %. Emise se snížily ve všech sektorech s výjimkou dopravy."
 chapter: the-solutions
 order: 3
-image: /images/atlas/atlas-_46.png
+image: /images/atlas/emise-v-eu-dlouhodobe-klesaji.png
 downloads:
-  - /images/atlas/atlas-_46.png
+  - /images/atlas/emise-v-eu-dlouhodobe-klesaji.png
 ---
 
 **Evropská unie snížila své emise o více než jednu třetinu v letech 1990–2024. Tento pokrok odráží zásadní posun ve způsobu, jakým region získává energii a řídí svoji ekonomiku.**

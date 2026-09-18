@@ -3,9 +3,9 @@ title: "Mapa klimatických bodů zlomu"
 lead: "Nad kritickými teplotními prahy již Země nereaguje na oteplování lineárně ani předvídatelně. Aktivace těchto bodů zlomu přinese rozsáhlé a nevratné změny naší planety."
 chapter: the-impacts
 order: 3
-image: /images/atlas/atlas-_30.png
+image: /images/atlas/mapa-klimatickych-bodu-zlomu.png
 downloads:
-  - /images/atlas/atlas-_30.png
+  - /images/atlas/mapa-klimatickych-bodu-zlomu.png
 ---
 
 **Pokud oteplení překročí body zlomu, ekosystémy, mořské proudy a ledovcové štíty ztratí svou stabilitu. Ačkoli má každý z těchto systémů jinou kritickou mez i tempo kolapsu, výsledné změny jsou vždy nevratné. Pro lidstvo to znamená opuštění stabilního klimatu, které po tisíciletí umožňovalo rozkvět naší civilizace.**
