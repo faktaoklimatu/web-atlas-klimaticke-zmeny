@@ -14,7 +14,7 @@ data:
 
 **Emise skleníkových plynů v Česku klesly mezi lety 1990 a 2024 o 50 %. Jakkoli jde o důležitý posun, české emise přepočítané na obyvatele patří stále k nejvyšším v EU.**
 
-Zhruba k polovině poklesu českých emisí došlo **během 90. let v důsledku restrukturalizace hospodářství, nikoliv cílených klimatických opatření**. Po období stagnace se trend poklesu začal opět zrychlovat až po roce 2018 vlivem klimatických politik EU.
+Zhruba k polovině poklesu českých emisí došlo **během 90. let v důsledku restrukturalizace hospodářství, nikoliv cílených klimatických opatření**.[^1] Po období stagnace se trend poklesu začal opět zrychlovat až po roce 2018 vlivem klimatických politik EU.
 
 Pro srovnání, pokles emisí v Česku o 50 % je výrazně vyšší než průměr v EU, kde se emise za stejné období snížily o 36 % (viz [Emise v EU dlouhodobě klesají](/emise-v-eu-dlouhodobe-klesaji/)). To je ale dáno extrémně vysokým výchozím stavem v roce 1990, kdy československá ekonomika patřila k emisně nejnáročnějším na světě. S **9 tunami CO₂eq na obyvatele v roce 2024** Česko stále o dost převyšuje unijní průměr 7 tun.
 
@@ -33,3 +33,5 @@ Emise uvádíme v tunách CO₂eq na obyvatele v roce 2024; změna je mezi lety 
 **Budovy** (0,75 t na obyvatele; −73 %): Většina poklesu proběhla již v 90. letech díky masivní plynofikaci země, kdy domácnosti i lokální domovní kotelny hromadně nahrazovaly uhelné kotle plynovými. Po následné dvacetileté stagnaci tlačí emise dolů až současná vlna komplexního zateplování a odchod od zbývajících uhelných kotlů.
 
 **Odpadové hospodářství** (0,51 t na obyvatele; +66 %): Zde emise v Česku dlouhodobě rostou, zatímco v EU výrazně klesly. Vyspělé země EU bioodpad odklánějí do bioplynových stanic a spaloven, v Česku ale stále končí velká část bioodpadu na skládkách a při jeho rozkladu bez přístupu vzduchu se uvolňuje metan.
+
+[^1]: Data v grafu čerpáme z: Eurostat. Greenhouse gas emissions from the source sector. DOI: [10.2908/env_air_gge](https://doi.org/10.2908/env_air_gge).
