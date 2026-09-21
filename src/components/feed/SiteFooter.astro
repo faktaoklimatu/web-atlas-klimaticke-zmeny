@@ -58,6 +58,22 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
 
 <footer class="footer">
     <div class="footer__brand">
+      <a
+        class="footer__logo"
+        href="https://faktaoklimatu.cz/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={`${base}/images/logo-fakta-o-klimatu.svg`}
+          alt="Fakta o klimatu"
+          width="220"
+          height="32"
+        />
+      </a>
+    </div>
+
+    <div class="footer__download">
       <p class="footer__label">{seo.siteTitle}</p>
       {atlasPdfUrl && (
         <Button variant="outlined" {...pdfLinkAttrs(atlasPdfUrl)}>
@@ -145,11 +161,19 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
     font-size: 15px;
     color: var(--text-secondary);
   }
-  .footer__brand {
+  /* Značka vydavatele. Placeholder svg v public/images/ — vyměň soubor,
+     značku ani rozměry měnit nemusíš. */
+  .footer__brand { grid-column: 1; }
+  .footer__logo { display: block; }
+  .footer__logo img { display: block; width: auto; height: 90px; }
+
+  .footer__download {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .footer__legal { grid-column: 2 / 3; }
 
   .footer__icons { display: flex; gap: var(--size-3); }
   .footer__icons a { display: inline-flex; }
