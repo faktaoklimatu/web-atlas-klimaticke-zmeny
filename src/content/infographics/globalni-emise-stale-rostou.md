@@ -6,6 +6,13 @@ order: 2
 image: /images/atlas/globalni-emise-stale-rostou.png
 downloads:
   - /images/atlas/globalni-emise-stale-rostou.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "EDGAR 2025"
+      url: "https://edgar.jrc.ec.europa.eu/report_2025"
+    - label: "GCB 2025"
+      url: "https://doi.org/10.5194/essd-2025-659"
 ---
 
 **Globální emise skleníkových plynů ke konci roku 2025 stále rostly, i když pomalejším tempem než před dvěma desetiletími. Aby bylo možné splnit mezinárodní klimatické cíle a vyhnout se ještě nebezpečnějšímu oteplování, musí světové emise začít výrazně klesat.**

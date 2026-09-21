@@ -8,8 +8,11 @@ downloads:
   - /images/atlas/koncentrace-co2-na-maximu-za-800000-let.png
 data:
   tableUrl: ""
-  sourceUrl: https://gml.noaa.gov/ccgg/trends/
-  citation: NOAA Global Monitoring Laboratory
+  sources:
+    - label: "NOAA, Antarctic Ice Cores Revised 800KYr CO2 Data"
+      url: "https://www.ncei.noaa.gov/access/paleo-search/study/17975"
+    - label: "NOAA, Global Monitoring Library, Mauna Loa"
+      url: "https://gml.noaa.gov/ccgg/trends/"
 related:
   - priciny-a-nasledky-zmeny-klimatu
   - sto-let-vedy-o-klimatu

@@ -6,6 +6,11 @@ order: 3
 image: /images/atlas/uhlikovy-rozpocet-kolik-jeste-zbyva.png
 downloads:
   - /images/atlas/uhlikovy-rozpocet-kolik-jeste-zbyva.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "GCB 2025"
+      url: "https://doi.org/10.5194/essd-2025-659"
 ---
 
 **Míra globálního oteplování závisí především na tom, kolik CO₂ lidstvo ještě vypustí do atmosféry. Udržet oteplení výrazně pod hranicí 2 °C, v souladu s Pařížskou dohodou, se jeví jako stále nesnadnější úkol.**

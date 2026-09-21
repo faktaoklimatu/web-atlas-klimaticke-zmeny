@@ -31,6 +31,14 @@ const infographicsCollection = defineCollection({
     data: z
       .object({
         tableUrl: z.string().optional(),
+        // Zdroje dat tak, jak jsou vytištěné v pravém dolním rohu infografiky
+        // ("zdroj dat: …"). Jeden řádek na zdroj; `url` je nepovinná, bez ní
+        // se název vypíše jako prostý text.
+        sources: z
+          .array(z.object({ label: z.string(), url: z.string().optional() }))
+          .optional(),
+        // Starší pole, ponechána kvůli zpětné kompatibilitě: když `sources`
+        // chybí, sestaví se z nich jediná položka seznamu.
         sourceUrl: z.string().optional(),
         citation: z.string().optional(),
       })

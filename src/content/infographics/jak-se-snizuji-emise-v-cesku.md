@@ -8,8 +8,9 @@ downloads:
   - /images/atlas/jak-se-snizuji-emise-v-cesku.png
 data:
   tableUrl: ""
-  sourceUrl: "https://doi.org/10.2908/env_air_gge"
-  citation: "Eurostat, env-air-gge"
+  sources:
+    - label: "Eurostat, env-air-gge"
+      url: "https://doi.org/10.2908/env_air_gge"
 ---
 
 **Emise skleníkových plynů v Česku klesly mezi lety 1990 a 2024 o 50 %. Jakkoli jde o důležitý posun, české emise přepočítané na obyvatele patří stále k nejvyšším v EU.**

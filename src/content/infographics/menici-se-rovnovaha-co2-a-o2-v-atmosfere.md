@@ -6,6 +6,13 @@ order: 2
 image: /images/atlas/menici-se-rovnovaha-co2-a-o2-v-atmosfere.png
 downloads:
   - /images/atlas/menici-se-rovnovaha-co2-a-o2-v-atmosfere.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "NOAA, Global Monitoring Library, Mauna Loa"
+      url: "https://gml.noaa.gov/ccgg/trends/"
+    - label: "Scripps O2 Program, Mauna Loa Observatory"
+      url: "https://scrippso2.ucsd.edu/data/mauna-loa-observatory-hawaii/"
 ---
 
 **Dlouhodobý nárůst koncentrace oxidu uhličitého a pokles koncentrace kyslíku ukazují, že složení atmosféry se mění v důsledku lidské činnosti – především vlivem spalování fosilních paliv.**

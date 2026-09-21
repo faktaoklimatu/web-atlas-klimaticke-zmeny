@@ -6,6 +6,13 @@ order: 1
 image: /images/atlas/na-jakych-sklenikovych-plynech-nejvic-zalezi.png
 downloads:
   - /images/atlas/na-jakych-sklenikovych-plynech-nejvic-zalezi.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "EDGAR 2025"
+      url: "https://edgar.jrc.ec.europa.eu/report_2025"
+    - label: "GCB 2025"
+      url: "https://doi.org/10.5194/essd-2025-659"
 ---
 
 **Skleníkové plyny se liší ve dvou zásadních ohledech: ve své účinnosti a v tom, jak dlouho setrvávají v atmosféře. Například metan zachycuje teplo velmi intenzivně, ale z atmosféry zmizí během deseti let. Naopak CO₂ má nižší účinek na jednu tunu, ale přetrvává po staletí až tisíciletí, a tím nevratně otepluje planetu po celé generace.**

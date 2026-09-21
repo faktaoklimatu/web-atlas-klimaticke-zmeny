@@ -6,6 +6,11 @@ order: 3
 image: /images/atlas/jak-moc-se-planeta-otepluje.png
 downloads:
   - /images/atlas/jak-moc-se-planeta-otepluje.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "NASA GISTEMP v4"
+      url: "https://data.giss.nasa.gov/gistemp/"
 ---
 
 **Naměřené hodnoty svědčí o tom, že teploty se stále zvyšují s rostoucími koncentracemi CO₂, přesně tak, jak vědci předpovídali.**

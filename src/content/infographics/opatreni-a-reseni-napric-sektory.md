@@ -6,6 +6,13 @@ order: 2
 image: /images/atlas/opatreni-a-reseni-napric-sektory.png
 downloads:
   - /images/atlas/opatreni-a-reseni-napric-sektory.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "EDGAR 2025"
+      url: "https://edgar.jrc.ec.europa.eu/report_2025"
+    - label: "GCB 2025"
+      url: "https://doi.org/10.5194/essd-2025-659"
 ---
 
 **Způsoby dekarbonizace různých odvětví ekonomiky lze rozdělit do šesti hlavních kategorií, které jsou v grafice označeny písmeny A–F.**

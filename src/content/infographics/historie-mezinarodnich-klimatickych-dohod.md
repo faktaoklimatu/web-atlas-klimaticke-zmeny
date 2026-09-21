@@ -6,6 +6,10 @@ order: 1
 image: /images/atlas/historie-mezinarodnich-klimatickych-dohod.png
 downloads:
   - /images/atlas/historie-mezinarodnich-klimatickych-dohod.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "OSN, IPCC, COP, Evropská komise"
 ---
 
 **Změna klimatu představuje globální výzvu, která vyžaduje dlouhodobou spolupráci na národní i mezinárodní úrovni. Mezinárodní vyjednávání sice bývají pomalá a těžkopádná, vytvářejí však důležitý rámec pro ochranu klimatu a snižování emisí po celém světě.**

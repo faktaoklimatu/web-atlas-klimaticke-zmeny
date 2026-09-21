@@ -6,6 +6,11 @@ order: 4
 image: /images/atlas/mapa-teplotnich-zmen-ve-svete.png
 downloads:
   - /images/atlas/mapa-teplotnich-zmen-ve-svete.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "NASA GISTEMP v4"
+      url: "https://data.giss.nasa.gov/gistemp/"
 ---
 
 **Změny za posledních šest desetiletí ukázaly, že rychlost oteplování se v různých regionech liší, což odpovídá předpovědím počítačových modelů.**

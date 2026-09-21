@@ -6,6 +6,13 @@ order: 7
 image: /images/atlas/prima-vazba-mezi-co2-a-teplotou.png
 downloads:
   - /images/atlas/prima-vazba-mezi-co2-a-teplotou.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "NOAA, Global Monitoring Library, Mauna Loa"
+      url: "https://gml.noaa.gov/ccgg/trends/"
+    - label: "NASA GISTEMP v4"
+      url: "https://data.giss.nasa.gov/gistemp/"
 ---
 
 **Graf odhaluje zřejmou závislost: čím vyšší jsou koncentrace CO₂, tím je vyšší globální teplota. Má-li se globální oteplování zastavit, bude třeba zastavit emise CO₂.**

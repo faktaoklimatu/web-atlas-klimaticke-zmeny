@@ -36,7 +36,6 @@ export const ui = {
     download: 'Stáhnout',
     underlyingData: 'Podkladová data',
     dataTable: 'Naše tabulka s daty',
-    dataSource: 'Zdroj dat',
     previousInfographic: 'Předchozí infografika',
     nextInfographic: 'Další infografika',
   },

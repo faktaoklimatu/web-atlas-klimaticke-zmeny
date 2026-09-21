@@ -8,8 +8,9 @@ downloads:
   - /images/atlas/cesko-se-otepluje-rychleji-nez-svet.png
 data:
   tableUrl: ""
-  sourceUrl: "https://opendata.chmi.cz/meteorology/products/regional_averages/temperature/"
-  citation: "ČHMÚ, Územní teploty"
+  sources:
+    - label: "ČHMÚ, Územní teploty"
+      url: "https://opendata.chmi.cz/meteorology/products/regional_averages/temperature/"
 ---
 
 **Nárůst průměrné teploty, způsobený změnou klimatu, je pozorovatelný i v Česku. Teplé zimy bez sněhu, častější přívalové deště i tropické letní dny, stejně jako velké sucho, kůrovcové kalamity či rozšíření klíšťat – to vše patří mezi důsledky, na kterých se podílejí rostoucí koncentrace skleníkových plynů v atmosféře.**
