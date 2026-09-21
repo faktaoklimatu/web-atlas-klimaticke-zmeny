@@ -7,7 +7,7 @@
  */
 import ButtonGroup from '../ButtonGroup.astro';
 import Button from '../Button.astro';
-import { imgUrl } from '../../utils/img';
+import { imgUrl, pdfLinkAttrs } from '../../utils/img';
 import { renderInlineMarkdown } from '../../utils/markdown';
 import { ui } from '../../data/ui';
 import seo from '../../data/seo.json';
@@ -60,7 +60,7 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
     <div class="footer__brand">
       <p class="footer__label">{seo.siteTitle}</p>
       {atlasPdfUrl && (
-        <Button variant="outlined" href={`${base}${atlasPdfUrl}`} download>
+        <Button variant="outlined" {...pdfLinkAttrs(atlasPdfUrl)}>
           {ui.footer.downloadPdf}
         </Button>
       )}
