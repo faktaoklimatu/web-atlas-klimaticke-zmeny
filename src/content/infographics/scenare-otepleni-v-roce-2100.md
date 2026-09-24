@@ -6,6 +6,11 @@ order: 4
 image: /images/atlas/scenare-otepleni-v-roce-2100.png
 downloads:
   - /images/atlas/scenare-otepleni-v-roce-2100.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "CAT Thermometer, listopad 2025"
+      url: "https://climateactiontracker.org/global/cat-thermometer/"
 ---
 
 **Budoucí teploty závisí na dvou faktorech: na budoucích emisích skleníkových plynů a na fyzikální reakci Země na tyto plyny. Přestože se nyní pro rok 2100 očekává výrazně nižší oteplení, než se předpovídalo ještě před deseti lety, stávající politiky a klimatické přísliby stále nestačí na to, aby se oteplení udrželo výrazně pod hranicí 2 °C — což je hlavním cílem Pařížské dohody.**

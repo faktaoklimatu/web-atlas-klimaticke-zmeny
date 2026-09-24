@@ -36,7 +36,6 @@ export const ui = {
     download: 'Stáhnout',
     underlyingData: 'Podkladová data',
     dataTable: 'Naše tabulka s daty',
-    dataSource: 'Zdroj dat',
     previousInfographic: 'Předchozí infografika',
     nextInfographic: 'Další infografika',
   },
@@ -55,6 +54,7 @@ export const ui = {
     followUs: 'Sleduj nás na sociálních sítích',
     downloadPdf: 'Stáhni Atlas jako PDF',
     languageLabel: 'Dostupné jazykové verze',
+    languageInterest: 'Zajímá tě Atlas klimatické změny ve tvém jazyce?',
     getInYourLanguage: 'Získej Atlas ve svém jazyce',
   },
 } as const;

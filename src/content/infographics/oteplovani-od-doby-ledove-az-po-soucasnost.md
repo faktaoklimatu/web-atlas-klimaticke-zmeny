@@ -6,6 +6,15 @@ order: 6
 image: /images/atlas/oteplovani-od-doby-ledove-az-po-soucasnost.png
 downloads:
   - /images/atlas/oteplovani-od-doby-ledove-az-po-soucasnost.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "Osman et al. (2021)"
+      url: "https://doi.org/10.1038/s41586-021-03984-4"
+    - label: "NASA GISTEMP v4"
+      url: "https://data.giss.nasa.gov/gistemp/"
+    - label: "IPCC AR6 WGI"
+      url: "https://doi.org/10.1017/9781009157896"
 ---
 
 **Častou námitkou proti závažnosti dnešní situace je tvrzení, že klima se měnilo vždy. To je sice pravda, ale tempo současného oteplování je v dějinách lidské civilizace bezprecedentní. Právě tato rychlost přitom rozhoduje o tom, jak citelně změny zasáhnou ekosystémy i naši společnost.**

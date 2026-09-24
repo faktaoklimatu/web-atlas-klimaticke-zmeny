@@ -6,10 +6,6 @@ order: 1
 image: /images/atlas/priciny-a-nasledky-zmeny-klimatu.png
 downloads:
   - /images/atlas/priciny-a-nasledky-zmeny-klimatu.png
-data:
-  tableUrl: ""
-  sourceUrl: ""
-  citation: IPCC AR6 Synthesis Report
 related:
   - sto-let-vedy-o-klimatu
   - koncentrace-co2-na-maximu-za-800000-let

@@ -7,7 +7,7 @@
  */
 import ButtonGroup from '../ButtonGroup.astro';
 import Button from '../Button.astro';
-import { imgUrl } from '../../utils/img';
+import { imgUrl, pdfLinkAttrs } from '../../utils/img';
 import { renderInlineMarkdown } from '../../utils/markdown';
 import { ui } from '../../data/ui';
 import seo from '../../data/seo.json';
@@ -57,13 +57,21 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
 ---
 
 <footer class="footer">
+  <div class="footer__col">
     <div class="footer__brand">
-      <p class="footer__label">{seo.siteTitle}</p>
-      {atlasPdfUrl && (
-        <Button variant="outlined" href={`${base}${atlasPdfUrl}`} download>
-          {ui.footer.downloadPdf}
-        </Button>
-      )}
+      <a
+        class="footer__logo"
+        href="https://faktaoklimatu.cz/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={`${base}/images/logo-fakta-o-klimatu.svg`}
+          alt="Fakta o klimatu"
+          width="220"
+          height="32"
+        />
+      </a>
     </div>
 
     <div class="footer__social">
@@ -79,40 +87,62 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
       </div>
     </div>
 
-    {/* ponytail: language switcher + "get it in your language" hidden for now;
-        uncomment to bring back (siblings/languageHref still wired above). */}
-    {/*
-    <div class="footer__languages">
-      <p class="footer__label">{ui.footer.languageLabel}</p>
-      <ButtonGroup role="group" aria-label={ui.footer.languageLabel}>
-        {
-          siblings.map((s) => (
-            <Button variant="text" href={s.url} target="_blank" rel="noopener noreferrer">
-              {s.flag && <span slot="icon-left" aria-hidden="true">{s.flag}</span>}
-              {s.code}
-            </Button>
-          ))
-        }
-      </ButtonGroup>
-      {languageHref && (
-        <div class="footer__lang-link">
-          <Button
-            variant="text"
-            href={languageHref}
-            target={isEnglishFork ? undefined : '_blank'}
-            rel={isEnglishFork ? undefined : 'noopener noreferrer'}
-          >
-            {ui.footer.getInYourLanguage}
-          </Button>
-        </div>
-      )}
-    </div>
-    */}
-
     <div class="footer__legal">
       <p class="footer__label" set:html={legalHtml}></p>
     </div>
+  </div>
 
+  <div class="footer__col">
+    <div class="footer__download">
+      <p class="footer__label">{seo.siteTitle}</p>
+      {atlasPdfUrl && (
+        <Button variant="outlined" {...pdfLinkAttrs(atlasPdfUrl)}>
+          {ui.footer.downloadPdf}
+        </Button>
+      )}
+    </div>
+
+    {/* Whole block disappears when there is nothing to put in it: a fork with no
+        `languages` and a blank languageVersionsUrl would otherwise contribute an
+        empty column entry. */}
+    {(siblings.length > 0 || languageHref) && (
+      <div class="footer__languages">
+        {/* Label + switcher only when there are siblings — an empty `languages`
+            list would otherwise leave the heading stranded above nothing. The
+            nav already guards this the same way. */}
+        {siblings.length > 0 && (
+          <Fragment>
+            <p class="footer__label">{ui.footer.languageLabel}</p>
+            <ButtonGroup role="group" aria-label={ui.footer.languageLabel}>
+              {
+                siblings.map((s) => (
+                  <Button variant="text" href={s.url} target="_blank" rel="noopener noreferrer">
+                    {s.flag && <span slot="icon-left" aria-hidden="true">{s.flag}</span>}
+                    {s.code}
+                  </Button>
+                ))
+              }
+            </ButtonGroup>
+          </Fragment>
+        )}
+        {languageHref && (
+          <p class="footer__lang-intro">{ui.footer.languageInterest}</p>
+        )}
+        {languageHref && (
+          <div class="footer__lang-link">
+            <Button
+              variant="text"
+              href={languageHref}
+              target={isEnglishFork ? undefined : '_blank'}
+              rel={isEnglishFork ? undefined : 'noopener noreferrer'}
+            >
+              {ui.footer.getInYourLanguage}
+            </Button>
+          </div>
+        )}
+      </div>
+    )}
+  </div>
 </footer>
 
 <style>
@@ -122,15 +152,29 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
     border-top: 1px solid var(--gray-200);
     font-family: var(--font-sans);
     color: var(--text-secondary);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--size-8);
-    row-gap: var(--size-8);
+    /* Two independent columns, not a 2-column grid. A grid row takes the
+       height of its tallest cell, so the tall language block stranded ~260px
+       of empty space beside the social icons. Each column now packs its own
+       blocks and neither affects the other's height. */
+    display: flex;
+    align-items: flex-start;
+    gap: var(--size-8); /* 32px */
+  }
+  .footer__col {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-6); /* 24px between blocks within a column */
   }
 
-  /* Phones: stack to a single column. */
+  /* Phones: one stack. `display: contents` dissolves the two columns so every
+     block becomes a direct child of .footer in DOM order — which would put the
+     legal line mid-stack, since it lives in column 1. `order` sends it last. */
   @media (max-width: 640px) {
-    .footer { grid-template-columns: 1fr; }
+    .footer { flex-direction: column; gap: var(--size-6); }
+    .footer__col { display: contents; }
+    .footer__legal { order: 1; }
   }
 
   /* Large phone (--bp-xs 480): tighter gap above the footer, matching the
@@ -145,7 +189,12 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
     font-size: 15px;
     color: var(--text-secondary);
   }
-  .footer__brand {
+  /* Publisher mark. Swap the file in public/images/ — the markup and the
+     dimensions stay as they are. */
+  .footer__logo { display: block; }
+  .footer__logo img { display: block; width: auto; height: 90px; }
+
+  .footer__download {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -160,6 +209,15 @@ const legalHtml = await renderInlineMarkdown(footerLegal);
   }
 
   .footer__languages { display: flex; flex-direction: column; align-items: flex-start; }
+  /* Blank line between the switcher and the invitation below it. Falls back to
+     0 when the switcher is absent, so the invitation doesn't float off the top
+     of an otherwise empty cell. */
+  .footer__lang-intro {
+    margin: var(--size-6) 0 0; /* 24px */
+    font-size: 15px;
+    color: var(--text-secondary);
+  }
+  .footer__languages > .footer__lang-intro:first-child { margin-top: 0; }
   .footer__lang-link { margin-top: var(--size-1); /* 4px */ }
   .footer__lang-link :global(.btn) { padding: 0; min-height: 0; }
   .footer__lang-link :global(.btn__label) { padding: 0; }

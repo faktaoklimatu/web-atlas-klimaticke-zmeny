@@ -6,6 +6,11 @@ order: 3
 image: /images/atlas/mapa-klimatickych-bodu-zlomu.png
 downloads:
   - /images/atlas/mapa-klimatickych-bodu-zlomu.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "McKay et al. (2022)"
+      url: "https://doi.org/10.1126/science.abn7950"
 ---
 
 **Pokud oteplení překročí body zlomu, ekosystémy, mořské proudy a ledovcové štíty ztratí svou stabilitu. Ačkoli má každý z těchto systémů jinou kritickou mez i tempo kolapsu, výsledné změny jsou vždy nevratné. Pro lidstvo to znamená opuštění stabilního klimatu, které po tisíciletí umožňovalo rozkvět naší civilizace.**

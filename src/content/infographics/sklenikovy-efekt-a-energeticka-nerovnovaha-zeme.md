@@ -6,6 +6,11 @@ order: 8
 image: /images/atlas/sklenikovy-efekt-a-energeticka-nerovnovaha-zeme.png
 downloads:
   - /images/atlas/sklenikovy-efekt-a-energeticka-nerovnovaha-zeme.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "IPCC, AR6 WGI"
+      url: "https://doi.org/10.1017/9781009157896"
 ---
 
 **Země zůstává obyvatelnou díky křehké rovnováze. Nachází se v chladném vakuu vesmíru a neustále přijímá obrovský tok sluneční energie, která ji zahřívá. Aby její teplota zůstala stabilní, musí stejné množství energie vyzářit zpět do vesmíru. Skleníkové plyny produkované lidmi tuto rovnováhu narušily a způsobují hromadění tepelné energie v zemském systému.**

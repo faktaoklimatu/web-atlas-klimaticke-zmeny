@@ -6,6 +6,11 @@ order: 3
 image: /images/atlas/emise-v-eu-dlouhodobe-klesaji.png
 downloads:
   - /images/atlas/emise-v-eu-dlouhodobe-klesaji.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "Eurostat, env-air-gge"
+      url: "https://doi.org/10.2908/env_air_gge"
 ---
 
 **Evropská unie snížila své emise o více než jednu třetinu v letech 1990–2024. Tento pokrok odráží zásadní posun ve způsobu, jakým region získává energii a řídí svoji ekonomiku.**

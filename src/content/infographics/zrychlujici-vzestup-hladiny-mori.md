@@ -6,6 +6,13 @@ order: 1
 image: /images/atlas/zrychlujici-vzestup-hladiny-mori.png
 downloads:
   - /images/atlas/zrychlujici-vzestup-hladiny-mori.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "CSIRO 2017"
+      url: "https://www.cmar.csiro.au/sealevel/sl_data_cmar.html"
+    - label: "NASA-SSH"
+      url: "https://doi.org/10.5067/NSIND-GMSV1"
 ---
 
 **Hladina moří ve většině oblastí světa stoupá a v důsledku tání ledu a oteplování oceánů způsobeného změnou klimatu bude stoupat ještě mnoho staletí. Do roku 2100 by mohla hladina na některých místech vzrůst až o 1 metr – vše závisí na tom, do jaké míry se bude planeta dále oteplovat.**

@@ -6,10 +6,6 @@ order: 2
 image: /images/atlas/sto-let-vedy-o-klimatu.png
 downloads:
   - /images/atlas/sto-let-vedy-o-klimatu.png
-data:
-  tableUrl: ""
-  sourceUrl: ""
-  citation: Historical review, Fakta o klimatu
 related:
   - priciny-a-nasledky-zmeny-klimatu
   - koncentrace-co2-na-maximu-za-800000-let

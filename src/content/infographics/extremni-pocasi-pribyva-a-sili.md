@@ -6,6 +6,11 @@ order: 2
 image: /images/atlas/extremni-pocasi-pribyva-a-sili.png
 downloads:
   - /images/atlas/extremni-pocasi-pribyva-a-sili.png
+data:
+  tableUrl: ""
+  sources:
+    - label: "IPCC, AR6 WGI SPM"
+      url: "https://doi.org/10.1017/9781009157896.001"
 ---
 
 **Extrémní jevy, jako jsou vlny veder, sucha a přívalové srážky, se ve světě zasaženém změnou klimatu vyskytují častěji a s větší intenzitou. S každým dalším oteplením se tyto extrémy stávají výraznějšími a ničivějšími.**
