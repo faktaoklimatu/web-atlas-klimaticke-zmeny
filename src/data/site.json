@@ -5,7 +5,20 @@
       "url": "https://faktaoklimatu.cz/"
     }
   ],
-  "languages": [],
+  "languages": [
+    {
+      "code": "EN",
+      "flag": "🇬🇧",
+      "url": "https://atlasofclimatechange.org",
+      "hreflang": "en"
+    },
+    {
+      "code": "CS",
+      "flag": "🇨🇿",
+      "url": "https://atlasklimatu.cz",
+      "hreflang": "cs"
+    }
+  ],
   "socialLinks": [
     {
       "label": "Facebook",
@@ -39,6 +52,6 @@
     }
   ],
   "atlasPdfUrl": "https://faktaoklimatu.cz/assets-local/files/atlas-klimaticke-zmeny.pdf",
-  "languageVersionsUrl": "https://google.com/",
+  "languageVersionsUrl": "",
   "footerLegal": "Tento web vznikl díky podpoře PPG.  \n© 2026 Otevřená data o klimatu, z.ú. · CC BY 4.0 · info@faktaoklimatu.cz"
 }
